@@ -1,104 +1,216 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
-  <title id="title">afterinit developer activity signal</title>
-  <desc id="desc">A monochrome animated signal generated from recent public GitHub activity.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">afterinit activity core</title>
+  <desc id="desc">An animated developer compute core generated from recent public GitHub activity.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#070A0C" />
-      <stop offset="0.52" stop-color="#050606" />
-      <stop offset="1" stop-color="#090806" />
+      <stop offset="0" stop-color="#05080C" />
+      <stop offset="0.48" stop-color="#030407" />
+      <stop offset="1" stop-color="#0A060A" />
     </linearGradient>
-    <linearGradient id="signalColor" x1="64" y1="0" x2="1136" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8FA8B8" />
-      <stop offset="0.52" stop-color="#83958A" />
-      <stop offset="1" stop-color="#A18F79" />
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#78AEB8" />
+      <stop offset="0.28" stop-color="#7185B5" />
+      <stop offset="0.55" stop-color="#907CAD" />
+      <stop offset="0.78" stop-color="#A67D8B" />
+      <stop offset="1" stop-color="#AA936E" />
     </linearGradient>
-    <linearGradient id="pipelineColor" x1="64" y1="0" x2="1136" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8FA8B8" stop-opacity="0.55" />
-      <stop offset="0.5" stop-color="#83958A" stop-opacity="0.55" />
-      <stop offset="1" stop-color="#A18F79" stop-opacity="0.55" />
+    <linearGradient id="coreTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#78AEB8" stop-opacity="0.72" />
+      <stop offset="0.48" stop-color="#7185B5" stop-opacity="0.54" />
+      <stop offset="1" stop-color="#907CAD" stop-opacity="0.68" />
     </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#151515" stroke-width="1" opacity="0.46" />
+    <linearGradient id="coreLeft" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#263652" />
+      <stop offset="1" stop-color="#10141D" />
+    </linearGradient>
+    <linearGradient id="coreRight" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#3B2943" />
+      <stop offset="1" stop-color="#151018" />
+    </linearGradient>
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#907CAD" stop-opacity="0.26" />
+      <stop offset="0.42" stop-color="#7185B5" stop-opacity="0.13" />
+      <stop offset="1" stop-color="#78AEB8" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#171A22" stroke-width="1" opacity="0.48" />
     </pattern>
+    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
     <style>
       .mono { font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
-      .cap { fill: #888888; font-size: 11px; letter-spacing: 2.4px; }
-      .micro { fill: #555555; font-size: 10px; letter-spacing: 1.35px; }
-      .body { fill: #888888; font-size: 14px; }
+      .cap { fill: #8B8C96; font-size: 11px; letter-spacing: 2.5px; }
+      .micro { fill: #6F717C; font-size: 10px; letter-spacing: 1.35px; }
+      .nano { fill: #4F515A; font-size: 8px; letter-spacing: 1px; }
+      .body { fill: #A5A4AA; font-size: 13px; }
       .cursor { animation: blink 1.2s steps(1, end) infinite; }
       @keyframes blink { 0%, 46% { opacity: 1; } 47%, 100% { opacity: 0; } }
       @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
     </style>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1199" height="649" fill="url(#surface)" stroke="#333333" />
-  <rect x="1" y="141" width="1198" height="418" fill="url(#grid)" opacity="0.42" />
+  <rect x="0.5" y="0.5" width="1199" height="719" fill="url(#surface)" stroke="#292D37" />
+  <rect x="1" y="1" width="1198" height="718" fill="url(#grid)" opacity="0.30" />
+  <ellipse cx="855" cy="286" rx="370" ry="285" fill="url(#aura)" opacity="0.82" />
+  <ellipse cx="855" cy="286" rx="145" ry="105" fill="#907CAD" opacity="0.06" filter="url(#softGlow)">
+    <animate attributeName="opacity" values="0.035;0.12;0.035" dur="6s" repeatCount="indefinite" />
+  </ellipse>
 
-  <path d="M 18 42 V 18 H 42 M 1158 18 H 1182 V 42 M 18 608 V 632 H 42 M 1158 632 H 1182 V 608"
-        fill="none" stroke="#333333" />
+  <path d="M 18 48 V 18 H 48 M 1152 18 H 1182 V 48 M 18 672 V 702 H 48 M 1152 702 H 1182 V 672"
+        fill="none" stroke="#343844" />
+  <path d="M 560 80 L 1118 570 M 650 64 L 1140 488 M 620 560 L 1112 112"
+        fill="none" stroke="#171A23" opacity="0.62" />
+  <text class="mono nano" x="24" y="360" transform="rotate(-90 24 360)">DEV NODE / TELEMETRY CHANNEL 01</text>
 
-  <text class="mono" x="64" y="76" fill="#FFFFFF" font-size="47" font-weight="700" letter-spacing="6">AFTERINIT<tspan class="cursor" fill="#A8BAC8">_</tspan></text>
-  <text class="mono cap" x="66" y="109">JAVA BACKEND / COMPUTER SCIENCE</text>
+  <!-- Identity / information plane -->
+  <text class="mono micro" x="60" y="46" style="fill:#78AEB8">SYS / AFTERINIT.01</text>
+  <text class="mono" x="60" y="103" fill="#F3F2F0" font-size="55" font-weight="700" letter-spacing="7">AFTERINIT<tspan class="cursor" fill="#78AEB8">_</tspan></text>
+  <text class="mono cap" x="62" y="138">JAVA BACKEND / COMPUTER SCIENCE</text>
+  <text class="mono body" x="62" y="169">Building backend systems and things worth using.</text>
+  <rect x="62" y="190" width="38" height="2" fill="#78AEB8" />
+  <rect x="108" y="190" width="26" height="2" fill="#7185B5" />
+  <rect x="142" y="190" width="18" height="2" fill="#907CAD" />
+  <rect x="168" y="190" width="12" height="2" fill="#A67D8B" />
 
-  <text class="mono micro" x="1136" y="46" text-anchor="end">GITHUB / PUBLIC ACTIVITY</text>
-  <rect x="1127" y="61" width="9" height="9" fill="#A18F79">
-    <animate attributeName="opacity" values="0.25;1;0.25" dur="2.4s" repeatCount="indefinite" />
+  <line x1="60" y1="215" x2="515" y2="215" stroke="#292D37" />
+  <text class="mono micro" x="60" y="239">NODE STATE</text>
+  <rect x="60" y="253" width="7" height="7" fill="#AA936E" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
   </rect>
-  <text class="mono" x="1112" y="72" fill="#FFFFFF" font-size="18" letter-spacing="2" text-anchor="end">IDLE</text>
-  <text class="mono micro" x="1136" y="108" text-anchor="end">SYNC / 2026.09.28  11:45 UTC+8</text>
+  <text class="mono" x="78" y="268" fill="#F3F2F0" font-size="20" letter-spacing="2">IDLE</text>
+  <line x1="213" y1="230" x2="213" y2="274" stroke="#292D37" />
+  <text class="mono micro" x="238" y="239">LAST SIGNAL</text>
+  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">14 HRS AGO</text>
+  <line x1="397" y1="230" x2="397" y2="274" stroke="#292D37" />
+  <text class="mono micro" x="423" y="239">ACTIVITY</text>
+  <text class="mono" x="423" y="268" fill="#F3F2F0" font-size="15">09C / 09P</text>
 
-  <line x1="64" y1="141" x2="1136" y2="141" stroke="#333333" />
-  <line x1="64" y1="141" x2="132" y2="141" stroke="#8FA8B8" opacity="0.8" />
-  <line x1="132" y1="141" x2="184" y2="141" stroke="#83958A" opacity="0.7" />
-  <line x1="184" y1="141" x2="220" y2="141" stroke="#A18F79" opacity="0.65" />
-  <text class="mono cap" x="64" y="179" style="fill:#8FA8B8">ACTIVITY SIGNAL</text>
-  <text class="mono micro" x="1136" y="179" text-anchor="end" style="fill:#A18F79">09 COMMITS / 7D</text>
+  <text class="mono cap" x="60" y="303" style="fill:#78AEB8">ACTIVITY SPECTRUM / 7D</text>
+  <line x1="60" y1="390" x2="515" y2="390" stroke="#242832" />
+  <line x1="74" y1="306" x2="74" y2="390" stroke="#171A21" /><rect x="62" y="385" width="24" height="5" fill="#66717E" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="4.2s" begin="0.00s" repeatCount="indefinite" /></rect><rect x="62" y="381" width="24" height="1" fill="#66717E" opacity="0.9" /><text class="mono micro" x="74" y="411" text-anchor="middle" style="fill:#66717E">TUE</text><text class="mono nano" x="74" y="428" text-anchor="middle">00</text><line x1="139" y1="306" x2="139" y2="390" stroke="#171A21" /><rect x="127" y="385" width="24" height="5" fill="#66717E" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="4.2s" begin="0.28s" repeatCount="indefinite" /></rect><rect x="127" y="381" width="24" height="1" fill="#66717E" opacity="0.9" /><text class="mono micro" x="139" y="411" text-anchor="middle" style="fill:#66717E">WED</text><text class="mono nano" x="139" y="428" text-anchor="middle">00</text><line x1="204" y1="306" x2="204" y2="390" stroke="#171A21" /><rect x="192" y="359" width="24" height="31" fill="#907CAD" opacity="0.78"><animate attributeName="opacity" values="0.45;0.92;0.45" dur="4.2s" begin="0.56s" repeatCount="indefinite" /></rect><rect x="192" y="355" width="24" height="1" fill="#907CAD" opacity="0.9" /><text class="mono micro" x="204" y="411" text-anchor="middle" style="fill:#907CAD">THU</text><text class="mono nano" x="204" y="428" text-anchor="middle">01</text><line x1="269" y1="306" x2="269" y2="390" stroke="#171A21" /><rect x="257" y="306" width="24" height="84" fill="#A67D8B" opacity="0.78"><animate attributeName="opacity" values="0.45;0.92;0.45" dur="4.2s" begin="0.84s" repeatCount="indefinite" /></rect><rect x="257" y="302" width="24" height="1" fill="#A67D8B" opacity="0.9" /><text class="mono micro" x="269" y="411" text-anchor="middle" style="fill:#A67D8B">FRI</text><text class="mono nano" x="269" y="428" text-anchor="middle">05</text><line x1="334" y1="306" x2="334" y2="390" stroke="#171A21" /><rect x="322" y="346" width="24" height="44" fill="#AA936E" opacity="0.78"><animate attributeName="opacity" values="0.45;0.92;0.45" dur="4.2s" begin="1.12s" repeatCount="indefinite" /></rect><rect x="322" y="342" width="24" height="1" fill="#AA936E" opacity="0.9" /><text class="mono micro" x="334" y="411" text-anchor="middle" style="fill:#AA936E">SAT</text><text class="mono nano" x="334" y="428" text-anchor="middle">02</text><line x1="399" y1="306" x2="399" y2="390" stroke="#171A21" /><rect x="387" y="359" width="24" height="31" fill="#7F998E" opacity="0.78"><animate attributeName="opacity" values="0.45;0.92;0.45" dur="4.2s" begin="1.40s" repeatCount="indefinite" /></rect><rect x="387" y="355" width="24" height="1" fill="#7F998E" opacity="0.9" /><text class="mono micro" x="399" y="411" text-anchor="middle" style="fill:#7F998E">SUN</text><text class="mono nano" x="399" y="428" text-anchor="middle">01</text><line x1="464" y1="306" x2="464" y2="390" stroke="#171A21" /><rect x="452" y="385" width="24" height="5" fill="#66717E" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="4.2s" begin="1.68s" repeatCount="indefinite" /></rect><rect x="452" y="381" width="24" height="1" fill="#66717E" opacity="0.9" /><text class="mono micro" x="464" y="411" text-anchor="middle" style="fill:#66717E">MON</text><text class="mono nano" x="464" y="428" text-anchor="middle">00</text>
 
-  <line x1="64" y1="255" x2="1136" y2="255" stroke="#1D1D1D" />
-  <path d="M 64 255 L 76.3 255 L 204.9 255 L 229.4 255 L 358.0 255 L 382.5 255 L 424.9 255 L 437.9 248.3 L 446.9 231 L 455.9 266.0 L 465.9 255 L 511.2 255 L 535.7 255 L 578.0 255 L 591.0 239.3 L 600.0 199 L 609.0 280.8 L 619.0 255 L 664.3 255 L 688.8 255 L 731.1 255 L 744.1 246.0 L 753.1 223 L 762.1 269.7 L 772.1 255 L 817.5 255 L 842.0 255 L 884.3 255 L 897.3 248.3 L 906.3 231 L 915.3 266.0 L 925.3 255 L 970.6 255 L 995.1 255 L 1123.7 255 L 1136 255" fill="none" stroke="#242424" stroke-width="3" stroke-linejoin="miter" />
-  <path d="M 64 255 L 76.3 255 L 204.9 255 L 229.4 255 L 358.0 255 L 382.5 255 L 424.9 255 L 437.9 248.3 L 446.9 231 L 455.9 266.0 L 465.9 255 L 511.2 255 L 535.7 255 L 578.0 255 L 591.0 239.3 L 600.0 199 L 609.0 280.8 L 619.0 255 L 664.3 255 L 688.8 255 L 731.1 255 L 744.1 246.0 L 753.1 223 L 762.1 269.7 L 772.1 255 L 817.5 255 L 842.0 255 L 884.3 255 L 897.3 248.3 L 906.3 231 L 915.3 266.0 L 925.3 255 L 970.6 255 L 995.1 255 L 1123.7 255 L 1136 255" fill="none" stroke="url(#signalColor)" stroke-width="1.8" stroke-linejoin="miter"
-        stroke-dasharray="17 12" opacity="0.92">
-    <animate attributeName="stroke-dashoffset" values="580;0;-580" dur="13s" repeatCount="indefinite" />
+  <line x1="60" y1="452" x2="515" y2="452" stroke="#292D37" />
+  <text class="mono cap" x="60" y="480">LAST PUSH</text>
+  <text class="mono" x="60" y="518" fill="#F3F2F0" font-size="21">afinit_blog_page</text>
+  <text class="mono body" x="380" y="518">/ master</text>
+  <text class="mono body" x="60" y="552">3.2.4修复了手机端第一次切换深浅卡顿的bug</text>
+  <text class="mono micro" x="60" y="582">2026.09.27  /  21:39:04 UTC+8</text>
+  <text class="mono micro" x="515" y="582" text-anchor="end" style="fill:#AA936E">14 HRS AGO</text>
+
+  <!-- Animated compute core -->
+  <text class="mono cap" x="635" y="63" style="fill:#907CAD">COMPUTE CORE / ACTIVITY DRIVEN</text>
+  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.09.28  11:45 UTC+8</text>
+  <path d="M 625 82 H 720 M 1050 82 H 1140 V 172 M 625 485 V 555 H 715 M 1050 555 H 1140 V 465"
+        fill="none" stroke="#303440" />
+
+  <!-- Circuit traces -->
+  <g fill="none" stroke-width="1">
+    <path d="M 647 151 H 708 L 774 216" stroke="#78AEB8" stroke-dasharray="5 9" opacity="0.62">
+      <animate attributeName="stroke-dashoffset" values="56;0" dur="5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 1086 167 H 1024 L 930 230" stroke="#A67D8B" stroke-dasharray="5 9" opacity="0.58">
+      <animate attributeName="stroke-dashoffset" values="0;56" dur="5.8s" repeatCount="indefinite" />
+    </path>
+    <path d="M 642 433 H 715 L 785 357" stroke="#7F998E" stroke-dasharray="5 9" opacity="0.55">
+      <animate attributeName="stroke-dashoffset" values="48;0" dur="6.2s" repeatCount="indefinite" />
+    </path>
+    <path d="M 1088 432 H 1015 L 920 362" stroke="#AA936E" stroke-dasharray="5 9" opacity="0.60">
+      <animate attributeName="stroke-dashoffset" values="0;48" dur="5.4s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <g class="mono nano">
+    <rect x="639" y="143" width="16" height="16" fill="none" stroke="#78AEB8" />
+    <text x="662" y="155" style="fill:#78AEB8">API</text>
+    <rect x="1078" y="159" width="16" height="16" fill="none" stroke="#A67D8B" />
+    <text x="1070" y="187" text-anchor="end" style="fill:#A67D8B">PUSH</text>
+    <rect x="634" y="425" width="16" height="16" fill="none" stroke="#7F998E" />
+    <text x="658" y="438" style="fill:#7F998E">CODE</text>
+    <rect x="1080" y="424" width="16" height="16" fill="none" stroke="#AA936E" />
+    <text x="1070" y="438" text-anchor="end" style="fill:#AA936E">BUILD</text>
+  </g>
+
+  <!-- Counter-rotating orbital system -->
+  <g transform="rotate(-14 855 286)">
+    <ellipse cx="855" cy="286" rx="250" ry="108" fill="none" stroke="url(#spectrum)"
+             stroke-width="1.2" stroke-dasharray="19 14" opacity="0.62">
+      <animateTransform attributeName="transform" type="rotate" from="0 855 286" to="360 855 286" dur="34s" repeatCount="indefinite" />
+    </ellipse>
+    <circle cx="605" cy="286" r="4" fill="#78AEB8" filter="url(#glow)">
+      <animateMotion path="M 605 286 A 250 108 0 1 1 1105 286 A 250 108 0 1 1 605 286" dur="10s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g transform="rotate(18 855 286)">
+    <ellipse cx="855" cy="286" rx="198" ry="82" fill="none" stroke="url(#spectrum)"
+             stroke-width="1" stroke-dasharray="3 12" opacity="0.48">
+      <animateTransform attributeName="transform" type="rotate" from="360 855 286" to="0 855 286" dur="24s" repeatCount="indefinite" />
+    </ellipse>
+    <circle cx="657" cy="286" r="3.5" fill="#A67D8B" filter="url(#glow)">
+      <animateMotion path="M 657 286 A 198 82 0 1 0 1053 286 A 198 82 0 1 0 657 286" dur="7.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Isometric core -->
+  <polygon points="855,190 963,251 855,312 747,251" fill="none" stroke="url(#spectrum)" opacity="0.34" />
+  <polygon points="855,205 947,257 855,309 763,257" fill="url(#coreTop)" stroke="url(#spectrum)" stroke-width="1.3" />
+  <polygon points="763,257 855,309 855,391 763,339" fill="url(#coreLeft)" stroke="#7185B5" stroke-opacity="0.55" />
+  <polygon points="947,257 855,309 855,391 947,339" fill="url(#coreRight)" stroke="#A67D8B" stroke-opacity="0.55" />
+  <path d="M 855 309 V 391 M 763 257 L 855 309 L 947 257" fill="none" stroke="#B7A9C2" opacity="0.28" />
+  <path d="M 784 327 L 836 357 M 874 358 L 925 329" fill="none" stroke="url(#spectrum)" stroke-dasharray="5 7" opacity="0.64">
+    <animate attributeName="stroke-dashoffset" values="48;0" dur="5s" repeatCount="indefinite" />
   </path>
-  <circle r="3.2" fill="#8FA8B8">
-    <animateMotion path="M 64 255 L 76.3 255 L 204.9 255 L 229.4 255 L 358.0 255 L 382.5 255 L 424.9 255 L 437.9 248.3 L 446.9 231 L 455.9 266.0 L 465.9 255 L 511.2 255 L 535.7 255 L 578.0 255 L 591.0 239.3 L 600.0 199 L 609.0 280.8 L 619.0 255 L 664.3 255 L 688.8 255 L 731.1 255 L 744.1 246.0 L 753.1 223 L 762.1 269.7 L 772.1 255 L 817.5 255 L 842.0 255 L 884.3 255 L 897.3 248.3 L 906.3 231 L 915.3 266.0 L 925.3 255 L 970.6 255 L 995.1 255 L 1123.7 255 L 1136 255" dur="8s" repeatCount="indefinite" />
-    <animate attributeName="opacity" values="0.25;1;0.25" dur="1.6s" repeatCount="indefinite" />
+
+  <g>
+    <polygon points="855,225 908,256 855,287 802,256" fill="url(#spectrum)" opacity="0.52" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.28;0.76;0.28" dur="4s" repeatCount="indefinite" />
+    </polygon>
+    <polygon points="855,235 891,256 855,277 819,256" fill="#090B12" stroke="#F3F2F0" stroke-opacity="0.55"
+             stroke-dasharray="6 5">
+      <animate attributeName="stroke-dashoffset" values="44;0" dur="5.5s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="rotate" from="0 855 256" to="360 855 256" dur="28s" repeatCount="indefinite" />
+    </polygon>
+    <rect x="850" y="251" width="10" height="10" fill="#F3F2F0" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="1.8s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Moving circuit packets -->
+  <circle cx="647" cy="151" r="2.8" fill="#78AEB8" filter="url(#glow)">
+    <animateMotion path="M 647 151 H 708 L 807 250" dur="4.8s" repeatCount="indefinite" />
   </circle>
-  <line x1="140.6" y1="275" x2="140.6" y2="284" stroke="#555555" opacity="0.55" /><rect x="138.6" y="286" width="4" height="4" fill="#555555" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.0s" repeatCount="indefinite" /></rect><text class="mono micro" x="140.6" y="307" text-anchor="middle" style="fill:#555555">TUE / 00</text><line x1="293.7" y1="275" x2="293.7" y2="284" stroke="#555555" opacity="0.55" /><rect x="291.7" y="286" width="4" height="4" fill="#555555" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.3s" repeatCount="indefinite" /></rect><text class="mono micro" x="293.7" y="307" text-anchor="middle" style="fill:#555555">WED / 00</text><line x1="446.9" y1="275" x2="446.9" y2="284" stroke="#A18F79" opacity="0.55" /><rect x="444.9" y="286" width="4" height="4" fill="#A18F79" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.6s" repeatCount="indefinite" /></rect><text class="mono micro" x="446.9" y="307" text-anchor="middle" style="fill:#A18F79">THU / 01</text><line x1="600.0" y1="275" x2="600.0" y2="284" stroke="#8FA8B8" opacity="0.55" /><rect x="598.0" y="286" width="4" height="4" fill="#8FA8B8" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.9s" repeatCount="indefinite" /></rect><text class="mono micro" x="600.0" y="307" text-anchor="middle" style="fill:#8FA8B8">FRI / 05</text><line x1="753.1" y1="275" x2="753.1" y2="284" stroke="#83958A" opacity="0.55" /><rect x="751.1" y="286" width="4" height="4" fill="#83958A" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="1.2s" repeatCount="indefinite" /></rect><text class="mono micro" x="753.1" y="307" text-anchor="middle" style="fill:#83958A">SAT / 02</text><line x1="906.3" y1="275" x2="906.3" y2="284" stroke="#A18F79" opacity="0.55" /><rect x="904.3" y="286" width="4" height="4" fill="#A18F79" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="1.5s" repeatCount="indefinite" /></rect><text class="mono micro" x="906.3" y="307" text-anchor="middle" style="fill:#A18F79">SUN / 01</text><line x1="1059.4" y1="275" x2="1059.4" y2="284" stroke="#555555" opacity="0.55" /><rect x="1057.4" y="286" width="4" height="4" fill="#555555" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="1.8s" repeatCount="indefinite" /></rect><text class="mono micro" x="1059.4" y="307" text-anchor="middle" style="fill:#555555">MON / 00</text>
+  <circle cx="1088" cy="432" r="2.8" fill="#AA936E" filter="url(#glow)">
+    <animateMotion path="M 1088 432 H 1015 L 904 348" dur="5.2s" begin="-1.7s" repeatCount="indefinite" />
+  </circle>
 
-  <line x1="64" y1="142" x2="64" y2="558" stroke="#A8BAC8" opacity="0.07">
-    <animate attributeName="x1" values="64;1136;64" dur="14s" repeatCount="indefinite" />
-    <animate attributeName="x2" values="64;1136;64" dur="14s" repeatCount="indefinite" />
-  </line>
+  <text class="mono micro" x="855" y="469" text-anchor="middle">CURRENT PROCESS</text>
+  <text class="mono" x="855" y="496" text-anchor="middle" fill="#F3F2F0" font-size="16" letter-spacing="1.8">Code Generator</text>
+  <text class="mono nano" x="855" y="519" text-anchor="middle" style="fill:#907CAD">SIGNAL / 09 COMMITS / 09 PUSHES</text>
 
-  <text class="mono cap" x="64" y="329">NODE STATE</text>
-  <rect x="64" y="346" width="7" height="7" fill="#A18F79">
-    <animate attributeName="opacity" values="0.28;1;0.28" dur="2.4s" repeatCount="indefinite" />
+  <!-- System data rail -->
+  <line x1="60" y1="626" x2="1140" y2="626" stroke="url(#spectrum)" opacity="0.58" />
+  <g>
+    <rect x="56" y="622" width="8" height="8" fill="#78AEB8" />
+    <rect x="413" y="622" width="8" height="8" fill="#7185B5" />
+    <rect x="773" y="622" width="8" height="8" fill="#907CAD" />
+    <rect x="1136" y="622" width="8" height="8" fill="#AA936E" />
+    <circle cx="60" cy="626" r="4" fill="#F3F2F0" filter="url(#glow)">
+      <animate attributeName="cx" values="60;1140" dur="5.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="5.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <text class="mono micro" x="60" y="656" style="fill:#78AEB8">CODE</text>
+  <text class="mono micro" x="417" y="656" text-anchor="middle" style="fill:#7185B5">COMMIT</text>
+  <text class="mono micro" x="777" y="656" text-anchor="middle" style="fill:#907CAD">PUSH</text>
+  <text class="mono micro" x="1140" y="656" text-anchor="end" style="fill:#AA936E">BUILD</text>
+  <text class="mono nano" x="60" y="690">PUBLIC GITHUB TELEMETRY / ACTIVITY STATE IS NOT LIVE PRESENCE</text>
+  <text class="mono nano" x="1140" y="690" text-anchor="end">AUTO SYNC / 06H</text>
+
+  <!-- Slow glass scan -->
+  <rect x="0" y="1" width="1" height="718" fill="#78AEB8" opacity="0.06">
+    <animate attributeName="x" values="1;1198;1" dur="18s" repeatCount="indefinite" />
   </rect>
-  <text class="mono" x="86" y="371" fill="#FFFFFF" font-size="34" letter-spacing="3">IDLE</text>
-  <text class="mono cap" x="1136" y="329" text-anchor="end">LAST SIGNAL</text>
-  <text class="mono" x="1136" y="371" fill="#FFFFFF" font-size="18" letter-spacing="1.5" text-anchor="end">14 HRS AGO</text>
-
-  <line x1="64" y1="412" x2="1136" y2="412" stroke="#333333" />
-  <text class="mono cap" x="64" y="449">LAST PUSH</text>
-  <text class="mono" x="64" y="488" fill="#FFFFFF" font-size="22">afinit_blog_page</text>
-  <text class="mono body" x="390" y="488">/ master</text>
-  <text class="mono body" x="64" y="526">3.2.4修复了手机端第一次切换深浅卡顿的bug</text>
-  <text class="mono" x="1136" y="488" fill="#FFFFFF" font-size="14" text-anchor="end">2026.09.27  /  21:39:04 UTC+8</text>
-  <text class="mono micro" x="1136" y="526" text-anchor="end">14 HRS AGO</text>
-
-  <line x1="64" y1="558" x2="1136" y2="558" stroke="#333333" />
-  <line x1="64" y1="583" x2="1136" y2="583" stroke="url(#pipelineColor)" />
-  <rect x="60" y="579" width="8" height="8" fill="#8FA8B8"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" /></rect>
-  <rect x="412" y="579" width="8" height="8" fill="#83958A"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="0.7s" repeatCount="indefinite" /></rect>
-  <rect x="772" y="579" width="8" height="8" fill="#A18F79"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="1.4s" repeatCount="indefinite" /></rect>
-  <rect x="1132" y="579" width="8" height="8" fill="#8FA8B8"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="2.1s" repeatCount="indefinite" /></rect>
-  <rect x="0" y="579" width="8" height="8" fill="#FFFFFF" opacity="0.9">
-    <animate attributeName="x" values="64;1132" dur="5.6s" repeatCount="indefinite" />
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="5.6s" repeatCount="indefinite" />
-  </rect>
-  <text class="mono micro" x="64" y="620" style="fill:#8FA8B8">CODE</text>
-  <text class="mono micro" x="416" y="620" text-anchor="middle" style="fill:#83958A">COMMIT</text>
-  <text class="mono micro" x="776" y="620" text-anchor="middle" style="fill:#A18F79">PUSH</text>
-  <text class="mono micro" x="1136" y="620" text-anchor="end" style="fill:#8FA8B8">BUILD</text>
 </svg>
