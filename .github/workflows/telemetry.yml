@@ -43,11 +43,7 @@ jobs:
           --output data/activity.json
 
       - name: Render telemetry assets
-        run: |
-          python scripts/generate_telemetry.py
-          python scripts/generate_pulse.py
-          python scripts/generate_timeline.py
-          python scripts/generate_matrix.py
+        run: python scripts/generate_telemetry.py
 
       - name: Commit changed telemetry
         shell: bash
@@ -62,4 +58,3 @@ jobs:
           git add assets data/activity.json
           git commit -m "chore: refresh developer telemetry"
           git push
-

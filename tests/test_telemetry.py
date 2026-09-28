@@ -68,7 +68,7 @@ class TelemetryTests(unittest.TestCase):
         self.assertEqual(document["stats"]["active_days"], 1)
 
     def test_generated_assets_are_valid_svg(self) -> None:
-        for name in ("telemetry.svg", "pulse.svg", "timeline.svg", "activity-matrix.svg"):
+        for name in ("telemetry.svg",):
             path = ROOT / "assets" / name
             self.assertTrue(path.exists(), name)
             root = ET.parse(path).getroot()
