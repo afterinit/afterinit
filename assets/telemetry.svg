@@ -2,9 +2,20 @@
   <title id="title">afterinit developer activity signal</title>
   <desc id="desc">A monochrome animated signal generated from recent public GitHub activity.</desc>
   <defs>
-    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#080808" />
-      <stop offset="1" stop-color="#030303" />
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070A0C" />
+      <stop offset="0.52" stop-color="#050606" />
+      <stop offset="1" stop-color="#090806" />
+    </linearGradient>
+    <linearGradient id="signalColor" x1="64" y1="0" x2="1136" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8FA8B8" />
+      <stop offset="0.52" stop-color="#83958A" />
+      <stop offset="1" stop-color="#A18F79" />
+    </linearGradient>
+    <linearGradient id="pipelineColor" x1="64" y1="0" x2="1136" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8FA8B8" stop-opacity="0.55" />
+      <stop offset="0.5" stop-color="#83958A" stop-opacity="0.55" />
+      <stop offset="1" stop-color="#A18F79" stop-opacity="0.55" />
     </linearGradient>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#151515" stroke-width="1" opacity="0.46" />
@@ -30,26 +41,30 @@
   <text class="mono cap" x="66" y="109">JAVA BACKEND / COMPUTER SCIENCE</text>
 
   <text class="mono micro" x="1136" y="46" text-anchor="end">GITHUB / PUBLIC ACTIVITY</text>
-  <rect x="1127" y="61" width="9" height="9" fill="#888888">
+  <rect x="1127" y="61" width="9" height="9" fill="#A18F79">
     <animate attributeName="opacity" values="0.25;1;0.25" dur="2.4s" repeatCount="indefinite" />
   </rect>
   <text class="mono" x="1112" y="72" fill="#FFFFFF" font-size="18" letter-spacing="2" text-anchor="end">IDLE</text>
   <text class="mono micro" x="1136" y="108" text-anchor="end">SYNC / 2026.09.28  11:45 UTC+8</text>
 
   <line x1="64" y1="141" x2="1136" y2="141" stroke="#333333" />
-  <text class="mono cap" x="64" y="179">ACTIVITY SIGNAL</text>
-  <text class="mono micro" x="1136" y="179" text-anchor="end">09 COMMITS / 7D</text>
+  <line x1="64" y1="141" x2="132" y2="141" stroke="#8FA8B8" opacity="0.8" />
+  <line x1="132" y1="141" x2="184" y2="141" stroke="#83958A" opacity="0.7" />
+  <line x1="184" y1="141" x2="220" y2="141" stroke="#A18F79" opacity="0.65" />
+  <text class="mono cap" x="64" y="179" style="fill:#8FA8B8">ACTIVITY SIGNAL</text>
+  <text class="mono micro" x="1136" y="179" text-anchor="end" style="fill:#A18F79">09 COMMITS / 7D</text>
 
   <line x1="64" y1="255" x2="1136" y2="255" stroke="#1D1D1D" />
   <path d="M 64 255 L 76.3 255 L 204.9 255 L 229.4 255 L 358.0 255 L 382.5 255 L 424.9 255 L 437.9 248.3 L 446.9 231 L 455.9 266.0 L 465.9 255 L 511.2 255 L 535.7 255 L 578.0 255 L 591.0 239.3 L 600.0 199 L 609.0 280.8 L 619.0 255 L 664.3 255 L 688.8 255 L 731.1 255 L 744.1 246.0 L 753.1 223 L 762.1 269.7 L 772.1 255 L 817.5 255 L 842.0 255 L 884.3 255 L 897.3 248.3 L 906.3 231 L 915.3 266.0 L 925.3 255 L 970.6 255 L 995.1 255 L 1123.7 255 L 1136 255" fill="none" stroke="#242424" stroke-width="3" stroke-linejoin="miter" />
-  <path d="M 64 255 L 76.3 255 L 204.9 255 L 229.4 255 L 358.0 255 L 382.5 255 L 424.9 255 L 437.9 248.3 L 446.9 231 L 455.9 266.0 L 465.9 255 L 511.2 255 L 535.7 255 L 578.0 255 L 591.0 239.3 L 600.0 199 L 609.0 280.8 L 619.0 255 L 664.3 255 L 688.8 255 L 731.1 255 L 744.1 246.0 L 753.1 223 L 762.1 269.7 L 772.1 255 L 817.5 255 L 842.0 255 L 884.3 255 L 897.3 248.3 L 906.3 231 L 915.3 266.0 L 925.3 255 L 970.6 255 L 995.1 255 L 1123.7 255 L 1136 255" fill="none" stroke="#A8BAC8" stroke-width="1.6" stroke-linejoin="miter"
+  <path d="M 64 255 L 76.3 255 L 204.9 255 L 229.4 255 L 358.0 255 L 382.5 255 L 424.9 255 L 437.9 248.3 L 446.9 231 L 455.9 266.0 L 465.9 255 L 511.2 255 L 535.7 255 L 578.0 255 L 591.0 239.3 L 600.0 199 L 609.0 280.8 L 619.0 255 L 664.3 255 L 688.8 255 L 731.1 255 L 744.1 246.0 L 753.1 223 L 762.1 269.7 L 772.1 255 L 817.5 255 L 842.0 255 L 884.3 255 L 897.3 248.3 L 906.3 231 L 915.3 266.0 L 925.3 255 L 970.6 255 L 995.1 255 L 1123.7 255 L 1136 255" fill="none" stroke="url(#signalColor)" stroke-width="1.8" stroke-linejoin="miter"
         stroke-dasharray="17 12" opacity="0.92">
     <animate attributeName="stroke-dashoffset" values="580;0;-580" dur="13s" repeatCount="indefinite" />
   </path>
-  <circle r="3.2" fill="#FFFFFF">
+  <circle r="3.2" fill="#8FA8B8">
     <animateMotion path="M 64 255 L 76.3 255 L 204.9 255 L 229.4 255 L 358.0 255 L 382.5 255 L 424.9 255 L 437.9 248.3 L 446.9 231 L 455.9 266.0 L 465.9 255 L 511.2 255 L 535.7 255 L 578.0 255 L 591.0 239.3 L 600.0 199 L 609.0 280.8 L 619.0 255 L 664.3 255 L 688.8 255 L 731.1 255 L 744.1 246.0 L 753.1 223 L 762.1 269.7 L 772.1 255 L 817.5 255 L 842.0 255 L 884.3 255 L 897.3 248.3 L 906.3 231 L 915.3 266.0 L 925.3 255 L 970.6 255 L 995.1 255 L 1123.7 255 L 1136 255" dur="8s" repeatCount="indefinite" />
     <animate attributeName="opacity" values="0.25;1;0.25" dur="1.6s" repeatCount="indefinite" />
   </circle>
+  <line x1="140.6" y1="275" x2="140.6" y2="284" stroke="#555555" opacity="0.55" /><rect x="138.6" y="286" width="4" height="4" fill="#555555" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.0s" repeatCount="indefinite" /></rect><text class="mono micro" x="140.6" y="307" text-anchor="middle" style="fill:#555555">TUE / 00</text><line x1="293.7" y1="275" x2="293.7" y2="284" stroke="#555555" opacity="0.55" /><rect x="291.7" y="286" width="4" height="4" fill="#555555" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.3s" repeatCount="indefinite" /></rect><text class="mono micro" x="293.7" y="307" text-anchor="middle" style="fill:#555555">WED / 00</text><line x1="446.9" y1="275" x2="446.9" y2="284" stroke="#A18F79" opacity="0.55" /><rect x="444.9" y="286" width="4" height="4" fill="#A18F79" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.6s" repeatCount="indefinite" /></rect><text class="mono micro" x="446.9" y="307" text-anchor="middle" style="fill:#A18F79">THU / 01</text><line x1="600.0" y1="275" x2="600.0" y2="284" stroke="#8FA8B8" opacity="0.55" /><rect x="598.0" y="286" width="4" height="4" fill="#8FA8B8" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="0.9s" repeatCount="indefinite" /></rect><text class="mono micro" x="600.0" y="307" text-anchor="middle" style="fill:#8FA8B8">FRI / 05</text><line x1="753.1" y1="275" x2="753.1" y2="284" stroke="#83958A" opacity="0.55" /><rect x="751.1" y="286" width="4" height="4" fill="#83958A" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="1.2s" repeatCount="indefinite" /></rect><text class="mono micro" x="753.1" y="307" text-anchor="middle" style="fill:#83958A">SAT / 02</text><line x1="906.3" y1="275" x2="906.3" y2="284" stroke="#A18F79" opacity="0.55" /><rect x="904.3" y="286" width="4" height="4" fill="#A18F79" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="1.5s" repeatCount="indefinite" /></rect><text class="mono micro" x="906.3" y="307" text-anchor="middle" style="fill:#A18F79">SUN / 01</text><line x1="1059.4" y1="275" x2="1059.4" y2="284" stroke="#555555" opacity="0.55" /><rect x="1057.4" y="286" width="4" height="4" fill="#555555" opacity="0.35"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" begin="1.8s" repeatCount="indefinite" /></rect><text class="mono micro" x="1059.4" y="307" text-anchor="middle" style="fill:#555555">MON / 00</text>
 
   <line x1="64" y1="142" x2="64" y2="558" stroke="#A8BAC8" opacity="0.07">
     <animate attributeName="x1" values="64;1136;64" dur="14s" repeatCount="indefinite" />
@@ -57,7 +72,7 @@
   </line>
 
   <text class="mono cap" x="64" y="329">NODE STATE</text>
-  <rect x="64" y="346" width="7" height="7" fill="#888888">
+  <rect x="64" y="346" width="7" height="7" fill="#A18F79">
     <animate attributeName="opacity" values="0.28;1;0.28" dur="2.4s" repeatCount="indefinite" />
   </rect>
   <text class="mono" x="86" y="371" fill="#FFFFFF" font-size="34" letter-spacing="3">IDLE</text>
@@ -73,7 +88,17 @@
   <text class="mono micro" x="1136" y="526" text-anchor="end">14 HRS AGO</text>
 
   <line x1="64" y1="558" x2="1136" y2="558" stroke="#333333" />
-  <rect x="64" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.00s" repeatCount="indefinite" /></rect><rect x="100" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.08s" repeatCount="indefinite" /></rect><rect x="136" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.16s" repeatCount="indefinite" /></rect><rect x="172" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.24s" repeatCount="indefinite" /></rect><rect x="208" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.32s" repeatCount="indefinite" /></rect><rect x="244" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.40s" repeatCount="indefinite" /></rect><rect x="280" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.48s" repeatCount="indefinite" /></rect><rect x="316" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.56s" repeatCount="indefinite" /></rect><rect x="352" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.64s" repeatCount="indefinite" /></rect><rect x="388" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.72s" repeatCount="indefinite" /></rect><rect x="424" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.80s" repeatCount="indefinite" /></rect><rect x="460" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.88s" repeatCount="indefinite" /></rect><rect x="496" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="0.96s" repeatCount="indefinite" /></rect><rect x="532" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.04s" repeatCount="indefinite" /></rect><rect x="568" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.12s" repeatCount="indefinite" /></rect><rect x="604" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.20s" repeatCount="indefinite" /></rect><rect x="640" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.28s" repeatCount="indefinite" /></rect><rect x="676" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.36s" repeatCount="indefinite" /></rect><rect x="712" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.44s" repeatCount="indefinite" /></rect><rect x="748" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.52s" repeatCount="indefinite" /></rect><rect x="784" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.60s" repeatCount="indefinite" /></rect><rect x="820" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.68s" repeatCount="indefinite" /></rect><rect x="856" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.76s" repeatCount="indefinite" /></rect><rect x="892" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.84s" repeatCount="indefinite" /></rect><rect x="928" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="1.92s" repeatCount="indefinite" /></rect><rect x="964" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="2.00s" repeatCount="indefinite" /></rect><rect x="1000" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="2.08s" repeatCount="indefinite" /></rect><rect x="1036" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="2.16s" repeatCount="indefinite" /></rect><rect x="1072" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="2.24s" repeatCount="indefinite" /></rect><rect x="1108" y="581" width="20" height="3" fill="#A8BAC8" opacity="0.08"><animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" begin="2.32s" repeatCount="indefinite" /></rect>
-  <text class="mono micro" x="64" y="620">CODE  /  COMMIT  /  PUSH  /  BUILD</text>
-  <text class="mono micro" x="1136" y="620" text-anchor="end">ACTIVITY STATE / NOT LIVE PRESENCE</text>
+  <line x1="64" y1="583" x2="1136" y2="583" stroke="url(#pipelineColor)" />
+  <rect x="60" y="579" width="8" height="8" fill="#8FA8B8"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" /></rect>
+  <rect x="412" y="579" width="8" height="8" fill="#83958A"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="0.7s" repeatCount="indefinite" /></rect>
+  <rect x="772" y="579" width="8" height="8" fill="#A18F79"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="1.4s" repeatCount="indefinite" /></rect>
+  <rect x="1132" y="579" width="8" height="8" fill="#8FA8B8"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="2.1s" repeatCount="indefinite" /></rect>
+  <rect x="0" y="579" width="8" height="8" fill="#FFFFFF" opacity="0.9">
+    <animate attributeName="x" values="64;1132" dur="5.6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="5.6s" repeatCount="indefinite" />
+  </rect>
+  <text class="mono micro" x="64" y="620" style="fill:#8FA8B8">CODE</text>
+  <text class="mono micro" x="416" y="620" text-anchor="middle" style="fill:#83958A">COMMIT</text>
+  <text class="mono micro" x="776" y="620" text-anchor="middle" style="fill:#A18F79">PUSH</text>
+  <text class="mono micro" x="1136" y="620" text-anchor="end" style="fill:#8FA8B8">BUILD</text>
 </svg>

@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from render_utils import (
-    ACCENT,
     ASSET_DIR,
     BORDER,
     DATA_PATH,
@@ -26,6 +25,10 @@ from render_utils import (
 WIDTH = 1200
 HEIGHT = 650
 BASELINE = 255
+ICE = "#8FA8B8"
+SAGE = "#83958A"
+SAND = "#A18F79"
+SLATE = "#667781"
 
 
 def build_signal_path(daily: list[dict]) -> str:
@@ -69,7 +72,13 @@ def main() -> None:
     stats = data.get("stats") or {}
     push = data.get("latest_push")
     latest_at = events[0].get("timestamp") if events else None
-    state, state_color = activity_state(latest_at, now)
+    state, _ = activity_state(latest_at, now)
+    state_color = {
+        "ACTIVE": SAGE,
+        "IDLE": SAND,
+        "OFFLINE": SLATE,
+        "NO SIGNAL": DIM,
+    }.get(state, DIM)
     daily = stats.get("daily") if isinstance(stats.get("daily"), list) else []
     signal_path = build_signal_path(daily)
     commits = int(stats.get("commits") or 0)
@@ -87,22 +96,43 @@ def main() -> None:
         pushed_at = "—"
         pushed_ago = "NO SIGNAL"
 
-    flow_cells = []
-    for index in range(30):
-        flow_cells.append(
-            f'<rect x="{64 + index * 36}" y="581" width="20" height="3" fill="{ACCENT}" opacity="0.08">'
-            f'<animate attributeName="opacity" values="0.08;0.68;0.08" dur="3.2s" '
-            f'begin="{index * 0.08:.2f}s" repeatCount="indefinite" />'
-            f'</rect>'
+    signal_days = daily[-7:]
+    if len(signal_days) < 7:
+        signal_days = ([{"day": "--", "commits": 0}] * (7 - len(signal_days))) + signal_days
+    day_markers = []
+    marker_colors = (ICE, SAGE, SAND, ICE, SAGE, SAND, ICE)
+    segment = (1136 - 64) / 7
+    for index, day in enumerate(signal_days):
+        center = 64 + segment * (index + 0.5)
+        value = max(0, int(day.get("commits") or 0))
+        color = marker_colors[index] if value else DIM
+        day_markers.append(
+            f'<line x1="{center:.1f}" y1="275" x2="{center:.1f}" y2="284" stroke="{color}" opacity="0.55" />'
+            f'<rect x="{center - 2:.1f}" y="286" width="4" height="4" fill="{color}" opacity="0.35">'
+            f'<animate attributeName="opacity" values="0.25;0.9;0.25" dur="3.8s" '
+            f'begin="{index * 0.3:.1f}s" repeatCount="indefinite" /></rect>'
+            f'<text class="mono micro" x="{center:.1f}" y="307" text-anchor="middle" '
+            f'style="fill:{color}">{x(day.get("day", "--"))} / {value:02d}</text>'
         )
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc">
   <title id="title">afterinit developer activity signal</title>
   <desc id="desc">A monochrome animated signal generated from recent public GitHub activity.</desc>
   <defs>
-    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#080808" />
-      <stop offset="1" stop-color="#030303" />
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070A0C" />
+      <stop offset="0.52" stop-color="#050606" />
+      <stop offset="1" stop-color="#090806" />
+    </linearGradient>
+    <linearGradient id="signalColor" x1="64" y1="0" x2="1136" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="{ICE}" />
+      <stop offset="0.52" stop-color="{SAGE}" />
+      <stop offset="1" stop-color="{SAND}" />
+    </linearGradient>
+    <linearGradient id="pipelineColor" x1="64" y1="0" x2="1136" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="{ICE}" stop-opacity="0.55" />
+      <stop offset="0.5" stop-color="{SAGE}" stop-opacity="0.55" />
+      <stop offset="1" stop-color="{SAND}" stop-opacity="0.55" />
     </linearGradient>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
       <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#151515" stroke-width="1" opacity="0.46" />
@@ -135,19 +165,23 @@ def main() -> None:
   <text class="mono micro" x="1136" y="108" text-anchor="end">SYNC / {x(format_local(data.get('generated_at'), tz, '%Y.%m.%d  %H:%M'))} {x(timezone_label)}</text>
 
   <line x1="64" y1="141" x2="1136" y2="141" stroke="{BORDER}" />
-  <text class="mono cap" x="64" y="179">ACTIVITY SIGNAL</text>
-  <text class="mono micro" x="1136" y="179" text-anchor="end">{commits:02d} COMMITS / 7D</text>
+  <line x1="64" y1="141" x2="132" y2="141" stroke="{ICE}" opacity="0.8" />
+  <line x1="132" y1="141" x2="184" y2="141" stroke="{SAGE}" opacity="0.7" />
+  <line x1="184" y1="141" x2="220" y2="141" stroke="{SAND}" opacity="0.65" />
+  <text class="mono cap" x="64" y="179" style="fill:{ICE}">ACTIVITY SIGNAL</text>
+  <text class="mono micro" x="1136" y="179" text-anchor="end" style="fill:{SAND}">{commits:02d} COMMITS / 7D</text>
 
   <line x1="64" y1="{BASELINE}" x2="1136" y2="{BASELINE}" stroke="#1D1D1D" />
   <path d="{signal_path}" fill="none" stroke="#242424" stroke-width="3" stroke-linejoin="miter" />
-  <path d="{signal_path}" fill="none" stroke="{ACCENT}" stroke-width="1.6" stroke-linejoin="miter"
+  <path d="{signal_path}" fill="none" stroke="url(#signalColor)" stroke-width="1.8" stroke-linejoin="miter"
         stroke-dasharray="17 12" opacity="0.92">
     <animate attributeName="stroke-dashoffset" values="580;0;-580" dur="13s" repeatCount="indefinite" />
   </path>
-  <circle r="3.2" fill="{TEXT}">
+  <circle r="3.2" fill="{ICE}">
     <animateMotion path="{signal_path}" dur="8s" repeatCount="indefinite" />
     <animate attributeName="opacity" values="0.25;1;0.25" dur="1.6s" repeatCount="indefinite" />
   </circle>
+  {''.join(day_markers)}
 
   <line x1="64" y1="142" x2="64" y2="558" stroke="{ACCENT}" opacity="0.07">
     <animate attributeName="x1" values="64;1136;64" dur="14s" repeatCount="indefinite" />
@@ -171,9 +205,19 @@ def main() -> None:
   <text class="mono micro" x="1136" y="526" text-anchor="end">{x(pushed_ago)}</text>
 
   <line x1="64" y1="558" x2="1136" y2="558" stroke="{BORDER}" />
-  {''.join(flow_cells)}
-  <text class="mono micro" x="64" y="620">CODE  /  COMMIT  /  PUSH  /  BUILD</text>
-  <text class="mono micro" x="1136" y="620" text-anchor="end">ACTIVITY STATE / NOT LIVE PRESENCE</text>
+  <line x1="64" y1="583" x2="1136" y2="583" stroke="url(#pipelineColor)" />
+  <rect x="60" y="579" width="8" height="8" fill="{ICE}"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" /></rect>
+  <rect x="412" y="579" width="8" height="8" fill="{SAGE}"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="0.7s" repeatCount="indefinite" /></rect>
+  <rect x="772" y="579" width="8" height="8" fill="{SAND}"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="1.4s" repeatCount="indefinite" /></rect>
+  <rect x="1132" y="579" width="8" height="8" fill="{ICE}"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="2.1s" repeatCount="indefinite" /></rect>
+  <rect x="0" y="579" width="8" height="8" fill="{TEXT}" opacity="0.9">
+    <animate attributeName="x" values="64;1132" dur="5.6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="5.6s" repeatCount="indefinite" />
+  </rect>
+  <text class="mono micro" x="64" y="620" style="fill:{ICE}">CODE</text>
+  <text class="mono micro" x="416" y="620" text-anchor="middle" style="fill:{SAGE}">COMMIT</text>
+  <text class="mono micro" x="776" y="620" text-anchor="middle" style="fill:{SAND}">PUSH</text>
+  <text class="mono micro" x="1136" y="620" text-anchor="end" style="fill:{ICE}">BUILD</text>
 </svg>"""
     write_svg(ASSET_DIR / "telemetry.svg", svg)
 
