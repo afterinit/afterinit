@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="370" viewBox="0 0 1200 370" role="img" aria-labelledby="title desc">
+  <title id="title">Seven-day code pulse</title>
+  <desc id="desc">Generated from public GitHub activity by the repository workflow.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#141414" stroke-width="1" opacity="0.5" />
+    </pattern>
+    <style>
+      .mono { font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+      .label { fill: #888888; font-size: 12px; letter-spacing: 2px; }
+      .micro { fill: #555555; font-size: 10px; letter-spacing: 1.4px; }
+      .value { fill: #FFFFFF; font-size: 15px; }
+      .soft { fill: #888888; font-size: 13px; }
+      .cursor { animation: blink 1.25s steps(1, end) infinite; }
+      @keyframes blink { 0%, 47% { opacity: 1; } 48%, 100% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .cursor, .scan { animation: none; } }
+    </style>
+  </defs>
+  <rect x="0.5" y="0.5" width="1199" height="369" fill="#050505" stroke="#333333" />
+  <rect x="1" y="1" width="1198" height="368" fill="url(#grid)" />
+<text class="mono label" x="48" y="43" >CODE PULSE / LAST 7 DAYS</text>
+  <text class="mono micro" x="1152" y="43" text-anchor="end">9 COMMITS  /  9 PUSHES</text>
+  <line x1="48" y1="65" x2="1152" y2="65" stroke="#333333" opacity="1" />
+  <text class="mono label" x="48" y="108" >TUE</text>
+  <text class="mono micro" x="112" y="108" >09-22</text>
+  <rect x="224" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="255" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="286" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="317" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="348" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="379" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="410" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="441" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="472" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="503" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="534" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="565" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="596" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="627" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="658" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="689" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="720" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="751" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="782" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="813" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="844" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="875" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="906" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="937" y="96" width="23" height="12" fill="#555555" opacity="0.24" />
+  <text class="mono micro" x="1000" y="108" >00 COMMITS</text>
+  <text class="mono micro" x="1152" y="108" text-anchor="end">00 PUSHES</text>
+  <text class="mono label" x="48" y="142" >WED</text>
+  <text class="mono micro" x="112" y="142" >09-23</text>
+  <rect x="224" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="255" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="286" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="317" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="348" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="379" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="410" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="441" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="472" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="503" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="534" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="565" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="596" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="627" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="658" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="689" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="720" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="751" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="782" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="813" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="844" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="875" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="906" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="937" y="130" width="23" height="12" fill="#555555" opacity="0.24" />
+  <text class="mono micro" x="1000" y="142" >00 COMMITS</text>
+  <text class="mono micro" x="1152" y="142" text-anchor="end">00 PUSHES</text>
+  <text class="mono label" x="48" y="176" >THU</text>
+  <text class="mono micro" x="112" y="176" >09-24</text>
+  <rect x="224" y="164" width="23" height="12" fill="#A8BAC8" opacity="0.28" />
+  <rect x="255" y="164" width="23" height="12" fill="#A8BAC8" opacity="0.31" />
+  <rect x="286" y="164" width="23" height="12" fill="#A8BAC8" opacity="0.33" />
+  <rect x="317" y="164" width="23" height="12" fill="#A8BAC8" opacity="0.36" />
+  <rect x="348" y="164" width="23" height="12" fill="#A8BAC8" opacity="0.39" />
+  <rect x="379" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="410" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="441" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="472" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="503" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="534" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="565" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="596" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="627" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="658" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="689" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="720" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="751" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="782" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="813" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="844" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="875" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="906" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="937" y="164" width="23" height="12" fill="#555555" opacity="0.24" />
+  <text class="mono micro" x="1000" y="176" >01 COMMIT</text>
+  <text class="mono micro" x="1152" y="176" text-anchor="end">01 PUSH</text>
+  <text class="mono label" x="48" y="210" >FRI</text>
+  <text class="mono micro" x="112" y="210" >09-25</text>
+  <rect x="224" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.28" />
+  <rect x="255" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.31" />
+  <rect x="286" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.33" />
+  <rect x="317" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.36" />
+  <rect x="348" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.39" />
+  <rect x="379" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.41" />
+  <rect x="410" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.44" />
+  <rect x="441" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.47" />
+  <rect x="472" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.50" />
+  <rect x="503" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.52" />
+  <rect x="534" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.55" />
+  <rect x="565" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.58" />
+  <rect x="596" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.60" />
+  <rect x="627" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.63" />
+  <rect x="658" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.66" />
+  <rect x="689" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.68" />
+  <rect x="720" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.71" />
+  <rect x="751" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.74" />
+  <rect x="782" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.77" />
+  <rect x="813" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.79" />
+  <rect x="844" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.82" />
+  <rect x="875" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.85" />
+  <rect x="906" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.87" />
+  <rect x="937" y="198" width="23" height="12" fill="#A8BAC8" opacity="0.90" />
+  <text class="mono micro" x="1000" y="210" >05 COMMITS</text>
+  <text class="mono micro" x="1152" y="210" text-anchor="end">05 PUSHES</text>
+  <text class="mono label" x="48" y="244" >SAT</text>
+  <text class="mono micro" x="112" y="244" >09-26</text>
+  <rect x="224" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.28" />
+  <rect x="255" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.31" />
+  <rect x="286" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.33" />
+  <rect x="317" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.36" />
+  <rect x="348" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.39" />
+  <rect x="379" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.41" />
+  <rect x="410" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.44" />
+  <rect x="441" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.47" />
+  <rect x="472" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.50" />
+  <rect x="503" y="232" width="23" height="12" fill="#A8BAC8" opacity="0.52" />
+  <rect x="534" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="565" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="596" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="627" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="658" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="689" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="720" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="751" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="782" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="813" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="844" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="875" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="906" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="937" y="232" width="23" height="12" fill="#555555" opacity="0.24" />
+  <text class="mono micro" x="1000" y="244" >02 COMMITS</text>
+  <text class="mono micro" x="1152" y="244" text-anchor="end">02 PUSHES</text>
+  <text class="mono label" x="48" y="278" >SUN</text>
+  <text class="mono micro" x="112" y="278" >09-27</text>
+  <rect x="224" y="266" width="23" height="12" fill="#A8BAC8" opacity="0.28" />
+  <rect x="255" y="266" width="23" height="12" fill="#A8BAC8" opacity="0.31" />
+  <rect x="286" y="266" width="23" height="12" fill="#A8BAC8" opacity="0.33" />
+  <rect x="317" y="266" width="23" height="12" fill="#A8BAC8" opacity="0.36" />
+  <rect x="348" y="266" width="23" height="12" fill="#A8BAC8" opacity="0.39" />
+  <rect x="379" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="410" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="441" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="472" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="503" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="534" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="565" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="596" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="627" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="658" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="689" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="720" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="751" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="782" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="813" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="844" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="875" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="906" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="937" y="266" width="23" height="12" fill="#555555" opacity="0.24" />
+  <text class="mono micro" x="1000" y="278" >01 COMMIT</text>
+  <text class="mono micro" x="1152" y="278" text-anchor="end">01 PUSH</text>
+  <text class="mono label" x="48" y="312" >MON</text>
+  <text class="mono micro" x="112" y="312" >09-28</text>
+  <rect x="224" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="255" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="286" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="317" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="348" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="379" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="410" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="441" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="472" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="503" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="534" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="565" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="596" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="627" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="658" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="689" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="720" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="751" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="782" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="813" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="844" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="875" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="906" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <rect x="937" y="300" width="23" height="12" fill="#555555" opacity="0.24" />
+  <text class="mono micro" x="1000" y="312" >00 COMMITS</text>
+  <text class="mono micro" x="1152" y="312" text-anchor="end">00 PUSHES</text>
+  <line x1="48" y1="336" x2="1152" y2="336" stroke="#333333" opacity="0.8" />
+  <text class="mono micro" x="48" y="354" >SIGNAL AMPLITUDE NORMALIZED TO THE BUSIEST DAY</text>
+  <text class="mono micro" x="1152" y="354" text-anchor="end">PUBLIC PUSH COMMITS</text>
+
+</svg>

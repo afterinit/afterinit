@@ -1,0 +1,468 @@
+{
+  "schema_version": 1,
+  "username": "afterinit",
+  "generated_at": "2026-09-28T03:28:12Z",
+  "source": "github-api",
+  "events": [
+    {
+      "id": "22303525548",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-27T13:39:04Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22221736875",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-26T10:43:39Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22221295171",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-26T10:35:42Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22155521284",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-25T13:15:19Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22134983902",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-25T11:10:50Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22150721416",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-25T10:38:39Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22132670274",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-25T10:35:41Z",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22121784531",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-25T07:48:20Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "22014009642",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-09-24T06:07:48Z",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "commit_count": 0
+    }
+  ],
+  "commits": [
+    {
+      "sha": "c5045a2d0ac0c1144f96a6ef4e6312714f8e36dc",
+      "message": "3.2.4修复了手机端第一次切换深浅卡顿的bug",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-09-27T13:38:53Z"
+    },
+    {
+      "sha": "dd2b74b7b52508c88960e833ddca104add0cad1e",
+      "message": "3.3增加了弹幕状态记录功能，增加了主页个个人页面的文章缓存功能",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-09-26T10:43:29Z"
+    },
+    {
+      "sha": "e1eac28e5ad2988c28b22845e3b00391c721259f",
+      "message": "3.2.3修复了手机端不能像电脑端一样有丝滑切换深浅模式的bug",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-09-26T10:35:21Z"
+    },
+    {
+      "sha": "417f6b771f9986b5fb44d2035266179fa0a6589a",
+      "message": "3.2.2修改了手机端切换深浅色的逻辑以适配",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-09-25T13:15:08Z"
+    },
+    {
+      "sha": "6f8bdd606b0fc686e6cfd53c210054cbc320c941",
+      "message": "3.2.1修复了相关与后端接口问题，修复了手机端切换深色与浅色模式存在的bug",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-09-25T11:10:44Z"
+    },
+    {
+      "sha": "3230c3349084464a4b57aa9a3e1e6daa6a19dbb2",
+      "message": "3.2修改了ui设计",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-09-25T10:38:30Z"
+    },
+    {
+      "sha": "94883ba5cab87fe26e7f0d2ac9e5f1cdc9932a0f",
+      "message": "3.1.1增加了mysql数据库建表语句与flyway管理工具，增加了统一返回体success字段",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "timestamp": "2026-09-25T10:35:25Z"
+    },
+    {
+      "sha": "1a3cd369241dbcd13d1148f6f1a3b41498d17d29",
+      "message": "3.1增加了找回密码功能，增加了用户主页查看自己文章的功能，修复了时区导致时间显示错误的问题",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-09-25T07:48:12Z"
+    },
+    {
+      "sha": "5c20960f396a639ce0b0bf55c39a68f85efdb6cf",
+      "message": "3.1添加了忘记密码功能，个人主页新增查看个人文章的功能，管理员界面可编辑用户信息",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "timestamp": "2026-09-24T06:07:31Z"
+    }
+  ],
+  "repos": [
+    {
+      "name": "afinit_blog_page",
+      "description": null,
+      "language": "Vue",
+      "topics": [],
+      "pushed_at": "2026-09-27T13:39:03Z",
+      "url": "https://github.com/afterinit/afinit_blog_page"
+    },
+    {
+      "name": "afinit_blog",
+      "description": "https://github.com/afterinit/afinit_blog.git",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-09-25T10:35:41Z",
+      "url": "https://github.com/afterinit/afinit_blog"
+    },
+    {
+      "name": "jwt-login",
+      "description": "基于JWT和Redis的登录模块",
+      "language": "HTML",
+      "topics": [],
+      "pushed_at": "2026-06-29T08:28:55Z",
+      "url": "https://github.com/afterinit/jwt-login"
+    },
+    {
+      "name": "auto_get_oci",
+      "description": "抢注甲骨文云服务器自动脚本",
+      "language": "Python",
+      "topics": [],
+      "pushed_at": "2026-04-28T12:20:25Z",
+      "url": "https://github.com/afterinit/auto_get_oci"
+    },
+    {
+      "name": "heimaPuzzleGame",
+      "description": null,
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-03-04T13:59:49Z",
+      "url": "https://github.com/afterinit/heimaPuzzleGame"
+    }
+  ],
+  "latest_push": {
+    "timestamp": "2026-09-27T13:39:04Z",
+    "repo": "afinit_blog_page",
+    "branch": "master",
+    "message": "3.2.4修复了手机端第一次切换深浅卡顿的bug",
+    "commit_count": 1
+  },
+  "stats": {
+    "window_start": "2026-09-22",
+    "window_end": "2026-09-28",
+    "commits": 9,
+    "pushes": 9,
+    "active_repos": 2,
+    "active_days": 4,
+    "most_active": "afinit_blog_page",
+    "daily": [
+      {
+        "date": "2026-09-22",
+        "day": "TUE",
+        "commits": 0,
+        "pushes": 0
+      },
+      {
+        "date": "2026-09-23",
+        "day": "WED",
+        "commits": 0,
+        "pushes": 0
+      },
+      {
+        "date": "2026-09-24",
+        "day": "THU",
+        "commits": 1,
+        "pushes": 1
+      },
+      {
+        "date": "2026-09-25",
+        "day": "FRI",
+        "commits": 5,
+        "pushes": 5
+      },
+      {
+        "date": "2026-09-26",
+        "day": "SAT",
+        "commits": 2,
+        "pushes": 2
+      },
+      {
+        "date": "2026-09-27",
+        "day": "SUN",
+        "commits": 1,
+        "pushes": 1
+      },
+      {
+        "date": "2026-09-28",
+        "day": "MON",
+        "commits": 0,
+        "pushes": 0
+      }
+    ],
+    "matrix": [
+      {
+        "date": "2026-09-22",
+        "day": "TUE",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-09-23",
+        "day": "WED",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "day": "THU",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "day": "FRI",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          2,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-09-26",
+        "day": "SAT",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-09-27",
+        "day": "SUN",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "day": "MON",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+}

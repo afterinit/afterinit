@@ -1,0 +1,18 @@
+{
+  "status": "BUILDING",
+  "focus": [
+    "Backend Architecture",
+    "Spring Boot",
+    "Distributed Cache",
+    "Developer Tools"
+  ],
+  "project": "Code Generator",
+  "tagline": "Building backend systems and things worth using.",
+  "role": "JAVA BACKEND / COMPUTER SCIENCE",
+  "timezone": "Asia/Singapore",
+  "timezone_label": "UTC+8",
+  "exclude_repositories": [
+    "afterinit"
+  ]
+}
+
