@@ -85,7 +85,7 @@
   <text class="mono" x="78" y="268" fill="#F3F2F0" font-size="20" letter-spacing="2">IDLE</text>
   <line x1="213" y1="230" x2="213" y2="274" stroke="#292D37" />
   <text class="mono micro" x="238" y="239">LAST SIGNAL</text>
-  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">15 HRS AGO</text>
+  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">4 HRS AGO</text>
   <line x1="397" y1="230" x2="397" y2="274" stroke="#292D37" />
   <text class="mono micro" x="423" y="239">ACTIVITY</text>
   <text class="mono" x="423" y="268" fill="#F3F2F0" font-size="15">09C / 09P</text>
@@ -100,11 +100,11 @@
   <text class="mono body" x="380" y="518">/ master</text>
   <text class="mono body" x="60" y="552">3.2.4修复了手机端第一次切换深浅卡顿的bug</text>
   <text class="mono micro" x="60" y="582">2026.09.27  /  21:39:04 UTC+8</text>
-  <text class="mono micro" x="515" y="582" text-anchor="end" style="fill:#AA936E">15 HRS AGO</text>
+  <text class="mono micro" x="515" y="582" text-anchor="end" style="fill:#AA936E">1 DAY AGO</text>
 
   <!-- Animated compute core -->
   <text class="mono cap" x="635" y="63" style="fill:#907CAD">COMPUTE CORE / ACTIVITY DRIVEN</text>
-  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.09.28  12:56 UTC+8</text>
+  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.09.28  21:52 UTC+8</text>
   <path d="M 625 82 H 720 M 1050 82 H 1140 V 172 M 625 485 V 555 H 715 M 1050 555 H 1140 V 465"
         fill="none" stroke="#303440" />
 
