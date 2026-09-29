@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-09-29T12:51:08Z",
+  "generated_at": "2026-09-29T22:14:23Z",
   "source": "github-api",
   "events": [
     {
@@ -210,20 +210,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-09-23",
-    "window_end": "2026-09-29",
+    "window_start": "2026-09-24",
+    "window_end": "2026-09-30",
     "commits": 9,
     "pushes": 9,
     "active_repos": 2,
     "active_days": 4,
     "most_active": "afinit_blog_page",
     "daily": [
-      {
-        "date": "2026-09-23",
-        "day": "WED",
-        "commits": 0,
-        "pushes": 0
-      },
       {
         "date": "2026-09-24",
         "day": "THU",
@@ -259,39 +253,15 @@
         "day": "TUE",
         "commits": 0,
         "pushes": 0
+      },
+      {
+        "date": "2026-09-30",
+        "day": "WED",
+        "commits": 0,
+        "pushes": 0
       }
     ],
     "matrix": [
-      {
-        "date": "2026-09-23",
-        "day": "WED",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
       {
         "date": "2026-09-24",
         "day": "THU",
@@ -445,6 +415,36 @@
       {
         "date": "2026-09-29",
         "day": "TUE",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "day": "WED",
         "hours": [
           0,
           0,
