@@ -85,7 +85,7 @@
   <text class="mono" x="78" y="268" fill="#F3F2F0" font-size="20" letter-spacing="2">IDLE</text>
   <line x1="213" y1="230" x2="213" y2="274" stroke="#292D37" />
   <text class="mono micro" x="238" y="239">LAST SIGNAL</text>
-  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">13 HRS AGO</text>
+  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">20 HRS AGO</text>
   <line x1="397" y1="230" x2="397" y2="274" stroke="#292D37" />
   <text class="mono micro" x="423" y="239">ACTIVITY</text>
   <text class="mono" x="423" y="268" fill="#F3F2F0" font-size="15">09C / 09P</text>
@@ -104,7 +104,7 @@
 
   <!-- Animated compute core -->
   <text class="mono cap" x="635" y="63" style="fill:#907CAD">COMPUTE CORE / ACTIVITY DRIVEN</text>
-  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.09.29  07:15 UTC+8</text>
+  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.09.29  13:42 UTC+8</text>
   <path d="M 625 82 H 720 M 1050 82 H 1140 V 172 M 625 485 V 555 H 715 M 1050 555 H 1140 V 465"
         fill="none" stroke="#303440" />
 
