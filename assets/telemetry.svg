@@ -79,13 +79,13 @@
 
   <line x1="60" y1="215" x2="515" y2="215" stroke="#292D37" />
   <text class="mono micro" x="60" y="239">NODE STATE</text>
-  <rect x="60" y="253" width="7" height="7" fill="#AA936E" filter="url(#glow)">
+  <rect x="60" y="253" width="7" height="7" fill="#66717E" filter="url(#glow)">
     <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
   </rect>
-  <text class="mono" x="78" y="268" fill="#F3F2F0" font-size="20" letter-spacing="2">IDLE</text>
+  <text class="mono" x="78" y="268" fill="#F3F2F0" font-size="20" letter-spacing="2">OFFLINE</text>
   <line x1="213" y1="230" x2="213" y2="274" stroke="#292D37" />
   <text class="mono micro" x="238" y="239">LAST SIGNAL</text>
-  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">20 HRS AGO</text>
+  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">1 DAY AGO</text>
   <line x1="397" y1="230" x2="397" y2="274" stroke="#292D37" />
   <text class="mono micro" x="423" y="239">ACTIVITY</text>
   <text class="mono" x="423" y="268" fill="#F3F2F0" font-size="15">09C / 09P</text>
@@ -104,7 +104,7 @@
 
   <!-- Animated compute core -->
   <text class="mono cap" x="635" y="63" style="fill:#907CAD">COMPUTE CORE / ACTIVITY DRIVEN</text>
-  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.09.29  13:42 UTC+8</text>
+  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.09.29  20:51 UTC+8</text>
   <path d="M 625 82 H 720 M 1050 82 H 1140 V 172 M 625 485 V 555 H 715 M 1050 555 H 1140 V 465"
         fill="none" stroke="#303440" />
 
