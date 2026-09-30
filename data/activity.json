@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-09-30T12:33:15Z",
+  "generated_at": "2026-09-30T22:15:05Z",
   "source": "github-api",
   "events": [
     {
@@ -210,20 +210,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-09-24",
-    "window_end": "2026-09-30",
-    "commits": 9,
-    "pushes": 9,
+    "window_start": "2026-09-25",
+    "window_end": "2026-10-01",
+    "commits": 8,
+    "pushes": 8,
     "active_repos": 2,
-    "active_days": 4,
+    "active_days": 3,
     "most_active": "afinit_blog_page",
     "daily": [
-      {
-        "date": "2026-09-24",
-        "day": "THU",
-        "commits": 1,
-        "pushes": 1
-      },
       {
         "date": "2026-09-25",
         "day": "FRI",
@@ -259,39 +253,15 @@
         "day": "WED",
         "commits": 0,
         "pushes": 0
+      },
+      {
+        "date": "2026-10-01",
+        "day": "THU",
+        "commits": 0,
+        "pushes": 0
       }
     ],
     "matrix": [
-      {
-        "date": "2026-09-24",
-        "day": "THU",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
       {
         "date": "2026-09-25",
         "day": "FRI",
@@ -445,6 +415,36 @@
       {
         "date": "2026-09-30",
         "day": "WED",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-10-01",
+        "day": "THU",
         "hours": [
           0,
           0,
