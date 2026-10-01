@@ -24,18 +24,18 @@ from render_utils import (
 WIDTH = 1200
 HEIGHT = 720
 
-INK = "#030406"
-TEXT = "#F0EFEC"
-MUTED = "#8C8B91"
-DIM_TEXT = "#55575F"
-BORDER = "#292B32"
-TEAL = "#719B9D"
-BLUE = "#6D7DA4"
-VIOLET = "#857397"
-PLUM = "#987184"
-COPPER = "#A27F68"
-GOLD = "#A18E68"
-PEARL = "#C9D1CF"
+INK = "#040405"
+TEXT = "#E8E4DC"
+MUTED = "#918E88"
+DIM_TEXT = "#5B5B5D"
+BORDER = "#26272A"
+TEAL = "#7B8F8E"
+BLUE = "#707A86"
+VIOLET = "#77717B"
+PLUM = "#817171"
+COPPER = "#927D68"
+GOLD = "#A08C6E"
+PEARL = "#D7D3CA"
 
 
 def normalized_days(raw_days: object) -> list[dict]:
@@ -208,7 +208,6 @@ def main() -> None:
         pushed_at = "—"
         pushed_ago = "NO SIGNAL"
 
-    tagline = clip(status.get("tagline"), 70)
     synced_at = format_local(data.get("generated_at"), tz, "%Y.%m.%d  %H:%M")
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc">
@@ -216,9 +215,9 @@ def main() -> None:
   <desc id="desc">A flowing spectrum sculpture shaped by seven days of public GitHub activity.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#06090A" />
+      <stop offset="0" stop-color="#060708" />
       <stop offset="0.46" stop-color="{INK}" />
-      <stop offset="1" stop-color="#0A0608" />
+      <stop offset="1" stop-color="#090806" />
     </linearGradient>
     <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="{TEAL}">
@@ -256,6 +255,9 @@ def main() -> None:
     </filter>
     <style>
       .mono {{ font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }}
+      .sans {{ font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }}
+      .display {{ font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: {TEXT}; font-size: 38px; font-weight: 500; letter-spacing: -0.8px; }}
+      .label {{ font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #9B9892; font-size: 12px; font-weight: 500; letter-spacing: 1.15px; }}
       .cap {{ fill: {MUTED}; font-size: 11px; letter-spacing: 2.5px; }}
       .micro {{ fill: {DIM_TEXT}; font-size: 10px; letter-spacing: 1.4px; }}
       .nano {{ fill: #484A52; font-size: 8px; letter-spacing: 1.1px; }}
@@ -280,10 +282,10 @@ def main() -> None:
   <text class="mono nano" x="22" y="360" transform="rotate(-90 22 360)">GENERATIVE SIGNAL / PUBLIC GITHUB ACTIVITY</text>
 
   <!-- Editorial identity -->
-  <text class="mono micro" x="62" y="43" style="fill:{TEAL}">AFTERINIT / DEV NODE 01</text>
-  <text class="mono" x="60" y="105" fill="{TEXT}" font-size="59" font-weight="700" letter-spacing="8">AFTERINIT<tspan class="cursor" fill="{PEARL}">_</tspan></text>
-  <text class="mono cap" x="63" y="140">{x(status.get('role', 'JAVA BACKEND / COMPUTER SCIENCE'))}</text>
-  <text class="mono body" x="63" y="168">{x(tagline)}</text>
+  <text class="mono micro" x="62" y="42" style="fill:{TEAL}">DEVELOPER TELEMETRY / 01</text>
+  <text class="display" x="60" y="91">Backend systems,</text>
+  <text class="display" x="60" y="133" style="fill:#B8B3AB">built with intent.<tspan class="cursor" fill="{PEARL}">_</tspan></text>
+  <text class="label" x="63" y="168">JAVA BACKEND  ·  COMPUTER SCIENCE</text>
   <line x1="62" y1="188" x2="1138" y2="188" stroke="{BORDER}" />
   <line x1="62" y1="188" x2="225" y2="188" stroke="url(#spectrum)" stroke-width="2" />
 
@@ -291,7 +293,7 @@ def main() -> None:
   <rect x="1129" y="62" width="9" height="9" fill="{state_color}" filter="url(#glow)">
     <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
   </rect>
-  <text class="mono" x="1115" y="73" fill="{TEXT}" font-size="18" letter-spacing="2" text-anchor="end">{x(state)}</text>
+  <text class="sans" x="1115" y="73" fill="{TEXT}" font-size="17" font-weight="600" letter-spacing="1.2" text-anchor="end">{x(state)}</text>
   <text class="mono micro" x="1138" y="104" text-anchor="end">{x(relative_time(latest_at, now))}</text>
   <text class="mono nano" x="1138" y="132" text-anchor="end">SYNC / {x(synced_at)} {x(timezone_label)}</text>
 
@@ -327,12 +329,12 @@ def main() -> None:
   <!-- Minimal activity metadata -->
   <line x1="62" y1="554" x2="1138" y2="554" stroke="{BORDER}" />
   <text class="mono micro" x="62" y="581">LAST PUSH</text>
-  <text class="mono" x="62" y="615" fill="{TEXT}" font-size="19">{x(repository)}</text>
-  <text class="mono body" x="385" y="615">/ {x(branch)}</text>
-  <text class="mono body" x="62" y="645">{x(message)}</text>
+  <text class="sans" x="62" y="615" fill="{TEXT}" font-size="19" font-weight="600">{x(repository)}</text>
+  <text class="sans body" x="385" y="615">/ {x(branch)}</text>
+  <text class="sans body" x="62" y="645">{x(message)}</text>
 
   <text class="mono micro" x="1138" y="581" text-anchor="end">ACTIVITY / 7D</text>
-  <text class="mono" x="1138" y="615" fill="{TEXT}" font-size="19" text-anchor="end">{commits:02d} COMMITS  /  {pushes:02d} PUSHES</text>
+  <text class="sans" x="1138" y="615" fill="{TEXT}" font-size="18" font-weight="600" text-anchor="end">{commits:02d} COMMITS  /  {pushes:02d} PUSHES</text>
   <text class="mono micro" x="1138" y="645" text-anchor="end">{x(pushed_at)} {x(timezone_label)}  /  {x(pushed_ago)}</text>
 
   <text class="mono nano" x="62" y="686">PUBLIC ACTIVITY / GENERATED EVERY 06H</text>
