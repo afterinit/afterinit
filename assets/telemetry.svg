@@ -1,216 +1,127 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
-  <title id="title">afterinit activity core</title>
-  <desc id="desc">An animated developer compute core generated from recent public GitHub activity.</desc>
+  <title id="title">afterinit generative activity spectrum</title>
+  <desc id="desc">A flowing spectrum sculpture shaped by seven days of public GitHub activity.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#05080C" />
-      <stop offset="0.48" stop-color="#030407" />
-      <stop offset="1" stop-color="#0A060A" />
+      <stop offset="0" stop-color="#06090A" />
+      <stop offset="0.46" stop-color="#030406" />
+      <stop offset="1" stop-color="#0A0608" />
     </linearGradient>
     <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#78AEB8" />
-      <stop offset="0.28" stop-color="#7185B5" />
-      <stop offset="0.55" stop-color="#907CAD" />
-      <stop offset="0.78" stop-color="#A67D8B" />
-      <stop offset="1" stop-color="#AA936E" />
+      <stop offset="0" stop-color="#719B9D">
+        <animate attributeName="stop-color" values="#719B9D;#6D7DA4;#719B9D" dur="18s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="0.34" stop-color="#6D7DA4" />
+      <stop offset="0.56" stop-color="#857397">
+        <animate attributeName="stop-color" values="#857397;#987184;#857397" dur="16s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="0.78" stop-color="#987184" />
+      <stop offset="1" stop-color="#A27F68" />
     </linearGradient>
-    <linearGradient id="coreTop" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#78AEB8" stop-opacity="0.72" />
-      <stop offset="0.48" stop-color="#7185B5" stop-opacity="0.54" />
-      <stop offset="1" stop-color="#907CAD" stop-opacity="0.68" />
+    <linearGradient id="bandFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#719B9D" stop-opacity="0.08" />
+      <stop offset="0.5" stop-color="#857397" stop-opacity="0.30" />
+      <stop offset="1" stop-color="#987184" stop-opacity="0.04" />
     </linearGradient>
-    <linearGradient id="coreLeft" x1="0" y1="0" x2="0.8" y2="1">
-      <stop offset="0" stop-color="#263652" />
-      <stop offset="1" stop-color="#10141D" />
-    </linearGradient>
-    <linearGradient id="coreRight" x1="0" y1="0" x2="0.8" y2="1">
-      <stop offset="0" stop-color="#3B2943" />
-      <stop offset="1" stop-color="#151018" />
-    </linearGradient>
-    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#907CAD" stop-opacity="0.26" />
-      <stop offset="0.42" stop-color="#7185B5" stop-opacity="0.13" />
-      <stop offset="1" stop-color="#78AEB8" stop-opacity="0" />
+    <radialGradient id="auraLeft" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#719B9D" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#719B9D" stop-opacity="0" />
     </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#171A22" stroke-width="1" opacity="0.48" />
+    <radialGradient id="auraRight" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#987184" stop-opacity="0.15" />
+      <stop offset="1" stop-color="#987184" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grain" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#15171C" stroke-width="1" opacity="0.34" />
     </pattern>
-    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
     </filter>
-    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="18" />
+    <filter id="soft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="24" />
     </filter>
     <style>
       .mono { font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
-      .cap { fill: #8B8C96; font-size: 11px; letter-spacing: 2.5px; }
-      .micro { fill: #6F717C; font-size: 10px; letter-spacing: 1.35px; }
-      .nano { fill: #4F515A; font-size: 8px; letter-spacing: 1px; }
-      .body { fill: #A5A4AA; font-size: 13px; }
+      .cap { fill: #8C8B91; font-size: 11px; letter-spacing: 2.5px; }
+      .micro { fill: #55575F; font-size: 10px; letter-spacing: 1.4px; }
+      .nano { fill: #484A52; font-size: 8px; letter-spacing: 1.1px; }
+      .body { fill: #A09FA4; font-size: 13px; }
       .cursor { animation: blink 1.2s steps(1, end) infinite; }
       @keyframes blink { 0%, 46% { opacity: 1; } 47%, 100% { opacity: 0; } }
       @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
     </style>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1199" height="719" fill="url(#surface)" stroke="#292D37" />
-  <rect x="1" y="1" width="1198" height="718" fill="url(#grid)" opacity="0.30" />
-  <ellipse cx="855" cy="286" rx="370" ry="285" fill="url(#aura)" opacity="0.82" />
-  <ellipse cx="855" cy="286" rx="145" ry="105" fill="#907CAD" opacity="0.06" filter="url(#softGlow)">
-    <animate attributeName="opacity" values="0.035;0.12;0.035" dur="6s" repeatCount="indefinite" />
+  <rect x="0.5" y="0.5" width="1199" height="719" fill="url(#surface)" stroke="#292B32" />
+  <rect x="1" y="1" width="1198" height="718" fill="url(#grain)" opacity="0.34" />
+  <ellipse cx="180" cy="348" rx="330" ry="285" fill="url(#auraLeft)" opacity="0.72" filter="url(#soft)">
+    <animate attributeName="opacity" values="0.48;0.82;0.48" dur="14s" repeatCount="indefinite" />
+  </ellipse>
+  <ellipse cx="1010" cy="324" rx="360" ry="300" fill="url(#auraRight)" opacity="0.72" filter="url(#soft)">
+    <animate attributeName="opacity" values="0.78;0.46;0.78" dur="17s" repeatCount="indefinite" />
   </ellipse>
 
-  <path d="M 18 48 V 18 H 48 M 1152 18 H 1182 V 48 M 18 672 V 702 H 48 M 1152 702 H 1182 V 672"
-        fill="none" stroke="#343844" />
-  <path d="M 560 80 L 1118 570 M 650 64 L 1140 488 M 620 560 L 1112 112"
-        fill="none" stroke="#171A23" opacity="0.62" />
-  <text class="mono nano" x="24" y="360" transform="rotate(-90 24 360)">DEV NODE / TELEMETRY CHANNEL 01</text>
+  <path d="M 18 46 V 18 H 46 M 1154 18 H 1182 V 46 M 18 674 V 702 H 46 M 1154 702 H 1182 V 674"
+        fill="none" stroke="#353740" />
+  <text class="mono nano" x="22" y="360" transform="rotate(-90 22 360)">GENERATIVE SIGNAL / PUBLIC GITHUB ACTIVITY</text>
 
-  <!-- Identity / information plane -->
-  <text class="mono micro" x="60" y="46" style="fill:#78AEB8">SYS / AFTERINIT.01</text>
-  <text class="mono" x="60" y="103" fill="#F3F2F0" font-size="55" font-weight="700" letter-spacing="7">AFTERINIT<tspan class="cursor" fill="#78AEB8">_</tspan></text>
-  <text class="mono cap" x="62" y="138">JAVA BACKEND / COMPUTER SCIENCE</text>
-  <text class="mono body" x="62" y="169">Building backend systems and things worth using.</text>
-  <rect x="62" y="190" width="38" height="2" fill="#78AEB8" />
-  <rect x="108" y="190" width="26" height="2" fill="#7185B5" />
-  <rect x="142" y="190" width="18" height="2" fill="#907CAD" />
-  <rect x="168" y="190" width="12" height="2" fill="#A67D8B" />
+  <!-- Editorial identity -->
+  <text class="mono micro" x="62" y="43" style="fill:#719B9D">AFTERINIT / DEV NODE 01</text>
+  <text class="mono" x="60" y="105" fill="#F0EFEC" font-size="59" font-weight="700" letter-spacing="8">AFTERINIT<tspan class="cursor" fill="#C9D1CF">_</tspan></text>
+  <text class="mono cap" x="63" y="140">JAVA BACKEND / COMPUTER SCIENCE</text>
+  <text class="mono body" x="63" y="168">Building backend systems and things worth using.</text>
+  <line x1="62" y1="188" x2="1138" y2="188" stroke="#292B32" />
+  <line x1="62" y1="188" x2="225" y2="188" stroke="url(#spectrum)" stroke-width="2" />
 
-  <line x1="60" y1="215" x2="515" y2="215" stroke="#292D37" />
-  <text class="mono micro" x="60" y="239">NODE STATE</text>
-  <rect x="60" y="253" width="7" height="7" fill="#66717E" filter="url(#glow)">
+  <text class="mono micro" x="1138" y="44" text-anchor="end">GITHUB SIGNAL</text>
+  <rect x="1129" y="62" width="9" height="9" fill="#55575F" filter="url(#glow)">
     <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
   </rect>
-  <text class="mono" x="78" y="268" fill="#F3F2F0" font-size="20" letter-spacing="2">OFFLINE</text>
-  <line x1="213" y1="230" x2="213" y2="274" stroke="#292D37" />
-  <text class="mono micro" x="238" y="239">LAST SIGNAL</text>
-  <text class="mono" x="238" y="268" fill="#F3F2F0" font-size="15">2 DAYS AGO</text>
-  <line x1="397" y1="230" x2="397" y2="274" stroke="#292D37" />
-  <text class="mono micro" x="423" y="239">ACTIVITY</text>
-  <text class="mono" x="423" y="268" fill="#F3F2F0" font-size="15">08C / 08P</text>
+  <text class="mono" x="1115" y="73" fill="#F0EFEC" font-size="18" letter-spacing="2" text-anchor="end">OFFLINE</text>
+  <text class="mono micro" x="1138" y="104" text-anchor="end">2 DAYS AGO</text>
+  <text class="mono nano" x="1138" y="132" text-anchor="end">SYNC / 2026.10.01  13:51 UTC+8</text>
 
-  <text class="mono cap" x="60" y="303" style="fill:#78AEB8">ACTIVITY SPECTRUM / 7D</text>
-  <line x1="60" y1="390" x2="515" y2="390" stroke="#242832" />
-  <line x1="74" y1="306" x2="74" y2="390" stroke="#171A21" /><rect x="62" y="306" width="24" height="84" fill="#78AEB8" opacity="0.78"><animate attributeName="opacity" values="0.45;0.92;0.45" dur="4.2s" begin="0.00s" repeatCount="indefinite" /></rect><rect x="62" y="302" width="24" height="1" fill="#78AEB8" opacity="0.9" /><text class="mono micro" x="74" y="411" text-anchor="middle" style="fill:#78AEB8">FRI</text><text class="mono nano" x="74" y="428" text-anchor="middle">05</text><line x1="139" y1="306" x2="139" y2="390" stroke="#171A21" /><rect x="127" y="346" width="24" height="44" fill="#7185B5" opacity="0.78"><animate attributeName="opacity" values="0.45;0.92;0.45" dur="4.2s" begin="0.28s" repeatCount="indefinite" /></rect><rect x="127" y="342" width="24" height="1" fill="#7185B5" opacity="0.9" /><text class="mono micro" x="139" y="411" text-anchor="middle" style="fill:#7185B5">SAT</text><text class="mono nano" x="139" y="428" text-anchor="middle">02</text><line x1="204" y1="306" x2="204" y2="390" stroke="#171A21" /><rect x="192" y="359" width="24" height="31" fill="#907CAD" opacity="0.78"><animate attributeName="opacity" values="0.45;0.92;0.45" dur="4.2s" begin="0.56s" repeatCount="indefinite" /></rect><rect x="192" y="355" width="24" height="1" fill="#907CAD" opacity="0.9" /><text class="mono micro" x="204" y="411" text-anchor="middle" style="fill:#907CAD">SUN</text><text class="mono nano" x="204" y="428" text-anchor="middle">01</text><line x1="269" y1="306" x2="269" y2="390" stroke="#171A21" /><rect x="257" y="385" width="24" height="5" fill="#66717E" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="4.2s" begin="0.84s" repeatCount="indefinite" /></rect><rect x="257" y="381" width="24" height="1" fill="#66717E" opacity="0.9" /><text class="mono micro" x="269" y="411" text-anchor="middle" style="fill:#66717E">MON</text><text class="mono nano" x="269" y="428" text-anchor="middle">00</text><line x1="334" y1="306" x2="334" y2="390" stroke="#171A21" /><rect x="322" y="385" width="24" height="5" fill="#66717E" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="4.2s" begin="1.12s" repeatCount="indefinite" /></rect><rect x="322" y="381" width="24" height="1" fill="#66717E" opacity="0.9" /><text class="mono micro" x="334" y="411" text-anchor="middle" style="fill:#66717E">TUE</text><text class="mono nano" x="334" y="428" text-anchor="middle">00</text><line x1="399" y1="306" x2="399" y2="390" stroke="#171A21" /><rect x="387" y="385" width="24" height="5" fill="#66717E" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="4.2s" begin="1.40s" repeatCount="indefinite" /></rect><rect x="387" y="381" width="24" height="1" fill="#66717E" opacity="0.9" /><text class="mono micro" x="399" y="411" text-anchor="middle" style="fill:#66717E">WED</text><text class="mono nano" x="399" y="428" text-anchor="middle">00</text><line x1="464" y1="306" x2="464" y2="390" stroke="#171A21" /><rect x="452" y="385" width="24" height="5" fill="#66717E" opacity="0.2"><animate attributeName="opacity" values="0.12;0.3;0.12" dur="4.2s" begin="1.68s" repeatCount="indefinite" /></rect><rect x="452" y="381" width="24" height="1" fill="#66717E" opacity="0.9" /><text class="mono micro" x="464" y="411" text-anchor="middle" style="fill:#66717E">THU</text><text class="mono nano" x="464" y="428" text-anchor="middle">00</text>
-
-  <line x1="60" y1="452" x2="515" y2="452" stroke="#292D37" />
-  <text class="mono cap" x="60" y="480">LAST PUSH</text>
-  <text class="mono" x="60" y="518" fill="#F3F2F0" font-size="21">afinit_blog_page</text>
-  <text class="mono body" x="380" y="518">/ master</text>
-  <text class="mono body" x="60" y="552">3.2.4修复了手机端第一次切换深浅卡顿的bug</text>
-  <text class="mono micro" x="60" y="582">2026.09.27  /  21:39:04 UTC+8</text>
-  <text class="mono micro" x="515" y="582" text-anchor="end" style="fill:#AA936E">3 DAYS AGO</text>
-
-  <!-- Animated compute core -->
-  <text class="mono cap" x="635" y="63" style="fill:#907CAD">COMPUTE CORE / ACTIVITY DRIVEN</text>
-  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.10.01  13:51 UTC+8</text>
-  <path d="M 625 82 H 720 M 1050 82 H 1140 V 172 M 625 485 V 555 H 715 M 1050 555 H 1140 V 465"
-        fill="none" stroke="#303440" />
-
-  <!-- Circuit traces -->
-  <g fill="none" stroke-width="1">
-    <path d="M 647 151 H 708 L 774 216" stroke="#78AEB8" stroke-dasharray="5 9" opacity="0.62">
-      <animate attributeName="stroke-dashoffset" values="56;0" dur="5s" repeatCount="indefinite" />
-    </path>
-    <path d="M 1086 167 H 1024 L 930 230" stroke="#A67D8B" stroke-dasharray="5 9" opacity="0.58">
-      <animate attributeName="stroke-dashoffset" values="0;56" dur="5.8s" repeatCount="indefinite" />
-    </path>
-    <path d="M 642 433 H 715 L 785 357" stroke="#7F998E" stroke-dasharray="5 9" opacity="0.55">
-      <animate attributeName="stroke-dashoffset" values="48;0" dur="6.2s" repeatCount="indefinite" />
-    </path>
-    <path d="M 1088 432 H 1015 L 920 362" stroke="#AA936E" stroke-dasharray="5 9" opacity="0.60">
-      <animate attributeName="stroke-dashoffset" values="0;48" dur="5.4s" repeatCount="indefinite" />
-    </path>
-  </g>
-  <g class="mono nano">
-    <rect x="639" y="143" width="16" height="16" fill="none" stroke="#78AEB8" />
-    <text x="662" y="155" style="fill:#78AEB8">API</text>
-    <rect x="1078" y="159" width="16" height="16" fill="none" stroke="#A67D8B" />
-    <text x="1070" y="187" text-anchor="end" style="fill:#A67D8B">PUSH</text>
-    <rect x="634" y="425" width="16" height="16" fill="none" stroke="#7F998E" />
-    <text x="658" y="438" style="fill:#7F998E">CODE</text>
-    <rect x="1080" y="424" width="16" height="16" fill="none" stroke="#AA936E" />
-    <text x="1070" y="438" text-anchor="end" style="fill:#AA936E">BUILD</text>
-  </g>
-
-  <!-- Counter-rotating orbital system -->
-  <g transform="rotate(-14 855 286)">
-    <ellipse cx="855" cy="286" rx="250" ry="108" fill="none" stroke="url(#spectrum)"
-             stroke-width="1.2" stroke-dasharray="20 14" opacity="0.62">
-      <animateTransform attributeName="transform" type="rotate" from="0 855 286" to="360 855 286" dur="34s" repeatCount="indefinite" />
-    </ellipse>
-    <circle cx="605" cy="286" r="4" fill="#78AEB8" filter="url(#glow)">
-      <animateMotion path="M 605 286 A 250 108 0 1 1 1105 286 A 250 108 0 1 1 605 286" dur="10s" repeatCount="indefinite" />
-    </circle>
-  </g>
-  <g transform="rotate(18 855 286)">
-    <ellipse cx="855" cy="286" rx="198" ry="82" fill="none" stroke="url(#spectrum)"
-             stroke-width="1" stroke-dasharray="3 12" opacity="0.48">
-      <animateTransform attributeName="transform" type="rotate" from="360 855 286" to="0 855 286" dur="24s" repeatCount="indefinite" />
-    </ellipse>
-    <circle cx="657" cy="286" r="3.5" fill="#A67D8B" filter="url(#glow)">
-      <animateMotion path="M 657 286 A 198 82 0 1 0 1053 286 A 198 82 0 1 0 657 286" dur="7.5s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Isometric core -->
-  <polygon points="855,190 963,251 855,312 747,251" fill="none" stroke="url(#spectrum)" opacity="0.34" />
-  <polygon points="855,205 947,257 855,309 763,257" fill="url(#coreTop)" stroke="url(#spectrum)" stroke-width="1.3" />
-  <polygon points="763,257 855,309 855,391 763,339" fill="url(#coreLeft)" stroke="#7185B5" stroke-opacity="0.55" />
-  <polygon points="947,257 855,309 855,391 947,339" fill="url(#coreRight)" stroke="#A67D8B" stroke-opacity="0.55" />
-  <path d="M 855 309 V 391 M 763 257 L 855 309 L 947 257" fill="none" stroke="#B7A9C2" opacity="0.28" />
-  <path d="M 784 327 L 836 357 M 874 358 L 925 329" fill="none" stroke="url(#spectrum)" stroke-dasharray="5 7" opacity="0.64">
-    <animate attributeName="stroke-dashoffset" values="48;0" dur="5s" repeatCount="indefinite" />
-  </path>
-
+  <!-- Generative spectrum sculpture -->
   <g>
-    <polygon points="855,225 908,256 855,287 802,256" fill="url(#spectrum)" opacity="0.52" filter="url(#glow)">
-      <animate attributeName="opacity" values="0.28;0.76;0.28" dur="4s" repeatCount="indefinite" />
-    </polygon>
-    <polygon points="855,235 891,256 855,277 819,256" fill="#090B12" stroke="#F3F2F0" stroke-opacity="0.55"
-             stroke-dasharray="6 5">
-      <animate attributeName="stroke-dashoffset" values="44;0" dur="5.5s" repeatCount="indefinite" />
-      <animateTransform attributeName="transform" type="rotate" from="0 855 256" to="360 855 256" dur="28s" repeatCount="indefinite" />
-    </polygon>
-    <rect x="850" y="251" width="10" height="10" fill="#F3F2F0" filter="url(#glow)">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="1.8s" repeatCount="indefinite" />
+    <polygon points="112.0,307.7 288.0,348.1 265.0,393.1 137.0,374.7" fill="#719B9D" stroke="#719B9D" stroke-opacity="0.24" opacity="0.150"><animate attributeName="opacity" values="0.093;0.203;0.093" dur="6.9s" begin="-0.8s" repeatCount="indefinite" /></polygon><polygon points="272.0,334.1 448.0,320.4 425.0,365.4 297.0,401.1" fill="#6D7DA4" stroke="#6D7DA4" stroke-opacity="0.24" opacity="0.126"><animate attributeName="opacity" values="0.078;0.170;0.078" dur="7.6s" begin="-1.6s" repeatCount="indefinite" /></polygon><polygon points="432.0,306.4 608.0,307.0 585.0,352.0 457.0,373.4" fill="#857397" stroke="#857397" stroke-opacity="0.24" opacity="0.118"><animate attributeName="opacity" values="0.073;0.159;0.073" dur="8.3s" begin="-2.4s" repeatCount="indefinite" /></polygon><polygon points="592.0,293.0 768.0,316.8 745.0,361.8 617.0,360.0" fill="#987184" stroke="#987184" stroke-opacity="0.24" opacity="0.065"><animate attributeName="opacity" values="0.040;0.088;0.040" dur="9.0s" begin="-3.2s" repeatCount="indefinite" /></polygon><polygon points="752.0,302.8 928.0,340.5 905.0,385.5 777.0,369.8" fill="#A27F68" stroke="#A27F68" stroke-opacity="0.24" opacity="0.065"><animate attributeName="opacity" values="0.040;0.088;0.040" dur="9.7s" begin="-4.0s" repeatCount="indefinite" /></polygon><polygon points="912.0,326.5 1088.0,337.6 1065.0,382.6 937.0,393.5" fill="#A18E68" stroke="#A18E68" stroke-opacity="0.24" opacity="0.065"><animate attributeName="opacity" values="0.040;0.088;0.040" dur="10.4s" begin="-4.8s" repeatCount="indefinite" /></polygon><polygon points="1072.0,323.6 1248.0,300.5 1225.0,345.5 1097.0,390.6" fill="#719B9D" stroke="#719B9D" stroke-opacity="0.24" opacity="0.065"><animate attributeName="opacity" values="0.040;0.088;0.040" dur="11.1s" begin="-5.6s" repeatCount="indefinite" /></polygon>
+    <path d="M -40.0 368.0 C -13.3 359.5 66.7 320.9 120.0 316.7 C 173.3 312.6 226.7 343.4 280.0 343.1 C 333.3 342.9 386.7 322.2 440.0 315.4 C 493.3 308.5 546.7 302.6 600.0 302.0 C 653.3 301.4 706.7 306.2 760.0 311.8 C 813.3 317.4 866.7 332.0 920.0 335.5 C 973.3 338.9 1026.7 339.2 1080.0 332.6 C 1133.3 325.9 1213.3 301.7 1240.0 295.5 L 1240.0 335.5 C 1213.3 341.7 1133.3 365.9 1080.0 372.6 C 1026.7 379.2 973.3 378.9 920.0 375.5 C 866.7 372.0 813.3 357.4 760.0 351.8 C 706.7 346.2 653.3 341.4 600.0 342.0 C 546.7 342.6 493.3 348.5 440.0 355.4 C 386.7 362.2 333.3 382.9 280.0 383.1 C 226.7 383.4 173.3 352.6 120.0 356.7 C 66.7 360.9 -13.3 399.5 -40.0 408.0 Z" fill="url(#bandFill)" stroke="none" opacity="0.86" filter="url(#glow)">
+      <animate attributeName="d" values="M -40.0 368.0 C -13.3 359.5 66.7 320.9 120.0 316.7 C 173.3 312.6 226.7 343.4 280.0 343.1 C 333.3 342.9 386.7 322.2 440.0 315.4 C 493.3 308.5 546.7 302.6 600.0 302.0 C 653.3 301.4 706.7 306.2 760.0 311.8 C 813.3 317.4 866.7 332.0 920.0 335.5 C 973.3 338.9 1026.7 339.2 1080.0 332.6 C 1133.3 325.9 1213.3 301.7 1240.0 295.5 L 1240.0 335.5 C 1213.3 341.7 1133.3 365.9 1080.0 372.6 C 1026.7 379.2 973.3 378.9 920.0 375.5 C 866.7 372.0 813.3 357.4 760.0 351.8 C 706.7 346.2 653.3 341.4 600.0 342.0 C 546.7 342.6 493.3 348.5 440.0 355.4 C 386.7 362.2 333.3 382.9 280.0 383.1 C 226.7 383.4 173.3 352.6 120.0 356.7 C 66.7 360.9 -13.3 399.5 -40.0 408.0 Z;M -40.0 390.0 C -13.3 379.6 66.7 337.1 120.0 327.3 C 173.3 317.5 226.7 336.9 280.0 331.3 C 333.3 325.6 386.7 299.8 440.0 293.4 C 493.3 287.0 546.7 287.5 600.0 292.8 C 653.3 298.0 706.7 314.1 760.0 324.9 C 813.3 335.6 866.7 354.7 920.0 357.2 C 973.3 359.8 1026.7 353.1 1080.0 340.4 C 1133.3 327.7 1213.3 291.1 1240.0 281.3 L 1240.0 321.3 C 1213.3 331.1 1133.3 367.7 1080.0 380.4 C 1026.7 393.1 973.3 399.8 920.0 397.2 C 866.7 394.7 813.3 375.6 760.0 364.9 C 706.7 354.1 653.3 338.0 600.0 332.8 C 546.7 327.5 493.3 327.0 440.0 333.4 C 386.7 339.8 333.3 365.6 280.0 371.3 C 226.7 376.9 173.3 357.5 120.0 367.3 C 66.7 377.1 -13.3 419.6 -40.0 430.0 Z;M -40.0 368.0 C -13.3 359.5 66.7 320.9 120.0 316.7 C 173.3 312.6 226.7 343.4 280.0 343.1 C 333.3 342.9 386.7 322.2 440.0 315.4 C 493.3 308.5 546.7 302.6 600.0 302.0 C 653.3 301.4 706.7 306.2 760.0 311.8 C 813.3 317.4 866.7 332.0 920.0 335.5 C 973.3 338.9 1026.7 339.2 1080.0 332.6 C 1133.3 325.9 1213.3 301.7 1240.0 295.5 L 1240.0 335.5 C 1213.3 341.7 1133.3 365.9 1080.0 372.6 C 1026.7 379.2 973.3 378.9 920.0 375.5 C 866.7 372.0 813.3 357.4 760.0 351.8 C 706.7 346.2 653.3 341.4 600.0 342.0 C 546.7 342.6 493.3 348.5 440.0 355.4 C 386.7 362.2 333.3 382.9 280.0 383.1 C 226.7 383.4 173.3 352.6 120.0 356.7 C 66.7 360.9 -13.3 399.5 -40.0 408.0 Z" dur="18s" repeatCount="indefinite" />
+    </path>
+    <path d="M -40.0 312.0 C -13.3 303.5 66.7 264.9 120.0 260.7 C 173.3 256.6 226.7 287.4 280.0 287.1 C 333.3 286.9 386.7 266.2 440.0 259.4 C 493.3 252.5 546.7 246.6 600.0 246.0 C 653.3 245.4 706.7 250.2 760.0 255.8 C 813.3 261.4 866.7 276.0 920.0 279.5 C 973.3 282.9 1026.7 283.2 1080.0 276.6 C 1133.3 269.9 1213.3 245.7 1240.0 239.5" fill="none" stroke="#719B9D" stroke-width="0.8" opacity="0.18"><animate attributeName="d" values="M -40.0 312.0 C -13.3 303.5 66.7 264.9 120.0 260.7 C 173.3 256.6 226.7 287.4 280.0 287.1 C 333.3 286.9 386.7 266.2 440.0 259.4 C 493.3 252.5 546.7 246.6 600.0 246.0 C 653.3 245.4 706.7 250.2 760.0 255.8 C 813.3 261.4 866.7 276.0 920.0 279.5 C 973.3 282.9 1026.7 283.2 1080.0 276.6 C 1133.3 269.9 1213.3 245.7 1240.0 239.5;M -40.0 334.0 C -13.3 323.6 66.7 281.1 120.0 271.3 C 173.3 261.5 226.7 280.9 280.0 275.3 C 333.3 269.6 386.7 243.8 440.0 237.4 C 493.3 231.0 546.7 231.5 600.0 236.8 C 653.3 242.0 706.7 258.1 760.0 268.9 C 813.3 279.6 866.7 298.7 920.0 301.2 C 973.3 303.8 1026.7 297.1 1080.0 284.4 C 1133.3 271.7 1213.3 235.1 1240.0 225.3;M -40.0 312.0 C -13.3 303.5 66.7 264.9 120.0 260.7 C 173.3 256.6 226.7 287.4 280.0 287.1 C 333.3 286.9 386.7 266.2 440.0 259.4 C 493.3 252.5 546.7 246.6 600.0 246.0 C 653.3 245.4 706.7 250.2 760.0 255.8 C 813.3 261.4 866.7 276.0 920.0 279.5 C 973.3 282.9 1026.7 283.2 1080.0 276.6 C 1133.3 269.9 1213.3 245.7 1240.0 239.5" dur="15.0s" repeatCount="indefinite" /></path><path d="M -40.0 335.0 C -13.3 326.5 66.7 287.9 120.0 283.7 C 173.3 279.6 226.7 310.4 280.0 310.1 C 333.3 309.9 386.7 289.2 440.0 282.4 C 493.3 275.5 546.7 269.6 600.0 269.0 C 653.3 268.4 706.7 273.2 760.0 278.8 C 813.3 284.4 866.7 299.0 920.0 302.5 C 973.3 305.9 1026.7 306.2 1080.0 299.6 C 1133.3 292.9 1213.3 268.7 1240.0 262.5" fill="none" stroke="#6D7DA4" stroke-width="0.8" opacity="0.21" stroke-dasharray="8 13"><animate attributeName="d" values="M -40.0 335.0 C -13.3 326.5 66.7 287.9 120.0 283.7 C 173.3 279.6 226.7 310.4 280.0 310.1 C 333.3 309.9 386.7 289.2 440.0 282.4 C 493.3 275.5 546.7 269.6 600.0 269.0 C 653.3 268.4 706.7 273.2 760.0 278.8 C 813.3 284.4 866.7 299.0 920.0 302.5 C 973.3 305.9 1026.7 306.2 1080.0 299.6 C 1133.3 292.9 1213.3 268.7 1240.0 262.5;M -40.0 357.0 C -13.3 346.6 66.7 304.1 120.0 294.3 C 173.3 284.5 226.7 303.9 280.0 298.3 C 333.3 292.6 386.7 266.8 440.0 260.4 C 493.3 254.0 546.7 254.5 600.0 259.8 C 653.3 265.0 706.7 281.1 760.0 291.9 C 813.3 302.6 866.7 321.7 920.0 324.2 C 973.3 326.8 1026.7 320.1 1080.0 307.4 C 1133.3 294.7 1213.3 258.1 1240.0 248.3;M -40.0 335.0 C -13.3 326.5 66.7 287.9 120.0 283.7 C 173.3 279.6 226.7 310.4 280.0 310.1 C 333.3 309.9 386.7 289.2 440.0 282.4 C 493.3 275.5 546.7 269.6 600.0 269.0 C 653.3 268.4 706.7 273.2 760.0 278.8 C 813.3 284.4 866.7 299.0 920.0 302.5 C 973.3 305.9 1026.7 306.2 1080.0 299.6 C 1133.3 292.9 1213.3 268.7 1240.0 262.5" dur="16.3s" repeatCount="indefinite" /><animate attributeName="stroke-dashoffset" values="126;0;-126" dur="19s" repeatCount="indefinite" /></path><path d="M -40.0 354.0 C -13.3 345.5 66.7 306.9 120.0 302.7 C 173.3 298.6 226.7 329.4 280.0 329.1 C 333.3 328.9 386.7 308.2 440.0 301.4 C 493.3 294.5 546.7 288.6 600.0 288.0 C 653.3 287.4 706.7 292.2 760.0 297.8 C 813.3 303.4 866.7 318.0 920.0 321.5 C 973.3 324.9 1026.7 325.2 1080.0 318.6 C 1133.3 311.9 1213.3 287.7 1240.0 281.5" fill="none" stroke="#857397" stroke-width="0.8" opacity="0.25"><animate attributeName="d" values="M -40.0 354.0 C -13.3 345.5 66.7 306.9 120.0 302.7 C 173.3 298.6 226.7 329.4 280.0 329.1 C 333.3 328.9 386.7 308.2 440.0 301.4 C 493.3 294.5 546.7 288.6 600.0 288.0 C 653.3 287.4 706.7 292.2 760.0 297.8 C 813.3 303.4 866.7 318.0 920.0 321.5 C 973.3 324.9 1026.7 325.2 1080.0 318.6 C 1133.3 311.9 1213.3 287.7 1240.0 281.5;M -40.0 376.0 C -13.3 365.6 66.7 323.1 120.0 313.3 C 173.3 303.5 226.7 322.9 280.0 317.3 C 333.3 311.6 386.7 285.8 440.0 279.4 C 493.3 273.0 546.7 273.5 600.0 278.8 C 653.3 284.0 706.7 300.1 760.0 310.9 C 813.3 321.6 866.7 340.7 920.0 343.2 C 973.3 345.8 1026.7 339.1 1080.0 326.4 C 1133.3 313.7 1213.3 277.1 1240.0 267.3;M -40.0 354.0 C -13.3 345.5 66.7 306.9 120.0 302.7 C 173.3 298.6 226.7 329.4 280.0 329.1 C 333.3 328.9 386.7 308.2 440.0 301.4 C 493.3 294.5 546.7 288.6 600.0 288.0 C 653.3 287.4 706.7 292.2 760.0 297.8 C 813.3 303.4 866.7 318.0 920.0 321.5 C 973.3 324.9 1026.7 325.2 1080.0 318.6 C 1133.3 311.9 1213.3 287.7 1240.0 281.5" dur="17.6s" repeatCount="indefinite" /></path><path d="M -40.0 371.0 C -13.3 362.5 66.7 323.9 120.0 319.7 C 173.3 315.6 226.7 346.4 280.0 346.1 C 333.3 345.9 386.7 325.2 440.0 318.4 C 493.3 311.5 546.7 305.6 600.0 305.0 C 653.3 304.4 706.7 309.2 760.0 314.8 C 813.3 320.4 866.7 335.0 920.0 338.5 C 973.3 341.9 1026.7 342.2 1080.0 335.6 C 1133.3 328.9 1213.3 304.7 1240.0 298.5" fill="none" stroke="#987184" stroke-width="1.25" opacity="0.29"><animate attributeName="d" values="M -40.0 371.0 C -13.3 362.5 66.7 323.9 120.0 319.7 C 173.3 315.6 226.7 346.4 280.0 346.1 C 333.3 345.9 386.7 325.2 440.0 318.4 C 493.3 311.5 546.7 305.6 600.0 305.0 C 653.3 304.4 706.7 309.2 760.0 314.8 C 813.3 320.4 866.7 335.0 920.0 338.5 C 973.3 341.9 1026.7 342.2 1080.0 335.6 C 1133.3 328.9 1213.3 304.7 1240.0 298.5;M -40.0 393.0 C -13.3 382.6 66.7 340.1 120.0 330.3 C 173.3 320.5 226.7 339.9 280.0 334.3 C 333.3 328.6 386.7 302.8 440.0 296.4 C 493.3 290.0 546.7 290.5 600.0 295.8 C 653.3 301.0 706.7 317.1 760.0 327.9 C 813.3 338.6 866.7 357.7 920.0 360.2 C 973.3 362.8 1026.7 356.1 1080.0 343.4 C 1133.3 330.7 1213.3 294.1 1240.0 284.3;M -40.0 371.0 C -13.3 362.5 66.7 323.9 120.0 319.7 C 173.3 315.6 226.7 346.4 280.0 346.1 C 333.3 345.9 386.7 325.2 440.0 318.4 C 493.3 311.5 546.7 305.6 600.0 305.0 C 653.3 304.4 706.7 309.2 760.0 314.8 C 813.3 320.4 866.7 335.0 920.0 338.5 C 973.3 341.9 1026.7 342.2 1080.0 335.6 C 1133.3 328.9 1213.3 304.7 1240.0 298.5" dur="18.9s" repeatCount="indefinite" /></path><path d="M -40.0 388.0 C -13.3 379.5 66.7 340.9 120.0 336.7 C 173.3 332.6 226.7 363.4 280.0 363.1 C 333.3 362.9 386.7 342.2 440.0 335.4 C 493.3 328.5 546.7 322.6 600.0 322.0 C 653.3 321.4 706.7 326.2 760.0 331.8 C 813.3 337.4 866.7 352.0 920.0 355.5 C 973.3 358.9 1026.7 359.2 1080.0 352.6 C 1133.3 345.9 1213.3 321.7 1240.0 315.5" fill="none" stroke="#A27F68" stroke-width="1.25" opacity="0.32"><animate attributeName="d" values="M -40.0 388.0 C -13.3 379.5 66.7 340.9 120.0 336.7 C 173.3 332.6 226.7 363.4 280.0 363.1 C 333.3 362.9 386.7 342.2 440.0 335.4 C 493.3 328.5 546.7 322.6 600.0 322.0 C 653.3 321.4 706.7 326.2 760.0 331.8 C 813.3 337.4 866.7 352.0 920.0 355.5 C 973.3 358.9 1026.7 359.2 1080.0 352.6 C 1133.3 345.9 1213.3 321.7 1240.0 315.5;M -40.0 410.0 C -13.3 399.6 66.7 357.1 120.0 347.3 C 173.3 337.5 226.7 356.9 280.0 351.3 C 333.3 345.6 386.7 319.8 440.0 313.4 C 493.3 307.0 546.7 307.5 600.0 312.8 C 653.3 318.0 706.7 334.1 760.0 344.9 C 813.3 355.6 866.7 374.7 920.0 377.2 C 973.3 379.8 1026.7 373.1 1080.0 360.4 C 1133.3 347.7 1213.3 311.1 1240.0 301.3;M -40.0 388.0 C -13.3 379.5 66.7 340.9 120.0 336.7 C 173.3 332.6 226.7 363.4 280.0 363.1 C 333.3 362.9 386.7 342.2 440.0 335.4 C 493.3 328.5 546.7 322.6 600.0 322.0 C 653.3 321.4 706.7 326.2 760.0 331.8 C 813.3 337.4 866.7 352.0 920.0 355.5 C 973.3 358.9 1026.7 359.2 1080.0 352.6 C 1133.3 345.9 1213.3 321.7 1240.0 315.5" dur="20.2s" repeatCount="indefinite" /></path><path d="M -40.0 408.0 C -13.3 399.5 66.7 360.9 120.0 356.7 C 173.3 352.6 226.7 383.4 280.0 383.1 C 333.3 382.9 386.7 362.2 440.0 355.4 C 493.3 348.5 546.7 342.6 600.0 342.0 C 653.3 341.4 706.7 346.2 760.0 351.8 C 813.3 357.4 866.7 372.0 920.0 375.5 C 973.3 378.9 1026.7 379.2 1080.0 372.6 C 1133.3 365.9 1213.3 341.7 1240.0 335.5" fill="none" stroke="#A18E68" stroke-width="0.8" opacity="0.35"><animate attributeName="d" values="M -40.0 408.0 C -13.3 399.5 66.7 360.9 120.0 356.7 C 173.3 352.6 226.7 383.4 280.0 383.1 C 333.3 382.9 386.7 362.2 440.0 355.4 C 493.3 348.5 546.7 342.6 600.0 342.0 C 653.3 341.4 706.7 346.2 760.0 351.8 C 813.3 357.4 866.7 372.0 920.0 375.5 C 973.3 378.9 1026.7 379.2 1080.0 372.6 C 1133.3 365.9 1213.3 341.7 1240.0 335.5;M -40.0 430.0 C -13.3 419.6 66.7 377.1 120.0 367.3 C 173.3 357.5 226.7 376.9 280.0 371.3 C 333.3 365.6 386.7 339.8 440.0 333.4 C 493.3 327.0 546.7 327.5 600.0 332.8 C 653.3 338.0 706.7 354.1 760.0 364.9 C 813.3 375.6 866.7 394.7 920.0 397.2 C 973.3 399.8 1026.7 393.1 1080.0 380.4 C 1133.3 367.7 1213.3 331.1 1240.0 321.3;M -40.0 408.0 C -13.3 399.5 66.7 360.9 120.0 356.7 C 173.3 352.6 226.7 383.4 280.0 383.1 C 333.3 382.9 386.7 362.2 440.0 355.4 C 493.3 348.5 546.7 342.6 600.0 342.0 C 653.3 341.4 706.7 346.2 760.0 351.8 C 813.3 357.4 866.7 372.0 920.0 375.5 C 973.3 378.9 1026.7 379.2 1080.0 372.6 C 1133.3 365.9 1213.3 341.7 1240.0 335.5" dur="21.5s" repeatCount="indefinite" /></path><path d="M -40.0 431.0 C -13.3 422.5 66.7 383.9 120.0 379.7 C 173.3 375.6 226.7 406.4 280.0 406.1 C 333.3 405.9 386.7 385.2 440.0 378.4 C 493.3 371.5 546.7 365.6 600.0 365.0 C 653.3 364.4 706.7 369.2 760.0 374.8 C 813.3 380.4 866.7 395.0 920.0 398.5 C 973.3 401.9 1026.7 402.2 1080.0 395.6 C 1133.3 388.9 1213.3 364.7 1240.0 358.5" fill="none" stroke="#719B9D" stroke-width="0.8" opacity="0.39" stroke-dasharray="8 13"><animate attributeName="d" values="M -40.0 431.0 C -13.3 422.5 66.7 383.9 120.0 379.7 C 173.3 375.6 226.7 406.4 280.0 406.1 C 333.3 405.9 386.7 385.2 440.0 378.4 C 493.3 371.5 546.7 365.6 600.0 365.0 C 653.3 364.4 706.7 369.2 760.0 374.8 C 813.3 380.4 866.7 395.0 920.0 398.5 C 973.3 401.9 1026.7 402.2 1080.0 395.6 C 1133.3 388.9 1213.3 364.7 1240.0 358.5;M -40.0 453.0 C -13.3 442.6 66.7 400.1 120.0 390.3 C 173.3 380.5 226.7 399.9 280.0 394.3 C 333.3 388.6 386.7 362.8 440.0 356.4 C 493.3 350.0 546.7 350.5 600.0 355.8 C 653.3 361.0 706.7 377.1 760.0 387.9 C 813.3 398.6 866.7 417.7 920.0 420.2 C 973.3 422.8 1026.7 416.1 1080.0 403.4 C 1133.3 390.7 1213.3 354.1 1240.0 344.3;M -40.0 431.0 C -13.3 422.5 66.7 383.9 120.0 379.7 C 173.3 375.6 226.7 406.4 280.0 406.1 C 333.3 405.9 386.7 385.2 440.0 378.4 C 493.3 371.5 546.7 365.6 600.0 365.0 C 653.3 364.4 706.7 369.2 760.0 374.8 C 813.3 380.4 866.7 395.0 920.0 398.5 C 973.3 401.9 1026.7 402.2 1080.0 395.6 C 1133.3 388.9 1213.3 364.7 1240.0 358.5" dur="22.8s" repeatCount="indefinite" /><animate attributeName="stroke-dashoffset" values="126;0;-126" dur="24s" repeatCount="indefinite" /></path><path d="M -40.0 458.0 C -13.3 449.5 66.7 410.9 120.0 406.7 C 173.3 402.6 226.7 433.4 280.0 433.1 C 333.3 432.9 386.7 412.2 440.0 405.4 C 493.3 398.5 546.7 392.6 600.0 392.0 C 653.3 391.4 706.7 396.2 760.0 401.8 C 813.3 407.4 866.7 422.0 920.0 425.5 C 973.3 428.9 1026.7 429.2 1080.0 422.6 C 1133.3 415.9 1213.3 391.7 1240.0 385.5" fill="none" stroke="#857397" stroke-width="0.8" opacity="0.43"><animate attributeName="d" values="M -40.0 458.0 C -13.3 449.5 66.7 410.9 120.0 406.7 C 173.3 402.6 226.7 433.4 280.0 433.1 C 333.3 432.9 386.7 412.2 440.0 405.4 C 493.3 398.5 546.7 392.6 600.0 392.0 C 653.3 391.4 706.7 396.2 760.0 401.8 C 813.3 407.4 866.7 422.0 920.0 425.5 C 973.3 428.9 1026.7 429.2 1080.0 422.6 C 1133.3 415.9 1213.3 391.7 1240.0 385.5;M -40.0 480.0 C -13.3 469.6 66.7 427.1 120.0 417.3 C 173.3 407.5 226.7 426.9 280.0 421.3 C 333.3 415.6 386.7 389.8 440.0 383.4 C 493.3 377.0 546.7 377.5 600.0 382.8 C 653.3 388.0 706.7 404.1 760.0 414.9 C 813.3 425.6 866.7 444.7 920.0 447.2 C 973.3 449.8 1026.7 443.1 1080.0 430.4 C 1133.3 417.7 1213.3 381.1 1240.0 371.3;M -40.0 458.0 C -13.3 449.5 66.7 410.9 120.0 406.7 C 173.3 402.6 226.7 433.4 280.0 433.1 C 333.3 432.9 386.7 412.2 440.0 405.4 C 493.3 398.5 546.7 392.6 600.0 392.0 C 653.3 391.4 706.7 396.2 760.0 401.8 C 813.3 407.4 866.7 422.0 920.0 425.5 C 973.3 428.9 1026.7 429.2 1080.0 422.6 C 1133.3 415.9 1213.3 391.7 1240.0 385.5" dur="24.1s" repeatCount="indefinite" /></path>
+    <path d="M -40.0 388.0 C -13.3 379.5 66.7 340.9 120.0 336.7 C 173.3 332.6 226.7 363.4 280.0 363.1 C 333.3 362.9 386.7 342.2 440.0 335.4 C 493.3 328.5 546.7 322.6 600.0 322.0 C 653.3 321.4 706.7 326.2 760.0 331.8 C 813.3 337.4 866.7 352.0 920.0 355.5 C 973.3 358.9 1026.7 359.2 1080.0 352.6 C 1133.3 345.9 1213.3 321.7 1240.0 315.5" fill="none" stroke="url(#spectrum)" stroke-width="2" opacity="0.88"
+          stroke-dasharray="22 15">
+      <animate attributeName="stroke-dashoffset" values="370;0;-370" dur="15s" repeatCount="indefinite" />
+    </path>
+    <circle cx="-40.0" cy="388.0" r="4" fill="#C9D1CF" filter="url(#glow)">
+      <animateMotion path="M 0.0 0.0 C 26.7 -8.5 106.7 -47.1 160.0 -51.3 C 213.3 -55.4 266.7 -24.6 320.0 -24.9 C 373.3 -25.1 426.7 -45.8 480.0 -52.6 C 533.3 -59.5 586.7 -65.4 640.0 -66.0 C 693.3 -66.6 746.7 -61.8 800.0 -56.2 C 853.3 -50.6 906.7 -36.0 960.0 -32.5 C 1013.3 -29.1 1066.7 -28.8 1120.0 -35.4 C 1173.3 -42.1 1253.3 -66.3 1280.0 -72.5" dur="9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-40.0" cy="388.0" r="3" fill="#987184" filter="url(#glow)">
+      <animateMotion path="M 0.0 0.0 C 26.7 -8.5 106.7 -47.1 160.0 -51.3 C 213.3 -55.4 266.7 -24.6 320.0 -24.9 C 373.3 -25.1 426.7 -45.8 480.0 -52.6 C 533.3 -59.5 586.7 -65.4 640.0 -66.0 C 693.3 -66.6 746.7 -61.8 800.0 -56.2 C 853.3 -50.6 906.7 -36.0 960.0 -32.5 C 1013.3 -29.1 1066.7 -28.8 1120.0 -35.4 C 1173.3 -42.1 1253.3 -66.3 1280.0 -72.5" dur="12s" begin="-5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-40.0" cy="388.0" r="2.5" fill="#719B9D" filter="url(#glow)">
+      <animateMotion path="M 0.0 0.0 C 26.7 -8.5 106.7 -47.1 160.0 -51.3 C 213.3 -55.4 266.7 -24.6 320.0 -24.9 C 373.3 -25.1 426.7 -45.8 480.0 -52.6 C 533.3 -59.5 586.7 -65.4 640.0 -66.0 C 693.3 -66.6 746.7 -61.8 800.0 -56.2 C 853.3 -50.6 906.7 -36.0 960.0 -32.5 C 1013.3 -29.1 1066.7 -28.8 1120.0 -35.4 C 1173.3 -42.1 1253.3 -66.3 1280.0 -72.5" dur="15s" begin="-10s" repeatCount="indefinite" />
+    </circle>
+    <rect x="597.0" y="319.0" width="6" height="6"
+          fill="#C9D1CF" opacity="0.54" transform="rotate(45 600.0 322.0)">
+      <animate attributeName="opacity" values="0.28;0.82;0.28" dur="4.6s" repeatCount="indefinite" />
     </rect>
   </g>
 
-  <!-- Moving circuit packets -->
-  <circle cx="647" cy="151" r="2.8" fill="#78AEB8" filter="url(#glow)">
-    <animateMotion path="M 647 151 H 708 L 807 250" dur="4.8s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="1088" cy="432" r="2.8" fill="#AA936E" filter="url(#glow)">
-    <animateMotion path="M 1088 432 H 1015 L 904 348" dur="5.2s" begin="-1.7s" repeatCount="indefinite" />
-  </circle>
+  <!-- Seven-day sampling track -->
+  <line x1="64" y1="504" x2="194" y2="504" stroke="#719B9D" stroke-width="2" opacity="0.82" /><rect x="64" y="500" width="8" height="8" fill="#719B9D" opacity="0.82"><animate attributeName="opacity" values="0.37;0.82;0.37" dur="4s" begin="0.0s" repeatCount="indefinite" /></rect><text class="mono nano" x="64" y="527" style="fill:#719B9D">FRI / 05</text><line x1="217" y1="504" x2="347" y2="504" stroke="#6D7DA4" stroke-width="2" opacity="0.82" /><rect x="217" y="500" width="8" height="8" fill="#6D7DA4" opacity="0.82"><animate attributeName="opacity" values="0.37;0.82;0.37" dur="4s" begin="0.3s" repeatCount="indefinite" /></rect><text class="mono nano" x="217" y="527" style="fill:#6D7DA4">SAT / 02</text><line x1="370" y1="504" x2="500" y2="504" stroke="#857397" stroke-width="2" opacity="0.82" /><rect x="370" y="500" width="8" height="8" fill="#857397" opacity="0.82"><animate attributeName="opacity" values="0.37;0.82;0.37" dur="4s" begin="0.6s" repeatCount="indefinite" /></rect><text class="mono nano" x="370" y="527" style="fill:#857397">SUN / 01</text><line x1="523" y1="504" x2="653" y2="504" stroke="#292B32" stroke-width="2" opacity="0.38" /><rect x="523" y="500" width="8" height="8" fill="#292B32" opacity="0.38"><animate attributeName="opacity" values="0.17;0.38;0.17" dur="4s" begin="0.9s" repeatCount="indefinite" /></rect><text class="mono nano" x="523" y="527" style="fill:#292B32">MON / 00</text><line x1="676" y1="504" x2="806" y2="504" stroke="#292B32" stroke-width="2" opacity="0.38" /><rect x="676" y="500" width="8" height="8" fill="#292B32" opacity="0.38"><animate attributeName="opacity" values="0.17;0.38;0.17" dur="4s" begin="1.2s" repeatCount="indefinite" /></rect><text class="mono nano" x="676" y="527" style="fill:#292B32">TUE / 00</text><line x1="829" y1="504" x2="959" y2="504" stroke="#292B32" stroke-width="2" opacity="0.38" /><rect x="829" y="500" width="8" height="8" fill="#292B32" opacity="0.38"><animate attributeName="opacity" values="0.17;0.38;0.17" dur="4s" begin="1.5s" repeatCount="indefinite" /></rect><text class="mono nano" x="829" y="527" style="fill:#292B32">WED / 00</text><line x1="982" y1="504" x2="1112" y2="504" stroke="#292B32" stroke-width="2" opacity="0.38" /><rect x="982" y="500" width="8" height="8" fill="#292B32" opacity="0.38"><animate attributeName="opacity" values="0.17;0.38;0.17" dur="4s" begin="1.8s" repeatCount="indefinite" /></rect><text class="mono nano" x="982" y="527" style="fill:#292B32">THU / 00</text>
 
-  <text class="mono micro" x="855" y="469" text-anchor="middle">CURRENT PROCESS</text>
-  <text class="mono" x="855" y="496" text-anchor="middle" fill="#F3F2F0" font-size="16" letter-spacing="1.8">Code Generator</text>
-  <text class="mono nano" x="855" y="519" text-anchor="middle" style="fill:#907CAD">SIGNAL / 08 COMMITS / 08 PUSHES</text>
+  <!-- Minimal activity metadata -->
+  <line x1="62" y1="554" x2="1138" y2="554" stroke="#292B32" />
+  <text class="mono micro" x="62" y="581">LAST PUSH</text>
+  <text class="mono" x="62" y="615" fill="#F0EFEC" font-size="19">afinit_blog_page</text>
+  <text class="mono body" x="385" y="615">/ master</text>
+  <text class="mono body" x="62" y="645">3.2.4修复了手机端第一次切换深浅卡顿的bug</text>
 
-  <!-- System data rail -->
-  <line x1="60" y1="626" x2="1140" y2="626" stroke="url(#spectrum)" opacity="0.58" />
-  <g>
-    <rect x="56" y="622" width="8" height="8" fill="#78AEB8" />
-    <rect x="413" y="622" width="8" height="8" fill="#7185B5" />
-    <rect x="773" y="622" width="8" height="8" fill="#907CAD" />
-    <rect x="1136" y="622" width="8" height="8" fill="#AA936E" />
-    <circle cx="60" cy="626" r="4" fill="#F3F2F0" filter="url(#glow)">
-      <animate attributeName="cx" values="60;1140" dur="5.8s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.94;1" dur="5.8s" repeatCount="indefinite" />
-    </circle>
-  </g>
-  <text class="mono micro" x="60" y="656" style="fill:#78AEB8">CODE</text>
-  <text class="mono micro" x="417" y="656" text-anchor="middle" style="fill:#7185B5">COMMIT</text>
-  <text class="mono micro" x="777" y="656" text-anchor="middle" style="fill:#907CAD">PUSH</text>
-  <text class="mono micro" x="1140" y="656" text-anchor="end" style="fill:#AA936E">BUILD</text>
-  <text class="mono nano" x="60" y="690">PUBLIC GITHUB TELEMETRY / ACTIVITY STATE IS NOT LIVE PRESENCE</text>
-  <text class="mono nano" x="1140" y="690" text-anchor="end">AUTO SYNC / 06H</text>
+  <text class="mono micro" x="1138" y="581" text-anchor="end">ACTIVITY / 7D</text>
+  <text class="mono" x="1138" y="615" fill="#F0EFEC" font-size="19" text-anchor="end">08 COMMITS  /  08 PUSHES</text>
+  <text class="mono micro" x="1138" y="645" text-anchor="end">2026.09.27  /  21:39:04 UTC+8  /  3 DAYS AGO</text>
 
-  <!-- Slow glass scan -->
-  <rect x="0" y="1" width="1" height="718" fill="#78AEB8" opacity="0.06">
-    <animate attributeName="x" values="1;1198;1" dur="18s" repeatCount="indefinite" />
-  </rect>
+  <text class="mono nano" x="62" y="686">PUBLIC ACTIVITY / GENERATED EVERY 06H</text>
+  <text class="mono nano" x="1138" y="686" text-anchor="end">ACTIVITY STATE IS NOT LIVE PRESENCE</text>
 </svg>
