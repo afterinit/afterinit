@@ -80,7 +80,8 @@ class TelemetryTests(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         match = re.search(r"\./assets/telemetry\.svg\?v=([0-9a-f]{12})", readme)
         self.assertIsNotNone(match)
-        svg = (ROOT / "assets" / "telemetry.svg").read_bytes()
+        # Git may check out LF files as CRLF on Windows; hash canonical SVG text.
+        svg = (ROOT / "assets" / "telemetry.svg").read_text(encoding="utf-8").encode("utf-8")
         self.assertEqual(match.group(1), hashlib.sha256(svg).hexdigest()[:12])
 
 
