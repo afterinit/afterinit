@@ -79,8 +79,8 @@
     <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
   </rect>
   <text class="mono" x="1115" y="73" fill="#F0EFEC" font-size="18" letter-spacing="2" text-anchor="end">OFFLINE</text>
-  <text class="mono micro" x="1138" y="104" text-anchor="end">2 DAYS AGO</text>
-  <text class="mono nano" x="1138" y="132" text-anchor="end">SYNC / 2026.10.01  13:51 UTC+8</text>
+  <text class="mono micro" x="1138" y="104" text-anchor="end">3 DAYS AGO</text>
+  <text class="mono nano" x="1138" y="132" text-anchor="end">SYNC / 2026.10.01  20:27 UTC+8</text>
 
   <!-- Generative spectrum sculpture -->
   <g>
