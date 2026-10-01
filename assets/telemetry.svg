@@ -104,7 +104,7 @@
 
   <!-- Animated compute core -->
   <text class="mono cap" x="635" y="63" style="fill:#907CAD">COMPUTE CORE / ACTIVITY DRIVEN</text>
-  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.10.01  06:15 UTC+8</text>
+  <text class="mono micro" x="1138" y="63" text-anchor="end">SYNC / 2026.10.01  13:51 UTC+8</text>
   <path d="M 625 82 H 720 M 1050 82 H 1140 V 172 M 625 485 V 555 H 715 M 1050 555 H 1140 V 465"
         fill="none" stroke="#303440" />
 
