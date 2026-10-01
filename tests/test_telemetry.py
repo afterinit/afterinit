@@ -3,6 +3,7 @@ from __future__ import annotations
 import sys
 import unittest
 import xml.etree.ElementTree as ET
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -73,6 +74,10 @@ class TelemetryTests(unittest.TestCase):
             self.assertTrue(path.exists(), name)
             root = ET.parse(path).getroot()
             self.assertTrue(root.tag.endswith("svg"), name)
+
+    def test_readme_uses_content_cache_key(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertRegex(readme, r"\./assets/telemetry\.svg\?v=[0-9a-f]{12}")
 
 
 if __name__ == "__main__":

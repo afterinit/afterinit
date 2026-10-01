@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 
+import hashlib
 import math
+import re
 
 from render_utils import (
     ASSET_DIR,
     DATA_PATH,
     DIM,
+    ROOT,
     STATUS_PATH,
     activity_state,
     clip,
@@ -36,6 +39,18 @@ PLUM = "#817171"
 COPPER = "#927D68"
 GOLD = "#A08C6E"
 PEARL = "#D7D3CA"
+
+
+def update_readme_cache_key(svg: str) -> None:
+    """Change the image URL whenever SVG content changes, bypassing GitHub Camo cache."""
+    readme = ROOT / "README.md"
+    source = readme.read_text(encoding="utf-8")
+    cache_key = hashlib.sha256(svg.encode("utf-8")).hexdigest()[:12]
+    pattern = re.compile(r"(\./assets/telemetry\.svg)(?:\?v=[^\"]+)?")
+    updated = pattern.sub(lambda match: f"{match.group(1)}?v={cache_key}", source)
+    if updated == source and f"?v={cache_key}" not in source:
+        raise RuntimeError("README telemetry image reference was not found")
+    readme.write_text(updated, encoding="utf-8", newline="\n")
 
 
 def normalized_days(raw_days: object) -> list[dict]:
@@ -341,6 +356,7 @@ def main() -> None:
   <text class="mono nano" x="1138" y="686" text-anchor="end">ACTIVITY STATE IS NOT LIVE PRESENCE</text>
 </svg>"""
     write_svg(ASSET_DIR / "telemetry.svg", svg)
+    update_readme_cache_key(svg)
 
 
 if __name__ == "__main__":
