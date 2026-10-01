@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="./assets/telemetry.svg?v=fdfd0f1a75a1" width="100%" alt="afterinit developer activity signal" />
+  <img src="./assets/telemetry.svg?v=3a9ef9542694" width="100%" alt="Minimal angular engineering profile with automatically updated GitHub activity" />
 </div>

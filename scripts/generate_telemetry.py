@@ -1,18 +1,15 @@
-"""Render a generative spectrum sculpture from public GitHub activity."""
+"""Render an angular editorial profile with restrained, linear motion."""
 
 from __future__ import annotations
 
 import hashlib
-import math
 import re
 
 from render_utils import (
     ASSET_DIR,
     DATA_PATH,
-    DIM,
     ROOT,
     STATUS_PATH,
-    activity_state,
     clip,
     format_local,
     now_from,
@@ -25,336 +22,163 @@ from render_utils import (
 
 
 WIDTH = 1200
-HEIGHT = 720
+HEIGHT = 550
 
-INK = "#040405"
-TEXT = "#E8E4DC"
-MUTED = "#918E88"
-DIM_TEXT = "#5B5B5D"
-BORDER = "#26272A"
-TEAL = "#7B8F8E"
-BLUE = "#707A86"
-VIOLET = "#77717B"
-PLUM = "#817171"
-COPPER = "#927D68"
-GOLD = "#A08C6E"
-PEARL = "#D7D3CA"
+BACKGROUND = "#0B0C0D"
+WHITE = "#E7E5DF"
+GRAY = "#989995"
+QUIET = "#70726F"
+RULE = "#303230"
+ACCENT = "#A89B7E"
+
+# Each contour uses only horizontal, vertical, and 45-degree edges.
+UPPER = (
+    "M 764 156 L 808 112 H 1080 V 288 L 1036 332 "
+    "H 922 V 280 H 1012 L 1028 264 V 164 H 836 "
+    "L 816 184 V 280 H 764 Z"
+)
+LOWER = "M 838 208 H 890 V 340 H 1008 L 956 392 H 838 Z"
 
 
 def update_readme_cache_key(svg: str) -> None:
-    """Change the image URL whenever SVG content changes, bypassing GitHub Camo cache."""
+    """Version the README image URL using the exact generated file bytes."""
     readme = ROOT / "README.md"
     source = readme.read_text(encoding="utf-8")
     cache_key = hashlib.sha256(svg.encode("utf-8")).hexdigest()[:12]
     pattern = re.compile(r"(\./assets/telemetry\.svg)(?:\?v=[^\"]+)?")
-    updated = pattern.sub(lambda match: f"{match.group(1)}?v={cache_key}", source)
-    if updated == source and f"?v={cache_key}" not in source:
+    updated, count = pattern.subn(
+        lambda match: f"{match.group(1)}?v={cache_key}", source
+    )
+    if count == 0:
         raise RuntimeError("README telemetry image reference was not found")
-    readme.write_text(updated, encoding="utf-8", newline="\n")
+    if updated != source:
+        readme.write_text(updated, encoding="utf-8", newline="\n")
 
 
-def normalized_days(raw_days: object) -> list[dict]:
+def weekly_signal(raw_days: object) -> str:
     days = raw_days[-7:] if isinstance(raw_days, list) else []
-    return ([{"day": "--", "date": "", "commits": 0}] * (7 - len(days))) + days
-
-
-def smooth_parts(points: list[tuple[float, float]]) -> tuple[str, list[str]]:
-    start = f"M {points[0][0]:.1f} {points[0][1]:.1f}"
-    segments: list[str] = []
-    for index in range(len(points) - 1):
-        p0 = points[max(0, index - 1)]
-        p1 = points[index]
-        p2 = points[index + 1]
-        p3 = points[min(len(points) - 1, index + 2)]
-        c1 = (p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6)
-        c2 = (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6)
-        segments.append(
-            f"C {c1[0]:.1f} {c1[1]:.1f} {c2[0]:.1f} {c2[1]:.1f} {p2[0]:.1f} {p2[1]:.1f}"
-        )
-    return start, segments
-
-
-def smooth_path(points: list[tuple[float, float]]) -> str:
-    start, segments = smooth_parts(points)
-    return " ".join([start, *segments])
-
-
-def shifted(points: list[tuple[float, float]], offset: float) -> list[tuple[float, float]]:
-    return [(px, py + offset) for px, py in points]
-
-
-def ribbon_path(upper: list[tuple[float, float]], lower: list[tuple[float, float]]) -> str:
-    start, upper_segments = smooth_parts(upper)
-    lower_reversed = list(reversed(lower))
-    _, lower_segments = smooth_parts(lower_reversed)
-    join = f"L {lower_reversed[0][0]:.1f} {lower_reversed[0][1]:.1f}"
-    return " ".join([start, *upper_segments, join, *lower_segments, "Z"])
-
-
-def sculpture(days: list[dict]) -> tuple[str, str, str, list[tuple[float, float]]]:
+    days = [{"commits": 0}] * (7 - len(days)) + days
     values = [max(0, int(day.get("commits") or 0)) for day in days]
     maximum = max(values, default=0)
-    extended = [0, *values, 0]
-    base: list[tuple[float, float]] = []
-    alternate: list[tuple[float, float]] = []
-    for index, value in enumerate(extended):
-        px = -40 + index * 160
-        ratio = value / maximum if maximum else 0
-        py = 388 - index * 9 + math.sin(index * 1.18) * 30 - ratio * 70
-        base.append((px, py))
-        alternate.append((px, py + math.cos(index * 1.07) * 22))
-
-    palette = (TEAL, BLUE, VIOLET, PLUM, COPPER, GOLD, TEAL, VIOLET)
-    offsets = (-76, -53, -34, -17, 0, 20, 43, 70)
-    lines: list[str] = []
-    for index, (offset, color) in enumerate(zip(offsets, palette)):
-        first = smooth_path(shifted(base, offset))
-        second = smooth_path(shifted(alternate, offset))
-        opacity = 0.18 + index * 0.035
-        width = 0.8 if index not in (3, 4) else 1.25
-        dash = ' stroke-dasharray="8 13"' if index in (1, 6) else ""
-        dash_animation = (
-            f'<animate attributeName="stroke-dashoffset" values="126;0;-126" '
-            f'dur="{18 + index}s" repeatCount="indefinite" />'
-            if dash
-            else ""
+    segments = []
+    for index, value in enumerate(values):
+        start = 920 + index * 28
+        height = 3 if not value else 6 + round(20 * value / maximum)
+        fill = WHITE if value else RULE
+        segments.append(
+            f'<rect x="{start}" y="{450 - height}" width="18" height="{height}" '
+            f'fill="{fill}"><title>{x(day_label(days[index], value))}</title></rect>'
         )
-        lines.append(
-            f'<path d="{first}" fill="none" stroke="{color}" stroke-width="{width}" '
-            f'opacity="{opacity:.2f}"{dash}>'
-            f'<animate attributeName="d" values="{first};{second};{first}" '
-            f'dur="{15 + index * 1.3:.1f}s" repeatCount="indefinite" />'
-            f'{dash_animation}</path>'
-        )
-
-    upper_base = shifted(base, -20)
-    lower_base = shifted(base, 20)
-    upper_alt = shifted(alternate, -20)
-    lower_alt = shifted(alternate, 20)
-    band_first = ribbon_path(upper_base, lower_base)
-    band_second = ribbon_path(upper_alt, lower_alt)
-    center_path = smooth_path(base)
-    return "".join(lines), band_first, band_second, base
+    return "\n      ".join(segments)
 
 
-def facets(points: list[tuple[float, float]], days: list[dict]) -> str:
-    colors = (TEAL, BLUE, VIOLET, PLUM, COPPER, GOLD, TEAL)
-    output: list[str] = []
-    for index in range(1, 8):
-        current = points[index]
-        following = points[index + 1]
-        value = max(0, int(days[index - 1].get("commits") or 0))
-        color = colors[index - 1]
-        opacity = 0.065 if value == 0 else 0.11 + min(value, 8) * 0.008
-        polygon = (
-            f"{current[0] - 8:.1f},{current[1] - 29:.1f} "
-            f"{following[0] + 8:.1f},{following[1] - 15:.1f} "
-            f"{following[0] - 15:.1f},{following[1] + 30:.1f} "
-            f"{current[0] + 17:.1f},{current[1] + 38:.1f}"
-        )
-        output.append(
-            f'<polygon points="{polygon}" fill="{color}" stroke="{color}" stroke-opacity="0.24" '
-            f'opacity="{opacity:.3f}">'
-            f'<animate attributeName="opacity" values="{opacity * 0.62:.3f};{opacity * 1.35:.3f};'
-            f'{opacity * 0.62:.3f}" dur="{6.2 + index * 0.7:.1f}s" '
-            f'begin="{-index * 0.8:.1f}s" repeatCount="indefinite" /></polygon>'
-        )
-    return "".join(output)
+def day_label(day: dict, commits: int) -> str:
+    return f"{day.get('date') or 'No date'} / {commits} public commits"
 
 
-def activity_track(days: list[dict]) -> str:
-    colors = (TEAL, BLUE, VIOLET, PLUM, COPPER, GOLD, TEAL)
-    output: list[str] = []
-    for index, day in enumerate(days):
-        start = 64 + index * 153
-        value = max(0, int(day.get("commits") or 0))
-        color = colors[index] if value else BORDER
-        opacity = 0.82 if value else 0.38
-        output.append(
-            f'<line x1="{start}" y1="504" x2="{start + 130}" y2="504" stroke="{color}" '
-            f'stroke-width="2" opacity="{opacity}" />'
-            f'<rect x="{start}" y="500" width="8" height="8" fill="{color}" opacity="{opacity}">'
-            f'<animate attributeName="opacity" values="{opacity * 0.45:.2f};{opacity:.2f};{opacity * 0.45:.2f}" '
-            f'dur="4s" begin="{index * 0.3:.1f}s" repeatCount="indefinite" /></rect>'
-            f'<text class="mono nano" x="{start}" y="527" style="fill:{color}">'
-            f'{x(day.get("day", "--"))} / {value:02d}</text>'
-        )
-    return "".join(output)
-
-
-def main() -> None:
-    data = read_json(DATA_PATH)
-    status = read_json(STATUS_PATH)
+def render(data: dict, status: dict) -> str:
     now = now_from(data)
     tz = timezone_from(status)
-    timezone_label = status.get("timezone_label", "UTC")
-    events = data.get("events") or []
+    timezone_label = str(status.get("timezone_label") or "UTC")
     stats = data.get("stats") or {}
-    push = data.get("latest_push")
-    latest_at = events[0].get("timestamp") if events else None
-    state, _ = activity_state(latest_at, now)
-    state_color = {
-        "ACTIVE": TEAL,
-        "IDLE": GOLD,
-        "OFFLINE": DIM_TEXT,
-        "NO SIGNAL": DIM,
-    }.get(state, DIM)
-    commits = int(stats.get("commits") or 0)
-    pushes = int(stats.get("pushes") or 0)
-    days = normalized_days(stats.get("daily"))
-    flowing_lines, band_first, band_second, points = sculpture(days)
-    facet_shapes = facets(points, days)
-    track = activity_track(days)
-    center_path = smooth_path(points)
-    motion_path = smooth_path(
-        [(px - points[0][0], py - points[0][1]) for px, py in points]
-    )
-
-    if push:
-        repository = clip(push.get("repo"), 34)
-        branch = clip(push.get("branch"), 20)
-        message = clip(push.get("message"), 72)
-        pushed_at = format_local(push.get("timestamp"), tz, "%Y.%m.%d  /  %H:%M:%S")
-        pushed_ago = relative_time(push.get("timestamp"), now)
-    else:
-        repository = "AWAITING FIRST PUBLIC PUSH"
-        branch = "—"
-        message = "RUN THE TELEMETRY WORKFLOW TO ESTABLISH SIGNAL"
-        pushed_at = "—"
-        pushed_ago = "NO SIGNAL"
-
-    synced_at = format_local(data.get("generated_at"), tz, "%Y.%m.%d  %H:%M")
+    push = data.get("latest_push") or {}
+    repository = clip(push.get("repo"), 30, "Awaiting public activity")
+    branch = clip(push.get("branch"), 16, "—")
+    pushed_ago = relative_time(push.get("timestamp"), now).lower()
+    commits = max(0, int(stats.get("commits") or 0))
+    synced_at = format_local(data.get("generated_at"), tz, "%m.%d / %H:%M")
+    username = clip(data.get("username"), 25, "afterinit")
+    signal = weekly_signal(stats.get("daily"))
+    tempo = 9 if commits > 15 else 12
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc">
-  <title id="title">afterinit generative activity spectrum</title>
-  <desc id="desc">A flowing spectrum sculpture shaped by seven days of public GitHub activity.</desc>
+  <title id="title">Angular engineering profile for {x(username)}</title>
+  <desc id="desc">Think clearly. Build precisely. Java backend engineering. Last public push: {x(repository)} / {x(branch)}, {x(pushed_ago)}. {commits} public commits in seven days. Updated {x(synced_at)} {x(timezone_label)}.</desc>
   <defs>
-    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#060708" />
-      <stop offset="0.46" stop-color="{INK}" />
-      <stop offset="1" stop-color="#090806" />
-    </linearGradient>
-    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="{TEAL}">
-        <animate attributeName="stop-color" values="{TEAL};{BLUE};{TEAL}" dur="18s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="0.34" stop-color="{BLUE}" />
-      <stop offset="0.56" stop-color="{VIOLET}">
-        <animate attributeName="stop-color" values="{VIOLET};{PLUM};{VIOLET}" dur="16s" repeatCount="indefinite" />
-      </stop>
-      <stop offset="0.78" stop-color="{PLUM}" />
-      <stop offset="1" stop-color="{COPPER}" />
-    </linearGradient>
-    <linearGradient id="bandFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="{TEAL}" stop-opacity="0.08" />
-      <stop offset="0.5" stop-color="{VIOLET}" stop-opacity="0.30" />
-      <stop offset="1" stop-color="{PLUM}" stop-opacity="0.04" />
-    </linearGradient>
-    <radialGradient id="auraLeft" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="{TEAL}" stop-opacity="0.16" />
-      <stop offset="1" stop-color="{TEAL}" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="auraRight" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="{PLUM}" stop-opacity="0.15" />
-      <stop offset="1" stop-color="{PLUM}" stop-opacity="0" />
-    </radialGradient>
-    <pattern id="grain" width="64" height="64" patternUnits="userSpaceOnUse">
-      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#15171C" stroke-width="1" opacity="0.34" />
-    </pattern>
-    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-    </filter>
-    <filter id="soft" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="24" />
-    </filter>
+    <clipPath id="upper-cut"><path d="{UPPER}" /></clipPath>
+    <clipPath id="lower-cut"><path d="{LOWER}" /></clipPath>
     <style>
-      .mono {{ font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }}
-      .sans {{ font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }}
-      .display {{ font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: {TEXT}; font-size: 38px; font-weight: 500; letter-spacing: -0.8px; }}
-      .label {{ font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #9B9892; font-size: 12px; font-weight: 500; letter-spacing: 1.15px; }}
-      .cap {{ fill: {MUTED}; font-size: 11px; letter-spacing: 2.5px; }}
-      .micro {{ fill: {DIM_TEXT}; font-size: 10px; letter-spacing: 1.4px; }}
-      .nano {{ fill: #484A52; font-size: 8px; letter-spacing: 1.1px; }}
-      .body {{ fill: #A09FA4; font-size: 13px; }}
-      .cursor {{ animation: blink 1.2s steps(1, end) infinite; }}
-      @keyframes blink {{ 0%, 46% {{ opacity: 1; }} 47%, 100% {{ opacity: 0; }} }}
-      @media (prefers-reduced-motion: reduce) {{ .cursor {{ animation: none; }} }}
+      .sans {{ font-family: Arial, Helvetica, sans-serif; }}
+      .mono {{ font-family: Consolas, 'Liberation Mono', monospace; }}
+      .title {{ fill: {WHITE}; font-size: 62px; font-weight: 400; letter-spacing: -2.4px; }}
+      .label {{ fill: {GRAY}; font-size: 11px; letter-spacing: 1.3px; }}
+      .data {{ fill: {WHITE}; font-size: 17px; }}
+      .muted {{ fill: {GRAY}; font-size: 13px; }}
+      .foot {{ fill: {QUIET}; font-size: 10px; letter-spacing: 0.45px; }}
+      .scan {{ animation: scan {tempo}s ease-in-out infinite; }}
+      .trace {{ animation: trace 14s linear infinite; }}
+      .transfer {{ animation: transfer 8s ease-in-out infinite; }}
+      @keyframes scan {{
+        0%, 16% {{ transform: translateY(0); opacity: 0; }}
+        25% {{ opacity: 0.55; }}
+        70% {{ opacity: 0.55; }}
+        84%, 100% {{ transform: translateY(250px); opacity: 0; }}
+      }}
+      @keyframes trace {{
+        0%, 10% {{ stroke-dashoffset: 0; opacity: 0; }}
+        20%, 80% {{ opacity: 0.8; }}
+        90%, 100% {{ stroke-dashoffset: -1024; opacity: 0; }}
+      }}
+      @keyframes transfer {{
+        0%, 12% {{ transform: translateX(0); opacity: 0; }}
+        20%, 72% {{ opacity: 0.6; }}
+        88%, 100% {{ transform: translateX(1072px); opacity: 0; }}
+      }}
+      @media (prefers-reduced-motion: reduce) {{
+        .scan, .trace, .transfer {{ animation: none; opacity: 0; }}
+      }}
     </style>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1199" height="719" fill="url(#surface)" stroke="{BORDER}" />
-  <rect x="1" y="1" width="1198" height="718" fill="url(#grain)" opacity="0.34" />
-  <ellipse cx="180" cy="348" rx="330" ry="285" fill="url(#auraLeft)" opacity="0.72" filter="url(#soft)">
-    <animate attributeName="opacity" values="0.48;0.82;0.48" dur="14s" repeatCount="indefinite" />
-  </ellipse>
-  <ellipse cx="1010" cy="324" rx="360" ry="300" fill="url(#auraRight)" opacity="0.72" filter="url(#soft)">
-    <animate attributeName="opacity" values="0.78;0.46;0.78" dur="17s" repeatCount="indefinite" />
-  </ellipse>
+  <rect width="{WIDTH}" height="{HEIGHT}" fill="{BACKGROUND}" />
 
-  <path d="M 18 46 V 18 H 46 M 1154 18 H 1182 V 46 M 18 674 V 702 H 46 M 1154 702 H 1182 V 674"
-        fill="none" stroke="#353740" />
-  <text class="mono nano" x="22" y="360" transform="rotate(-90 22 360)">GENERATIVE SIGNAL / PUBLIC GITHUB ACTIVITY</text>
+  <!-- Typography and negative space define the composition. -->
+  <text class="sans label" x="72" y="76">JAVA / BACKEND ENGINEERING</text>
+  <text class="sans title" x="68" y="181">Think clearly.</text>
+  <text class="sans title" x="68" y="252">Build precisely.</text>
+  <text class="sans muted" x="72" y="303">Architecture. Code. Iteration.</text>
 
-  <!-- Editorial identity -->
-  <text class="mono micro" x="62" y="42" style="fill:{TEAL}">DEVELOPER TELEMETRY / 01</text>
-  <text class="display" x="60" y="91">Backend systems,</text>
-  <text class="display" x="60" y="133" style="fill:#B8B3AB">built with intent.<tspan class="cursor" fill="{PEARL}">_</tspan></text>
-  <text class="label" x="63" y="168">JAVA BACKEND  ·  COMPUTER SCIENCE</text>
-  <line x1="62" y1="188" x2="1138" y2="188" stroke="{BORDER}" />
-  <line x1="62" y1="188" x2="225" y2="188" stroke="url(#spectrum)" stroke-width="2" />
+  <!-- Two interlocking cut components, without curves or surface effects. -->
+  <g transform="translate(0 -24)">
+  <path d="{UPPER}" fill="#242625" transform="translate(12 12)" />
+  <path d="{LOWER}" fill="#191B1A" transform="translate(12 12)" />
+  <path d="{UPPER}" fill="{WHITE}" />
+  <path d="{LOWER}" fill="#6D706C" />
+  <path d="M 838 340 H 890 L 856 374 H 838 Z" fill="{ACCENT}" />
 
-  <text class="mono micro" x="1138" y="44" text-anchor="end">GITHUB SIGNAL</text>
-  <rect x="1129" y="62" width="9" height="9" fill="{state_color}" filter="url(#glow)">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
-  </rect>
-  <text class="sans" x="1115" y="73" fill="{TEXT}" font-size="17" font-weight="600" letter-spacing="1.2" text-anchor="end">{x(state)}</text>
-  <text class="mono micro" x="1138" y="104" text-anchor="end">{x(relative_time(latest_at, now))}</text>
-  <text class="mono nano" x="1138" y="132" text-anchor="end">SYNC / {x(synced_at)} {x(timezone_label)}</text>
-
-  <!-- Generative spectrum sculpture -->
-  <g>
-    {facet_shapes}
-    <path d="{band_first}" fill="url(#bandFill)" stroke="none" opacity="0.86" filter="url(#glow)">
-      <animate attributeName="d" values="{band_first};{band_second};{band_first}" dur="18s" repeatCount="indefinite" />
-    </path>
-    {flowing_lines}
-    <path d="{center_path}" fill="none" stroke="url(#spectrum)" stroke-width="2" opacity="0.88"
-          stroke-dasharray="22 15">
-      <animate attributeName="stroke-dashoffset" values="370;0;-370" dur="15s" repeatCount="indefinite" />
-    </path>
-    <circle cx="{points[0][0]:.1f}" cy="{points[0][1]:.1f}" r="4" fill="{PEARL}" filter="url(#glow)">
-      <animateMotion path="{motion_path}" dur="9s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="{points[0][0]:.1f}" cy="{points[0][1]:.1f}" r="3" fill="{PLUM}" filter="url(#glow)">
-      <animateMotion path="{motion_path}" dur="12s" begin="-5s" repeatCount="indefinite" />
-    </circle>
-    <circle cx="{points[0][0]:.1f}" cy="{points[0][1]:.1f}" r="2.5" fill="{TEAL}" filter="url(#glow)">
-      <animateMotion path="{motion_path}" dur="15s" begin="-10s" repeatCount="indefinite" />
-    </circle>
-    <rect x="{points[4][0] - 3:.1f}" y="{points[4][1] - 3:.1f}" width="6" height="6"
-          fill="{PEARL}" opacity="0.54" transform="rotate(45 {points[4][0]:.1f} {points[4][1]:.1f})">
-      <animate attributeName="opacity" values="0.28;0.82;0.28" dur="4.6s" repeatCount="indefinite" />
-    </rect>
+  <!-- Light traverses a single straight axis; a small trace follows hard edges. -->
+  <g clip-path="url(#upper-cut)">
+    <rect class="scan" x="750" y="104" width="340" height="3" fill="{BACKGROUND}" opacity="0" />
+  </g>
+  <g clip-path="url(#lower-cut)">
+    <rect class="scan" x="832" y="104" width="188" height="3" fill="{WHITE}" opacity="0" />
+  </g>
+  <path class="trace" d="M 792 252 V 168 L 822 138 H 1054 V 276 L 1024 306 H 940"
+        fill="none" stroke="{BACKGROUND}" stroke-width="2"
+        stroke-linejoin="miter" stroke-linecap="butt" pathLength="1024"
+        stroke-dasharray="42 982" opacity="0" />
   </g>
 
-  <!-- Seven-day sampling track -->
-  {track}
+  <!-- One compact row carries the actual public activity. -->
+  <line x1="72" y1="395" x2="1128" y2="395" stroke="{RULE}" />
+  <rect class="transfer" x="72" y="394" width="24" height="2" fill="{WHITE}" opacity="0" />
+  <text class="sans label" x="72" y="425">LAST PUSH</text>
+  <text class="sans data" x="72" y="452">{x(repository)}</text>
+  <text class="mono muted" x="374" y="451">/ {x(branch)}</text>
+  <text class="sans muted" x="622" y="451">{x(pushed_ago)}</text>
 
-  <!-- Minimal activity metadata -->
-  <line x1="62" y1="554" x2="1138" y2="554" stroke="{BORDER}" />
-  <text class="mono micro" x="62" y="581">LAST PUSH</text>
-  <text class="sans" x="62" y="615" fill="{TEXT}" font-size="19" font-weight="600">{x(repository)}</text>
-  <text class="sans body" x="385" y="615">/ {x(branch)}</text>
-  <text class="sans body" x="62" y="645">{x(message)}</text>
+  <text class="sans label" x="1106" y="425" text-anchor="end">LAST 7 DAYS</text>
+  {signal}
+  <text class="sans muted" x="1106" y="474" text-anchor="end">{commits} public commits</text>
 
-  <text class="mono micro" x="1138" y="581" text-anchor="end">ACTIVITY / 7D</text>
-  <text class="sans" x="1138" y="615" fill="{TEXT}" font-size="18" font-weight="600" text-anchor="end">{commits:02d} COMMITS  /  {pushes:02d} PUSHES</text>
-  <text class="mono micro" x="1138" y="645" text-anchor="end">{x(pushed_at)} {x(timezone_label)}  /  {x(pushed_ago)}</text>
-
-  <text class="mono nano" x="62" y="686">PUBLIC ACTIVITY / GENERATED EVERY 06H</text>
-  <text class="mono nano" x="1138" y="686" text-anchor="end">ACTIVITY STATE IS NOT LIVE PRESENCE</text>
+  <text class="sans foot" x="72" y="514">{x(username)} / public GitHub activity</text>
+  <text class="mono foot" x="1128" y="514" text-anchor="end">updated {x(synced_at)} {x(timezone_label)}</text>
 </svg>"""
+    return svg.strip() + "\n"
+
+
+def main() -> None:
+    svg = render(read_json(DATA_PATH), read_json(STATUS_PATH))
     write_svg(ASSET_DIR / "telemetry.svg", svg)
     update_readme_cache_key(svg)
 

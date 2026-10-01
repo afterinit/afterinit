@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import sys
 import unittest
 import xml.etree.ElementTree as ET
@@ -77,7 +78,10 @@ class TelemetryTests(unittest.TestCase):
 
     def test_readme_uses_content_cache_key(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertRegex(readme, r"\./assets/telemetry\.svg\?v=[0-9a-f]{12}")
+        match = re.search(r"\./assets/telemetry\.svg\?v=([0-9a-f]{12})", readme)
+        self.assertIsNotNone(match)
+        svg = (ROOT / "assets" / "telemetry.svg").read_bytes()
+        self.assertEqual(match.group(1), hashlib.sha256(svg).hexdigest()[:12])
 
 
 if __name__ == "__main__":
