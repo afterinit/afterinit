@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-02T12:33:09Z",
+  "generated_at": "2026-10-02T22:13:09Z",
   "source": "github-api",
   "events": [
     {
@@ -219,20 +219,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-09-26",
-    "window_end": "2026-10-02",
-    "commits": 4,
-    "pushes": 4,
+    "window_start": "2026-09-27",
+    "window_end": "2026-10-03",
+    "commits": 2,
+    "pushes": 2,
     "active_repos": 2,
-    "active_days": 3,
-    "most_active": "afinit_blog_page",
+    "active_days": 2,
+    "most_active": "afinit_blog",
     "daily": [
-      {
-        "date": "2026-09-26",
-        "day": "SAT",
-        "commits": 2,
-        "pushes": 2
-      },
       {
         "date": "2026-09-27",
         "day": "SUN",
@@ -268,40 +262,16 @@
         "day": "FRI",
         "commits": 1,
         "pushes": 1
+      },
+      {
+        "date": "2026-10-03",
+        "day": "SAT",
+        "commits": 0,
+        "pushes": 0
       }
     ],
     "matrix": [
       {
-        "date": "2026-09-26",
-        "day": "SAT",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          2,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
         "date": "2026-09-27",
         "day": "SUN",
         "hours": [
@@ -472,6 +442,36 @@
           0,
           0,
           1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-10-03",
+        "day": "SAT",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
