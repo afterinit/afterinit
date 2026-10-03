@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-03T05:18:05Z",
+  "generated_at": "2026-10-03T11:38:21Z",
   "source": "github-api",
   "events": [
     {
@@ -139,34 +139,6 @@
       "repo": "afinit_blog_page",
       "branch": "master",
       "timestamp": "2026-09-25T13:15:08Z"
-    },
-    {
-      "sha": "6f8bdd606b0fc686e6cfd53c210054cbc320c941",
-      "message": "3.2.1修复了相关与后端接口问题，修复了手机端切换深色与浅色模式存在的bug",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-09-25T11:10:44Z"
-    },
-    {
-      "sha": "3230c3349084464a4b57aa9a3e1e6daa6a19dbb2",
-      "message": "3.2修改了ui设计",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-09-25T10:38:30Z"
-    },
-    {
-      "sha": "94883ba5cab87fe26e7f0d2ac9e5f1cdc9932a0f",
-      "message": "3.1.1增加了mysql数据库建表语句与flyway管理工具，增加了统一返回体success字段",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-09-25T10:35:25Z"
-    },
-    {
-      "sha": "1a3cd369241dbcd13d1148f6f1a3b41498d17d29",
-      "message": "3.1增加了找回密码功能，增加了用户主页查看自己文章的功能，修复了时区导致时间显示错误的问题",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-09-25T07:48:12Z"
     }
   ],
   "repos": [
