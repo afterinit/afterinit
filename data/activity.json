@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-03T11:38:21Z",
+  "generated_at": "2026-10-03T16:16:47Z",
   "source": "github-api",
   "events": [
     {
@@ -132,13 +132,6 @@
       "repo": "afinit_blog_page",
       "branch": "master",
       "timestamp": "2026-09-26T10:35:21Z"
-    },
-    {
-      "sha": "417f6b771f9986b5fb44d2035266179fa0a6589a",
-      "message": "3.2.2修改了手机端切换深浅色的逻辑以适配",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-09-25T13:15:08Z"
     }
   ],
   "repos": [
@@ -191,20 +184,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-09-27",
-    "window_end": "2026-10-03",
-    "commits": 2,
-    "pushes": 2,
-    "active_repos": 2,
-    "active_days": 2,
+    "window_start": "2026-09-28",
+    "window_end": "2026-10-04",
+    "commits": 1,
+    "pushes": 1,
+    "active_repos": 1,
+    "active_days": 1,
     "most_active": "afinit_blog",
     "daily": [
-      {
-        "date": "2026-09-27",
-        "day": "SUN",
-        "commits": 1,
-        "pushes": 1
-      },
       {
         "date": "2026-09-28",
         "day": "MON",
@@ -238,42 +225,18 @@
       {
         "date": "2026-10-03",
         "day": "SAT",
+        "commits": 0,
+        "pushes": 0
+      },
+      {
+        "date": "2026-10-04",
+        "day": "SUN",
         "commits": 0,
         "pushes": 0
       }
     ],
     "matrix": [
       {
-        "date": "2026-09-27",
-        "day": "SUN",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0
-        ]
-      },
-      {
         "date": "2026-09-28",
         "day": "MON",
         "hours": [
@@ -426,6 +389,36 @@
       {
         "date": "2026-10-03",
         "day": "SAT",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-10-04",
+        "day": "SUN",
         "hours": [
           0,
           0,
