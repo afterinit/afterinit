@@ -1,3 +1,3 @@
 <div align="center">
-  <img src="./assets/telemetry.svg?v=26821466f612" width="100%" alt="Minimal angular engineering profile with automatically updated GitHub activity" />
+  <img src="./assets/telemetry.svg?v=a2d9bbcd1676" width="100%" alt="Minimal angular engineering profile with automatically updated GitHub activity" />
 </div>
