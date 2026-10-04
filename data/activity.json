@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-04T05:51:07Z",
+  "generated_at": "2026-10-04T12:20:13Z",
   "source": "github-api",
   "events": [
     {
@@ -118,20 +118,6 @@
       "repo": "afinit_blog_page",
       "branch": "master",
       "timestamp": "2026-09-27T13:38:53Z"
-    },
-    {
-      "sha": "dd2b74b7b52508c88960e833ddca104add0cad1e",
-      "message": "3.3增加了弹幕状态记录功能，增加了主页个个人页面的文章缓存功能",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-09-26T10:43:29Z"
-    },
-    {
-      "sha": "e1eac28e5ad2988c28b22845e3b00391c721259f",
-      "message": "3.2.3修复了手机端不能像电脑端一样有丝滑切换深浅模式的bug",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-09-26T10:35:21Z"
     }
   ],
   "repos": [
