@@ -1,9 +1,27 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-08T06:02:16Z",
+  "generated_at": "2026-10-08T13:27:30Z",
   "source": "github-api",
   "events": [
+    {
+      "id": "23349871605",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-10-08T07:26:23Z",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "23348162107",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-10-08T07:03:39Z",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "commit_count": 0
+    },
     {
       "id": "23056756511",
       "type": "PushEvent",
@@ -124,6 +142,41 @@
   ],
   "commits": [
     {
+      "sha": "949cee2ca823d23943aa525f0a2dd54591884430",
+      "message": "3.6增加了点赞功能",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-10-08T11:06:40Z"
+    },
+    {
+      "sha": "0e30378055e4c5fa96813127e1ab0b0a3f8f9c68",
+      "message": "3.4增加了点赞功能",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "timestamp": "2026-10-08T11:06:17Z"
+    },
+    {
+      "sha": "f0fdf66fbb6a74d8567d5f162fd6e157f18cde84",
+      "message": "3.5增加了上传图片时的裁剪功能，修复了首页不显示共几页的bug",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-10-08T07:51:38Z"
+    },
+    {
+      "sha": "28cf6883cc2622e49050fec2792cd447af395658",
+      "message": "3.3.2修复了刷新AccessToken失败的问题",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "timestamp": "2026-10-08T07:26:09Z"
+    },
+    {
+      "sha": "0fdd1767fe7d91e60ba623c8f371d90ffe49e411",
+      "message": "3.3.1修复了登录失败的问题",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "timestamp": "2026-10-08T07:03:10Z"
+    },
+    {
       "sha": "b6862d635ab34f9ea4901312d6ce4a99280b3192",
       "message": "3.3增加了阅读量记录",
       "repo": "afinit_blog",
@@ -147,20 +200,20 @@
   ],
   "repos": [
     {
-      "name": "afinit_blog",
-      "description": "https://github.com/afterinit/afinit_blog.git",
-      "language": "Java",
-      "topics": [],
-      "pushed_at": "2026-10-05T11:56:28Z",
-      "url": "https://github.com/afterinit/afinit_blog"
-    },
-    {
       "name": "afinit_blog_page",
       "description": null,
       "language": "Vue",
       "topics": [],
-      "pushed_at": "2026-10-05T11:55:22Z",
+      "pushed_at": "2026-10-08T11:06:56Z",
       "url": "https://github.com/afterinit/afinit_blog_page"
+    },
+    {
+      "name": "afinit_blog",
+      "description": "https://github.com/afterinit/afinit_blog.git",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-10-08T11:06:35Z",
+      "url": "https://github.com/afterinit/afinit_blog"
     },
     {
       "name": "jwt-login",
@@ -188,19 +241,19 @@
     }
   ],
   "latest_push": {
-    "timestamp": "2026-10-05T11:56:29Z",
+    "timestamp": "2026-10-08T07:26:23Z",
     "repo": "afinit_blog",
     "branch": "master",
-    "message": "3.3增加了阅读量记录",
+    "message": "3.4增加了点赞功能",
     "commit_count": 1
   },
   "stats": {
     "window_start": "2026-10-02",
     "window_end": "2026-10-08",
-    "commits": 3,
-    "pushes": 3,
+    "commits": 8,
+    "pushes": 5,
     "active_repos": 2,
-    "active_days": 2,
+    "active_days": 3,
     "most_active": "afinit_blog",
     "daily": [
       {
@@ -242,8 +295,8 @@
       {
         "date": "2026-10-08",
         "day": "THU",
-        "commits": 0,
-        "pushes": 0
+        "commits": 5,
+        "pushes": 2
       }
     ],
     "matrix": [
@@ -446,11 +499,11 @@
           0,
           0,
           0,
+          3,
           0,
           0,
           0,
-          0,
-          0,
+          2,
           0,
           0,
           0,
