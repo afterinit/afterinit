@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-10T05:51:05Z",
+  "generated_at": "2026-10-10T12:30:29Z",
   "source": "github-api",
   "events": [
     {
@@ -169,6 +169,20 @@
   ],
   "commits": [
     {
+      "sha": "014fceb30a42645d95a29de708315bc7b28c5327",
+      "message": "docs: fix browser deployment instructions",
+      "repo": "one-netdisc",
+      "branch": "default",
+      "timestamp": "2026-10-10T07:15:35Z"
+    },
+    {
+      "sha": "e1087aa37853c345117342885792369481a317a7",
+      "message": "update: prepare for deployment",
+      "repo": "one-netdisc",
+      "branch": "default",
+      "timestamp": "2026-10-10T07:05:03Z"
+    },
+    {
       "sha": "949cee2ca823d23943aa525f0a2dd54591884430",
       "message": "3.6增加了点赞功能",
       "repo": "afinit_blog_page",
@@ -216,16 +230,17 @@
       "repo": "afinit_blog_page",
       "branch": "master",
       "timestamp": "2026-10-05T11:55:13Z"
-    },
-    {
-      "sha": "3cefaffad155c98e69987ec3ccbaa4418c2d142c",
-      "message": "3.2增加了日志记录",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-10-02T08:58:17Z"
     }
   ],
   "repos": [
+    {
+      "name": "one-netdisc",
+      "description": "网盘直链下载助手",
+      "language": "JavaScript",
+      "topics": [],
+      "pushed_at": "2026-10-10T07:16:07Z",
+      "url": "https://github.com/afterinit/one-netdisc"
+    },
     {
       "name": "afinit_blog_page",
       "description": null,
@@ -277,9 +292,9 @@
   "stats": {
     "window_start": "2026-10-04",
     "window_end": "2026-10-10",
-    "commits": 7,
+    "commits": 9,
     "pushes": 7,
-    "active_repos": 2,
+    "active_repos": 3,
     "active_days": 2,
     "most_active": "afinit_blog",
     "daily": [
@@ -322,7 +337,7 @@
       {
         "date": "2026-10-10",
         "day": "SAT",
-        "commits": 0,
+        "commits": 2,
         "pushes": 0
       }
     ],
@@ -526,7 +541,7 @@
           0,
           0,
           0,
-          0,
+          2,
           0,
           0,
           0,
