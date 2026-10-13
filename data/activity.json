@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-13T00:38:20Z",
+  "generated_at": "2026-10-13T14:09:57Z",
   "source": "github-api",
   "events": [
     {
@@ -225,20 +225,6 @@
       "repo": "afinit_blog",
       "branch": "master",
       "timestamp": "2026-10-08T07:03:10Z"
-    },
-    {
-      "sha": "b6862d635ab34f9ea4901312d6ce4a99280b3192",
-      "message": "3.3增加了阅读量记录",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-10-05T11:56:19Z"
-    },
-    {
-      "sha": "fd61b924faeab7ea29afae1d94314e2cb4f081fd",
-      "message": "3.4增加了阅读量记录功能",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-10-05T11:55:13Z"
     }
   ],
   "repos": [
