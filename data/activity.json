@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-14T11:50:26Z",
+  "generated_at": "2026-10-14T17:09:13Z",
   "source": "github-api",
   "events": [
     {
@@ -285,20 +285,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-10-08",
-    "window_end": "2026-10-14",
-    "commits": 7,
-    "pushes": 5,
-    "active_repos": 3,
-    "active_days": 1,
-    "most_active": "afinit_blog",
+    "window_start": "2026-10-09",
+    "window_end": "2026-10-15",
+    "commits": 2,
+    "pushes": 0,
+    "active_repos": 1,
+    "active_days": 0,
+    "most_active": "one-netdisc",
     "daily": [
-      {
-        "date": "2026-10-08",
-        "day": "THU",
-        "commits": 5,
-        "pushes": 5
-      },
       {
         "date": "2026-10-09",
         "day": "FRI",
@@ -334,39 +328,15 @@
         "day": "WED",
         "commits": 0,
         "pushes": 0
+      },
+      {
+        "date": "2026-10-15",
+        "day": "THU",
+        "commits": 0,
+        "pushes": 0
       }
     ],
     "matrix": [
-      {
-        "date": "2026-10-08",
-        "day": "THU",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          3,
-          0,
-          0,
-          0,
-          2,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
       {
         "date": "2026-10-09",
         "day": "FRI",
@@ -520,6 +490,36 @@
       {
         "date": "2026-10-14",
         "day": "WED",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "day": "THU",
         "hours": [
           0,
           0,
