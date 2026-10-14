@@ -75,18 +75,26 @@ def render(data: dict, status: dict) -> str:
       .domain {{ fill: {INK}; font-size: 22px; font-weight: 700; letter-spacing: -0.6px; }}
       .locate-scan {{ animation: locate-scan 5.6s ease-in-out infinite; }}
       .locate-pulse {{ animation: locate-pulse 4.2s ease-out infinite; transform-origin: 97px 164px; }}
+      .observe-flow {{ animation: observe-flow 5.6s linear infinite; }}
       .orbit-dot {{ animation: orbit 12s linear infinite; transform-origin: 355px 286px; }}
       .organize-ring {{ animation: organize-spin 24s linear infinite; transform-origin: 600px 286px; }}
       .organize-ring-reverse {{ animation: organize-spin-reverse 16s linear infinite; transform-origin: 600px 286px; }}
       .origin {{ animation: pulse 3.8s ease-in-out infinite; }}
       .link-signal {{ animation: link-signal 5.2s linear infinite; }}
-      .link-source-pulse {{ animation: link-pulse 4.2s ease-out infinite; transform-origin: 783px 184px; }}
-      .link-target-pulse {{ animation: link-pulse 4.2s ease-out -2.1s infinite; transform-origin: 894px 389px; }}
+      .link-source-pulse {{ animation: link-pulse 4.2s ease-out infinite; transform-origin: 773px 184px; }}
+      .link-target-pulse {{ animation: link-pulse 4.2s ease-out -2.1s infinite; transform-origin: 886px 381px; }}
       .create-trace {{ animation: create-trace 8s linear infinite; }}
       .create-tip {{ animation: create-tip 4s ease-in-out infinite; transform-origin: 1130px 207px; }}
       .create-end-pulse {{ animation: create-end-pulse 4s ease-out infinite; transform-origin: 1114px 365px; }}
       .create-spark {{ animation: create-spark 14s linear infinite; transform-origin: 1025px 286px; }}
       .create-core {{ animation: create-core 3.4s ease-in-out infinite; transform-origin: 1025px 286px; }}
+      .mini-locate-pulse {{ animation: mini-pulse 4.4s ease-out infinite; transform-origin: 370px 53px; }}
+      .mini-observe-dot {{ animation: mini-orbit 8s linear infinite; }}
+      .mini-organize-ring {{ animation: mini-spin 12s linear infinite; transform-origin: 750px 53px; }}
+      .mini-organize-core {{ animation: mini-core 3.2s ease-in-out infinite; transform-origin: 750px 53px; }}
+      .mini-link-flow {{ animation: mini-flow 3.6s linear infinite; }}
+      .mini-create-flight {{ animation: mini-create-journey 6s linear -5.1s infinite; transform: translate(1122px, 37px) rotate(-143.13deg); transform-origin: 0 0; }}
+      .mini-create-exhaust {{ animation: mini-create-exhaust 6s linear -5.1s infinite; opacity: 0; }}
       @keyframes locate-scan {{
         0%, 12% {{ opacity: 0; transform: translateY(0); }}
         24%, 74% {{ opacity: 0.72; }}
@@ -96,6 +104,7 @@ def render(data: dict, status: dict) -> str:
         0% {{ opacity: 0.55; transform: scale(0.55); }}
         70%, 100% {{ opacity: 0; transform: scale(1.65); }}
       }}
+      @keyframes observe-flow {{ to {{ stroke-dashoffset: -86; }} }}
       @keyframes orbit {{ to {{ transform: rotate(360deg); }} }}
       @keyframes organize-spin {{
         from {{ transform: rotate(-28deg); }}
@@ -125,12 +134,75 @@ def render(data: dict, status: dict) -> str:
         0%, 100% {{ opacity: 0.55; transform: scale(0.78); }}
         50% {{ opacity: 1; transform: scale(1.08); }}
       }}
+      @keyframes mini-pulse {{
+        0% {{ opacity: 0.5; transform: scale(0.55); }}
+        72%, 100% {{ opacity: 0; transform: scale(1.55); }}
+      }}
+      @keyframes mini-orbit {{
+        0%, 100% {{ transform: translate(0, 0); }}
+        6.25% {{ transform: translate(-0.99px, 4.27px); }}
+        12.5% {{ transform: translate(-5.93px, 9.06px); }}
+        18.75% {{ transform: translate(-14.07px, 13.65px); }}
+        25% {{ transform: translate(-24.16px, 17.33px); }}
+        31.25% {{ transform: translate(-34.67px, 19.55px); }}
+        37.5% {{ transform: translate(-44px, 19.97px); }}
+        43.75% {{ transform: translate(-50.73px, 18.53px); }}
+        50% {{ transform: translate(-53.83px, 15.44px); }}
+        56.25% {{ transform: translate(-52.84px, 11.17px); }}
+        62.5% {{ transform: translate(-47.9px, 6.38px); }}
+        68.75% {{ transform: translate(-39.76px, 1.79px); }}
+        75% {{ transform: translate(-29.67px, -1.89px); }}
+        81.25% {{ transform: translate(-19.16px, -4.12px); }}
+        87.5% {{ transform: translate(-9.83px, -4.54px); }}
+        93.75% {{ transform: translate(-3.1px, -3.09px); }}
+      }}
+      @keyframes mini-spin {{ to {{ transform: rotate(360deg); }} }}
+      @keyframes mini-core {{
+        0%, 100% {{ opacity: 0.55; transform: scale(0.8); }}
+        50% {{ opacity: 1; transform: scale(1); }}
+      }}
+      @keyframes mini-flow {{ to {{ stroke-dashoffset: -56; }} }}
+      @keyframes mini-create-journey {{
+        0% {{ transform: translate(1122px, 37px) rotate(-143.13deg); }}
+        6% {{ transform: translate(1115.42px, 33.75px) rotate(-164.28deg); }}
+        12% {{ transform: translate(1108.11px, 33.09px) rotate(-185.42deg); }}
+        18% {{ transform: translate(1101.06px, 35.11px) rotate(-206.57deg); }}
+        24% {{ transform: translate(1095.21px, 39.54px) rotate(-227.71deg); }}
+        30% {{ transform: translate(1091.35px, 45.79px) rotate(-248.86deg); }}
+        36% {{ transform: translate(1090px, 53px) rotate(-270deg); }}
+        42% {{ transform: translate(1091.35px, 60.21px) rotate(-291.14deg); }}
+        48% {{ transform: translate(1095.21px, 66.46px) rotate(-312.29deg); }}
+        54% {{ transform: translate(1101.06px, 70.89px) rotate(-333.43deg); }}
+        60% {{ transform: translate(1108.11px, 72.91px) rotate(-354.58deg); }}
+        66% {{ transform: translate(1115.42px, 72.25px) rotate(-375.72deg); }}
+        72% {{ transform: translate(1122px, 69px) rotate(-396.87deg); }}
+        76% {{ transform: translate(1122px, 69px) rotate(-396.87deg) scale(0.72); }}
+        80% {{ transform: translate(1122px, 69px) rotate(-396.87deg) scale(1.08); }}
+        83.33% {{ transform: translate(1126.3px, 64.59px) rotate(-414.58deg); }}
+        86.67% {{ transform: translate(1129.05px, 59.08px) rotate(-432.29deg); }}
+        90% {{ transform: translate(1130px, 53px) rotate(-450deg); }}
+        93.33% {{ transform: translate(1129.05px, 46.92px) rotate(-467.71deg); }}
+        96.67% {{ transform: translate(1126.3px, 41.41px) rotate(-485.42deg); }}
+        100% {{ transform: translate(1122px, 37px) rotate(-503.13deg); }}
+      }}
+      @keyframes mini-create-exhaust {{
+        0%, 79.9%, 100% {{ opacity: 0; }}
+        82% {{ opacity: 0.38; }}
+        85% {{ opacity: 0.95; }}
+        88% {{ opacity: 0.42; }}
+        91% {{ opacity: 0.86; }}
+        94% {{ opacity: 0.32; }}
+        97% {{ opacity: 0.76; }}
+        99% {{ opacity: 0.18; }}
+      }}
       @media (prefers-reduced-motion: reduce) {{
-        .locate-scan, .locate-pulse, .orbit-dot, .organize-ring, .organize-ring-reverse,
+        .locate-scan, .locate-pulse, .observe-flow, .orbit-dot, .organize-ring, .organize-ring-reverse,
         .origin, .link-signal, .link-source-pulse, .link-target-pulse, .create-trace,
-        .create-tip, .create-end-pulse, .create-spark, .create-core {{ animation: none; }}
+        .create-tip, .create-end-pulse, .create-spark, .create-core, .mini-locate-pulse,
+        .mini-observe-dot, .mini-organize-ring, .mini-organize-core, .mini-link-flow,
+        .mini-create-flight, .mini-create-exhaust {{ animation: none; }}
         .locate-scan, .locate-pulse, .link-source-pulse, .link-target-pulse,
-        .create-end-pulse {{ opacity: 0; }}
+        .create-end-pulse, .mini-locate-pulse, .mini-create-exhaust {{ opacity: 0; }}
         .link-signal, .create-trace {{ stroke-dashoffset: 0; opacity: 0.7; }}
       }}
     </style>
@@ -150,31 +222,42 @@ def render(data: dict, status: dict) -> str:
       <line x1="361" y1="41" x2="370" y2="41" stroke="{MUTED}" stroke-width="1" />
       <line x1="364" y1="65" x2="370" y2="65" stroke="{MUTED}" stroke-width="1" />
       <circle cx="370" cy="53" r="5" fill="{CORAL}" />
+      <circle class="mini-locate-pulse" cx="370" cy="53" r="8" fill="none" stroke="{CORAL}" stroke-width="1" />
     </g>
 
     <g aria-label="Observe symbol">
       <ellipse cx="555" cy="53" rx="28" ry="10" transform="rotate(-16 555 53)" fill="none" stroke="{MUTED}" stroke-width="1" />
-      <circle cx="582" cy="45" r="4" fill="{CORAL}" />
+      <g class="mini-observe-ellipse">
+        <g class="mini-observe-dot">
+          <circle cx="581.92" cy="45.28" r="4" fill="{CORAL}" />
+        </g>
+      </g>
     </g>
 
     <g aria-label="Organize symbol">
-      <circle cx="750" cy="53" r="15" fill="{CANVAS}" stroke="{INK}" stroke-width="1.2" />
+      <circle class="mini-organize-ring" cx="750" cy="53" r="15" fill="{CANVAS}" stroke="{INK}" stroke-width="1.2" stroke-dasharray="72 7" />
       <line x1="731" y1="53" x2="769" y2="53" stroke="{MUTED}" stroke-width="1" />
       <line x1="750" y1="34" x2="750" y2="72" stroke="{MUTED}" stroke-width="1" />
-      <circle cx="750" cy="53" r="5" fill="{BLUE}" />
+      <circle class="mini-organize-core" cx="750" cy="53" r="5" fill="{BLUE}" />
     </g>
 
     <g aria-label="Link symbol">
-      <path d="M922 65L943 45L964 60M943 45L959 32" fill="none" stroke="{INK}" stroke-width="1.2" />
-      <circle cx="922" cy="65" r="4" fill="{CORAL}" />
-      <circle cx="943" cy="45" r="5" fill="{BLUE}" />
-      <circle cx="964" cy="60" r="4" fill="{CORAL}" />
+      <path class="mini-link-flow" d="M938 30V59Q938 67 946 67H962" fill="none" stroke="{BLUE}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 8" />
+      <circle cx="938" cy="30" r="4" fill="{CORAL}" />
+      <circle cx="962" cy="67" r="4" fill="{BLUE}" />
     </g>
 
     <g aria-label="Create symbol">
       <path d="M1122 37A20 20 0 1 0 1122 69" fill="none" stroke="{INK}" stroke-width="1.2" />
-      <path d="M1120 32L1136 37L1122 46Z" fill="{CORAL}" />
-      <path d="M1124 38C1140 45 1140 61 1124 68" fill="none" stroke="{BLUE}" stroke-width="1" stroke-dasharray="3 5" />
+      <path class="mini-create-return" d="M1122 69A20 20 0 0 0 1122 37" fill="none" stroke="{BLUE}" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 5" opacity="0.75" />
+      <g class="mini-create-flight">
+        <g class="mini-create-exhaust" fill="none" stroke-linecap="round">
+          <path d="M-5 -2H-9" stroke="{BLUE}" stroke-width="0.8" />
+          <path d="M-5 0H-12" stroke="{CORAL}" stroke-width="1.4" />
+          <path d="M-5 2H-9" stroke="{BLUE}" stroke-width="0.8" />
+        </g>
+        <path class="mini-create-arrow" d="M-3 -3L4 0L-3 3Z" fill="{CORAL}" />
+      </g>
     </g>
   </g>
 
@@ -202,7 +285,8 @@ def render(data: dict, status: dict) -> str:
     <g aria-label="O — observe">
       <circle class="outline" cx="355" cy="286" r="122" />
       <circle class="outline" cx="355" cy="286" r="67" />
-      <ellipse class="fine" cx="355" cy="286" rx="145" ry="45" transform="rotate(-18 355 286)" />
+      <ellipse class="fine" cx="355" cy="286" rx="145" ry="45" transform="rotate(-18 355 286)" opacity="0.35" />
+      <ellipse class="observe-flow" cx="355" cy="286" rx="145" ry="45" transform="rotate(-18 355 286)" fill="none" stroke="{MUTED}" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="38 16 7 16" />
       <g class="orbit-dot">
         <circle cx="494" cy="244" r="8" fill="{CORAL}" />
         <circle cx="494" cy="244" r="13" fill="none" stroke="{CORAL}" stroke-width="1" opacity="0.45" />
@@ -224,17 +308,14 @@ def render(data: dict, status: dict) -> str:
 
     <!-- L / LINK: one continuous signal travels from source to destination. -->
     <g aria-label="L — link">
-      <path class="outline" d="M762 164V410H914" />
-      <path class="outline" d="M804 164V368H914" />
-      <line class="outline" x1="762" y1="164" x2="804" y2="164" />
-      <line class="outline" x1="914" y1="368" x2="914" y2="410" />
-      <path d="M783 184V389H894" fill="none" stroke="{MUTED}" stroke-width="1.2" opacity="0.45" />
-      <path class="link-signal" d="M783 184V389H894" fill="none" stroke="{BLUE}" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" stroke-dasharray="8 12" />
-      <circle cx="783" cy="184" r="6" fill="{CORAL}" />
-      <circle class="link-source-pulse" cx="783" cy="184" r="12" fill="none" stroke="{CORAL}" stroke-width="1.2" />
-      <circle cx="894" cy="389" r="6" fill="{BLUE}" />
-      <circle class="link-target-pulse" cx="894" cy="389" r="12" fill="none" stroke="{BLUE}" stroke-width="1.2" />
-      <text class="mono label" x="829" y="448" text-anchor="middle">LINK</text>
+      <path class="outline" d="M744 164H802V352H906V410H744Z" />
+      <path d="M773 184V381H886" fill="none" stroke="{MUTED}" stroke-width="1.2" opacity="0.45" />
+      <path class="link-signal" d="M773 184V381H886" fill="none" stroke="{BLUE}" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" stroke-dasharray="8 12" />
+      <circle cx="773" cy="184" r="6" fill="{CORAL}" />
+      <circle class="link-source-pulse" cx="773" cy="184" r="12" fill="none" stroke="{CORAL}" stroke-width="1.2" />
+      <circle cx="886" cy="381" r="6" fill="{BLUE}" />
+      <circle class="link-target-pulse" cx="886" cy="381" r="12" fill="none" stroke="{BLUE}" stroke-width="1.2" />
+      <text class="mono label" x="825" y="448" text-anchor="middle">LINK</text>
     </g>
 
     <!-- C / CREATE: a restrained tracer stays on the letter's original open form. -->
