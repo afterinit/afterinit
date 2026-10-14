@@ -76,6 +76,20 @@ class TelemetryTests(unittest.TestCase):
             root = ET.parse(path).getroot()
             self.assertTrue(root.tag.endswith("svg"), name)
 
+    def test_identity_is_built_around_loolc(self) -> None:
+        svg = (ROOT / "assets" / "telemetry.svg").read_text(encoding="utf-8")
+        self.assertIn('id="loolc-linework"', svg)
+        self.assertIn('id="header-sequence"', svg)
+        self.assertIn("loolc.com", svg)
+        self.assertIn("line-drawn identity", svg)
+        self.assertIn(">LOCATE<", svg)
+        self.assertIn(">OBSERVE<", svg)
+        self.assertIn(">ORGANIZE<", svg)
+        self.assertIn(">LINK<", svg)
+        self.assertIn(">CREATE<", svg)
+        self.assertIn("Let Our Originality Lead Creation.", svg)
+        self.assertNotIn("extrusion", svg)
+
     def test_readme_uses_content_cache_key(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         match = re.search(r"\./assets/telemetry\.svg\?v=([0-9a-f]{12})", readme)

@@ -1,89 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img" aria-labelledby="title desc">
-  <title id="title">Angular engineering profile for afterinit</title>
-  <desc id="desc">Think clearly. Build precisely. Java backend engineering. Last public push: afinit_blog_page / master, 5 days ago. 7 public commits in seven days. Updated 10.14 / 06:44 UTC+8.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">loolc.com — a line-drawn identity for afterinit</title>
+  <desc id="desc">A two-dimensional custom LOOLC wordmark on a warm paper background. Its statement is Let Our Originality Lead Creation. Latest public push: afinit_blog_page on master, 5 days ago.</desc>
   <defs>
-    <clipPath id="upper-cut"><path d="M 764 156 L 808 112 H 1080 V 288 L 1036 332 H 922 V 280 H 1012 L 1028 264 V 164 H 836 L 816 184 V 280 H 764 Z" /></clipPath>
-    <clipPath id="lower-cut"><path d="M 838 208 H 890 V 340 H 1008 L 956 392 H 838 Z" /></clipPath>
+    <pattern id="paper-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#AFA89B" stroke-width="0.5" opacity="0.13" />
+    </pattern>
     <style>
       .sans { font-family: Arial, Helvetica, sans-serif; }
       .mono { font-family: Consolas, 'Liberation Mono', monospace; }
-      .title { fill: #E7E5DF; font-size: 62px; font-weight: 400; letter-spacing: -2.4px; }
-      .label { fill: #989995; font-size: 11px; letter-spacing: 1.3px; }
-      .data { fill: #E7E5DF; font-size: 17px; }
-      .muted { fill: #989995; font-size: 13px; }
-      .foot { fill: #70726F; font-size: 10px; letter-spacing: 0.45px; }
-      .scan { animation: scan 12s ease-in-out infinite; }
-      .trace { animation: trace 14s linear infinite; }
-      .transfer { animation: transfer 8s ease-in-out infinite; }
-      @keyframes scan {
-        0%, 16% { transform: translateY(0); opacity: 0; }
-        25% { opacity: 0.55; }
-        70% { opacity: 0.55; }
-        84%, 100% { transform: translateY(250px); opacity: 0; }
+      .outline { fill: none; stroke: #171715; stroke-width: 3; stroke-linecap: square; stroke-linejoin: miter; }
+      .fine { fill: none; stroke: #777166; stroke-width: 1.2; }
+      .guide { fill: none; stroke: #CEC8BC; stroke-width: 1; }
+      .label { fill: #171715; font-size: 10px; font-weight: 700; letter-spacing: 1.8px; }
+      .meta { fill: #777166; font-size: 10px; letter-spacing: 0.65px; }
+      .domain { fill: #171715; font-size: 22px; font-weight: 700; letter-spacing: -0.6px; }
+      .orbit-dot { animation: orbit 12s linear infinite; transform-origin: 355px 286px; }
+      .origin { animation: pulse 3.8s ease-in-out infinite; }
+      .continuation { animation: travel 8s linear infinite; }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.35; transform: scale(0.78); transform-origin: 600px 286px; }
+        50% { opacity: 1; transform: scale(1); transform-origin: 600px 286px; }
       }
-      @keyframes trace {
-        0%, 10% { stroke-dashoffset: 0; opacity: 0; }
-        20%, 80% { opacity: 0.8; }
-        90%, 100% { stroke-dashoffset: -1024; opacity: 0; }
-      }
-      @keyframes transfer {
-        0%, 12% { transform: translateX(0); opacity: 0; }
-        20%, 72% { opacity: 0.6; }
-        88%, 100% { transform: translateX(1072px); opacity: 0; }
-      }
+      @keyframes travel { to { stroke-dashoffset: -48; } }
       @media (prefers-reduced-motion: reduce) {
-        .scan, .trace, .transfer { animation: none; opacity: 0; }
+        .orbit-dot, .origin, .continuation { animation: none; }
       }
     </style>
   </defs>
 
-  <rect width="1200" height="550" fill="#0B0C0D" />
+  <rect width="1200" height="620" fill="#F2EFE7" />
+  <rect width="1200" height="620" fill="url(#paper-grid)" />
 
-  <!-- Typography and negative space define the composition. -->
-  <text class="sans label" x="72" y="76">JAVA / BACKEND ENGINEERING</text>
-  <text class="sans title" x="68" y="181">Think clearly.</text>
-  <text class="sans title" x="68" y="252">Build precisely.</text>
-  <text class="sans muted" x="72" y="303">Architecture. Code. Iteration.</text>
+  <text class="sans domain" x="58" y="61">loolc<tspan fill="#F05032">.com</tspan></text>
 
-  <!-- Two interlocking cut components, without curves or surface effects. -->
-  <g transform="translate(0 -24)">
-  <path d="M 764 156 L 808 112 H 1080 V 288 L 1036 332 H 922 V 280 H 1012 L 1028 264 V 164 H 836 L 816 184 V 280 H 764 Z" fill="#242625" transform="translate(12 12)" />
-  <path d="M 838 208 H 890 V 340 H 1008 L 956 392 H 838 Z" fill="#191B1A" transform="translate(12 12)" />
-  <path d="M 764 156 L 808 112 H 1080 V 288 L 1036 332 H 922 V 280 H 1012 L 1028 264 V 164 H 836 L 816 184 V 280 H 764 Z" fill="#E7E5DF" />
-  <path d="M 838 208 H 890 V 340 H 1008 L 956 392 H 838 Z" fill="#6D706C" />
-  <path d="M 838 340 H 890 L 856 374 H 838 Z" fill="#A89B7E" />
+  <!-- A compact index carries the five ideas into the header without adding copy. -->
+  <g id="header-sequence" aria-label="LOOLC visual index">
+    <line x1="334" y1="53" x2="1142" y2="53" stroke="#CEC8BC" />
 
-  <!-- Light traverses a single straight axis; a small trace follows hard edges. -->
-  <g clip-path="url(#upper-cut)">
-    <rect class="scan" x="750" y="104" width="340" height="3" fill="#0B0C0D" opacity="0" />
+    <g aria-label="Locate symbol">
+      <line x1="370" y1="34" x2="370" y2="72" stroke="#777166" stroke-width="1" />
+      <line x1="361" y1="41" x2="370" y2="41" stroke="#777166" stroke-width="1" />
+      <line x1="364" y1="65" x2="370" y2="65" stroke="#777166" stroke-width="1" />
+      <circle cx="370" cy="53" r="5" fill="#F05032" />
+    </g>
+
+    <g aria-label="Observe symbol">
+      <ellipse cx="555" cy="53" rx="28" ry="10" transform="rotate(-16 555 53)" fill="none" stroke="#777166" stroke-width="1" />
+      <circle cx="582" cy="45" r="4" fill="#F05032" />
+    </g>
+
+    <g aria-label="Organize symbol">
+      <circle cx="750" cy="53" r="15" fill="#F2EFE7" stroke="#171715" stroke-width="1.2" />
+      <line x1="731" y1="53" x2="769" y2="53" stroke="#777166" stroke-width="1" />
+      <line x1="750" y1="34" x2="750" y2="72" stroke="#777166" stroke-width="1" />
+      <circle cx="750" cy="53" r="5" fill="#3155C6" />
+    </g>
+
+    <g aria-label="Link symbol">
+      <path d="M922 65L943 45L964 60M943 45L959 32" fill="none" stroke="#171715" stroke-width="1.2" />
+      <circle cx="922" cy="65" r="4" fill="#F05032" />
+      <circle cx="943" cy="45" r="5" fill="#3155C6" />
+      <circle cx="964" cy="60" r="4" fill="#F05032" />
+    </g>
+
+    <g aria-label="Create symbol">
+      <path d="M1122 37A20 20 0 1 0 1122 69" fill="none" stroke="#171715" stroke-width="1.2" />
+      <path d="M1120 32L1136 37L1122 46Z" fill="#F05032" />
+      <path d="M1124 38C1140 45 1140 61 1124 68" fill="none" stroke="#3155C6" stroke-width="1" stroke-dasharray="3 5" />
+    </g>
   </g>
-  <g clip-path="url(#lower-cut)">
-    <rect class="scan" x="832" y="104" width="188" height="3" fill="#E7E5DF" opacity="0" />
+
+  <line x1="58" y1="108" x2="1142" y2="108" stroke="#171715" stroke-width="1" />
+  <line x1="58" y1="112" x2="266" y2="112" stroke="#F05032" stroke-width="3" />
+
+  <g id="loolc-linework">
+    <!-- L / LOCATE: a measured stroke finds the idea's starting point. -->
+    <g aria-label="L — locate">
+      <path class="outline" d="M68 164H126V352H230V410H68Z" />
+      <line class="fine" x1="52" y1="194" x2="68" y2="194" />
+      <line class="fine" x1="58" y1="224" x2="68" y2="224" />
+      <line class="fine" x1="52" y1="254" x2="68" y2="254" />
+      <line class="fine" x1="58" y1="284" x2="68" y2="284" />
+      <line class="fine" x1="52" y1="314" x2="68" y2="314" />
+      <line class="fine" x1="58" y1="344" x2="68" y2="344" />
+      <circle cx="97" cy="164" r="8" fill="#F05032" />
+      <line x1="97" y1="146" x2="97" y2="182" stroke="#F05032" stroke-width="1" />
+      <text class="mono label" x="149" y="448" text-anchor="middle">LOCATE</text>
+    </g>
+
+    <!-- O / OBSERVE: a moving point studies the form from every angle. -->
+    <g aria-label="O — observe">
+      <circle class="outline" cx="355" cy="286" r="122" />
+      <circle class="outline" cx="355" cy="286" r="67" />
+      <ellipse class="fine" cx="355" cy="286" rx="145" ry="45" transform="rotate(-18 355 286)" />
+      <g class="orbit-dot">
+        <circle cx="494" cy="244" r="8" fill="#F05032" />
+        <circle cx="494" cy="244" r="13" fill="none" stroke="#F05032" stroke-width="1" opacity="0.45" />
+      </g>
+      <text class="mono label" x="355" y="448" text-anchor="middle">OBSERVE</text>
+    </g>
+
+    <!-- O / ORGANIZE: axes and a structured ring order the information. -->
+    <g aria-label="O — organize">
+      <circle class="outline" cx="600" cy="286" r="122" stroke-dasharray="492 18" transform="rotate(-28 600 286)" />
+      <circle class="outline" cx="600" cy="286" r="67" stroke-dasharray="15 9" />
+      <line class="fine" x1="557" y1="286" x2="643" y2="286" />
+      <line class="fine" x1="600" y1="243" x2="600" y2="329" />
+      <path d="M681 195L600 286L526 372" fill="none" stroke="#3155C6" stroke-width="1.5" />
+      <circle class="origin" cx="600" cy="286" r="9" fill="#3155C6" />
+      <circle cx="600" cy="286" r="18" fill="none" stroke="#3155C6" stroke-width="1" opacity="0.35" />
+      <text class="mono label" x="600" y="448" text-anchor="middle">ORGANIZE</text>
+    </g>
+
+    <!-- L / LINK: colored nodes meet at the letter's inner corner. -->
+    <g aria-label="L — link">
+      <path class="outline" d="M744 164H802V352H914V410H744Z" />
+      <line x1="724" y1="140" x2="724" y2="426" stroke="#3155C6" stroke-width="1.5" stroke-dasharray="3 8" />
+      <circle cx="724" cy="410" r="6" fill="#3155C6" />
+      <path d="M802 352L844 310L877 341" fill="none" stroke="#F05032" stroke-width="2.5" />
+      <path d="M844 310L875 286M844 310L829 279" fill="none" stroke="#3155C6" stroke-width="1.2" />
+      <circle cx="802" cy="352" r="5" fill="#F05032" />
+      <circle cx="844" cy="310" r="7" fill="#3155C6" />
+      <circle cx="877" cy="341" r="5" fill="#F05032" />
+      <text class="mono label" x="829" y="448" text-anchor="middle">LINK</text>
+    </g>
+
+    <!-- C / CREATE: the open letter releases its path into a new form. -->
+    <g aria-label="C — create">
+      <path class="outline" d="M1114 207A116 116 0 1 0 1114 365" />
+      <path class="outline" d="M1075 245A64 64 0 1 0 1075 327" />
+      <line class="outline" x1="1114" y1="207" x2="1075" y2="245" />
+      <line class="outline" x1="1114" y1="365" x2="1075" y2="327" />
+      <path class="continuation" d="M1115 208C1164 242 1164 330 1115 364" fill="none" stroke="#3155C6" stroke-width="1.5" stroke-dasharray="4 8" />
+      <path d="M1122 193L1145 207L1118 216Z" fill="#F05032" />
+      <circle cx="1114" cy="365" r="6" fill="#F05032" />
+      <text class="mono label" x="1030" y="448" text-anchor="middle">CREATE</text>
+    </g>
   </g>
-  <path class="trace" d="M 792 252 V 168 L 822 138 H 1054 V 276 L 1024 306 H 940"
-        fill="none" stroke="#0B0C0D" stroke-width="2"
-        stroke-linejoin="miter" stroke-linecap="butt" pathLength="1024"
-        stroke-dasharray="42 982" opacity="0" />
-  </g>
 
-  <!-- One compact row carries the actual public activity. -->
-  <line x1="72" y1="395" x2="1128" y2="395" stroke="#303230" />
-  <rect class="transfer" x="72" y="394" width="24" height="2" fill="#E7E5DF" opacity="0" />
-  <text class="sans label" x="72" y="425">LAST PUSH</text>
-  <text class="sans data" x="72" y="452">afinit_blog_page</text>
-  <text class="mono muted" x="374" y="451">/ master</text>
-  <text class="sans muted" x="622" y="451">5 days ago</text>
+  <line x1="58" y1="480" x2="1142" y2="480" stroke="#CEC8BC" />
+  <text class="sans" x="58" y="526" fill="#171715" font-size="28" font-weight="400" letter-spacing="-0.7">Let Our Originality Lead Creation.</text>
 
-  <text class="sans label" x="1106" y="425" text-anchor="end">LAST 7 DAYS</text>
-  <rect x="920" y="424" width="18" height="26" fill="#E7E5DF"><title>2026-10-08 / 5 public commits</title></rect>
-      <rect x="948" y="447" width="18" height="3" fill="#303230"><title>2026-10-09 / 0 public commits</title></rect>
-      <rect x="976" y="436" width="18" height="14" fill="#E7E5DF"><title>2026-10-10 / 2 public commits</title></rect>
-      <rect x="1004" y="447" width="18" height="3" fill="#303230"><title>2026-10-11 / 0 public commits</title></rect>
-      <rect x="1032" y="447" width="18" height="3" fill="#303230"><title>2026-10-12 / 0 public commits</title></rect>
-      <rect x="1060" y="447" width="18" height="3" fill="#303230"><title>2026-10-13 / 0 public commits</title></rect>
-      <rect x="1088" y="447" width="18" height="3" fill="#303230"><title>2026-10-14 / 0 public commits</title></rect>
-  <text class="sans muted" x="1106" y="474" text-anchor="end">7 public commits</text>
-
-  <text class="sans foot" x="72" y="514">afterinit / public GitHub activity</text>
-  <text class="mono foot" x="1128" y="514" text-anchor="end">updated 10.14 / 06:44 UTC+8</text>
+  <line x1="58" y1="554" x2="1142" y2="554" stroke="#171715" stroke-width="1" />
+  <text class="mono meta" x="58" y="584">afterinit</text>
+  <text class="mono meta" x="1142" y="584" text-anchor="end">2026</text>
 </svg>

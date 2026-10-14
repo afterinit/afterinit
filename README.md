@@ -1,3 +1,5 @@
 <div align="center">
-  <img src="./assets/telemetry.svg?v=38b36822a126" width="100%" alt="Minimal angular engineering profile with automatically updated GitHub activity" />
+  <a href="https://loolc.com" aria-label="Visit loolc.com">
+    <img src="./assets/telemetry.svg?v=a30b3c54aa5d" width="100%" alt="LOOLC line-drawn identity with automatically updated public GitHub activity" />
+  </a>
 </div>
