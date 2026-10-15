@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-15T04:37:11Z",
+  "generated_at": "2026-10-15T11:27:08Z",
   "source": "github-api",
   "events": [
     {
@@ -178,6 +178,27 @@
   ],
   "commits": [
     {
+      "sha": "0f9f0a2c53511c695d6d53de965ef81cc48d7c3d",
+      "message": "3.7.1修复了项目构建器进入卡顿问题",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-10-15T07:55:33Z"
+    },
+    {
+      "sha": "85dd6fb7a3134dd4d1d16136b33f6d207ba5ea0a",
+      "message": "3.7增加了logo显示",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-10-15T07:43:50Z"
+    },
+    {
+      "sha": "988741988b4cff6e7b730c0817c8e26a3a81354b",
+      "message": "1.0主页面稳定运行版",
+      "repo": "main_page",
+      "branch": "default",
+      "timestamp": "2026-10-15T07:40:44Z"
+    },
+    {
       "sha": "014fceb30a42645d95a29de708315bc7b28c5327",
       "message": "docs: fix browser deployment instructions",
       "repo": "one-netdisc",
@@ -229,20 +250,28 @@
   ],
   "repos": [
     {
+      "name": "afinit_blog_page",
+      "description": null,
+      "language": "Vue",
+      "topics": [],
+      "pushed_at": "2026-10-15T07:55:39Z",
+      "url": "https://github.com/afterinit/afinit_blog_page"
+    },
+    {
+      "name": "main_page",
+      "description": null,
+      "language": "Vue",
+      "topics": [],
+      "pushed_at": "2026-10-15T07:41:01Z",
+      "url": "https://github.com/afterinit/main_page"
+    },
+    {
       "name": "one-netdisc",
       "description": "网盘直链下载助手",
       "language": "JavaScript",
       "topics": [],
       "pushed_at": "2026-10-10T07:16:07Z",
       "url": "https://github.com/afterinit/one-netdisc"
-    },
-    {
-      "name": "afinit_blog_page",
-      "description": null,
-      "language": "Vue",
-      "topics": [],
-      "pushed_at": "2026-10-08T11:06:56Z",
-      "url": "https://github.com/afterinit/afinit_blog_page"
     },
     {
       "name": "afinit_blog",
@@ -281,17 +310,17 @@
     "timestamp": "2026-10-08T11:06:56Z",
     "repo": "afinit_blog_page",
     "branch": "master",
-    "message": "3.6增加了点赞功能",
+    "message": "3.7.1修复了项目构建器进入卡顿问题",
     "commit_count": 1
   },
   "stats": {
     "window_start": "2026-10-09",
     "window_end": "2026-10-15",
-    "commits": 2,
+    "commits": 5,
     "pushes": 0,
-    "active_repos": 1,
+    "active_repos": 3,
     "active_days": 0,
-    "most_active": "one-netdisc",
+    "most_active": "afinit_blog_page",
     "daily": [
       {
         "date": "2026-10-09",
@@ -332,7 +361,7 @@
       {
         "date": "2026-10-15",
         "day": "THU",
-        "commits": 0,
+        "commits": 3,
         "pushes": 0
       }
     ],
@@ -536,7 +565,7 @@
           0,
           0,
           0,
-          0,
+          3,
           0,
           0,
           0,
