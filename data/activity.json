@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-16T11:22:28Z",
+  "generated_at": "2026-10-16T16:38:21Z",
   "source": "github-api",
   "events": [
     {
@@ -313,20 +313,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-10-10",
-    "window_end": "2026-10-16",
-    "commits": 6,
+    "window_start": "2026-10-11",
+    "window_end": "2026-10-17",
+    "commits": 4,
     "pushes": 2,
-    "active_repos": 3,
+    "active_repos": 2,
     "active_days": 1,
     "most_active": "afinit_blog_page",
     "daily": [
-      {
-        "date": "2026-10-10",
-        "day": "SAT",
-        "commits": 2,
-        "pushes": 0
-      },
       {
         "date": "2026-10-11",
         "day": "SUN",
@@ -362,39 +356,15 @@
         "day": "FRI",
         "commits": 0,
         "pushes": 0
+      },
+      {
+        "date": "2026-10-17",
+        "day": "SAT",
+        "commits": 0,
+        "pushes": 0
       }
     ],
     "matrix": [
-      {
-        "date": "2026-10-10",
-        "day": "SAT",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          2,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
       {
         "date": "2026-10-11",
         "day": "SUN",
@@ -548,6 +518,36 @@
       {
         "date": "2026-10-16",
         "day": "FRI",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-10-17",
+        "day": "SAT",
         "hours": [
           0,
           0,
