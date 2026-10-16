@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-16T04:30:39Z",
+  "generated_at": "2026-10-16T11:22:28Z",
   "source": "github-api",
   "events": [
     {
@@ -245,41 +245,6 @@
       "repo": "one-netdisc",
       "branch": "default",
       "timestamp": "2026-10-10T07:05:03Z"
-    },
-    {
-      "sha": "949cee2ca823d23943aa525f0a2dd54591884430",
-      "message": "3.6增加了点赞功能",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-10-08T11:06:40Z"
-    },
-    {
-      "sha": "0e30378055e4c5fa96813127e1ab0b0a3f8f9c68",
-      "message": "3.4增加了点赞功能",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-10-08T11:06:17Z"
-    },
-    {
-      "sha": "f0fdf66fbb6a74d8567d5f162fd6e157f18cde84",
-      "message": "3.5增加了上传图片时的裁剪功能，修复了首页不显示共几页的bug",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-10-08T07:51:38Z"
-    },
-    {
-      "sha": "28cf6883cc2622e49050fec2792cd447af395658",
-      "message": "3.3.2修复了刷新AccessToken失败的问题",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-10-08T07:26:09Z"
-    },
-    {
-      "sha": "0fdd1767fe7d91e60ba623c8f371d90ffe49e411",
-      "message": "3.3.1修复了登录失败的问题",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-10-08T07:03:10Z"
     }
   ],
   "repos": [
