@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-10-30T05:46:19Z",
+  "generated_at": "2026-10-30T12:53:16Z",
   "source": "github-api",
   "events": [
     {
@@ -122,14 +122,29 @@
       "commit_count": 0
     }
   ],
-  "commits": [],
+  "commits": [
+    {
+      "sha": "b06ec40dc88a2827c95398d0e036b2e0c3936c41",
+      "message": "3.8更新了标签页logo",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-10-30T09:30:40Z"
+    },
+    {
+      "sha": "7f7ea8ed80a01c5dc3b8b8db8e545f9ea5fc3fd6",
+      "message": "1.1更新了标签页logo",
+      "repo": "main_page",
+      "branch": "default",
+      "timestamp": "2026-10-30T09:30:15Z"
+    }
+  ],
   "repos": [
     {
       "name": "afinit_blog_page",
       "description": null,
       "language": "Vue",
       "topics": [],
-      "pushed_at": "2026-10-15T14:05:43Z",
+      "pushed_at": "2026-10-30T09:37:32Z",
       "url": "https://github.com/afterinit/afinit_blog_page"
     },
     {
@@ -137,7 +152,7 @@
       "description": null,
       "language": "Vue",
       "topics": [],
-      "pushed_at": "2026-10-15T07:41:01Z",
+      "pushed_at": "2026-10-30T09:37:16Z",
       "url": "https://github.com/afterinit/main_page"
     },
     {
@@ -191,11 +206,11 @@
   "stats": {
     "window_start": "2026-10-24",
     "window_end": "2026-10-30",
-    "commits": 0,
+    "commits": 2,
     "pushes": 0,
-    "active_repos": 0,
+    "active_repos": 2,
     "active_days": 0,
-    "most_active": null,
+    "most_active": "afinit_blog_page",
     "daily": [
       {
         "date": "2026-10-24",
@@ -236,7 +251,7 @@
       {
         "date": "2026-10-30",
         "day": "FRI",
-        "commits": 0,
+        "commits": 2,
         "pushes": 0
       }
     ],
@@ -442,7 +457,7 @@
           0,
           0,
           0,
-          0,
+          2,
           0,
           0,
           0,
