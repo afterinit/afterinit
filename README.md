@@ -1,5 +1,5 @@
 <div align="center">
   <a href="https://loolc.com" aria-label="Visit loolc.com">
-    <img src="./assets/telemetry.svg?v=6654eff8efcb" width="100%" alt="LOOLC line-drawn identity with automatically updated public GitHub activity" />
+    <img src="./assets/telemetry.svg?v=0a4728abd097" width="100%" alt="LOOLC line-drawn identity with automatically updated public GitHub activity" />
   </a>
 </div>
