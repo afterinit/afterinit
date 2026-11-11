@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-11-11T06:15:07Z",
+  "generated_at": "2026-11-11T14:27:15Z",
   "source": "github-api",
   "events": [
     {
@@ -66,19 +66,18 @@
       "repo": "main_page",
       "branch": "master",
       "commit_count": 0
-    },
-    {
-      "id": "23730863978",
-      "type": "CreateEvent",
-      "action": "CREATE",
-      "timestamp": "2026-10-10T07:16:07Z",
-      "repo": "one-netdisc",
-      "branch": "main",
-      "commit_count": 0
     }
   ],
   "commits": [],
   "repos": [
+    {
+      "name": "loolc_curriculum",
+      "description": null,
+      "language": null,
+      "topics": [],
+      "pushed_at": "2026-11-11T11:37:58Z",
+      "url": "https://github.com/afterinit/loolc_curriculum"
+    },
     {
       "name": "afinit_blog_page",
       "description": null,
