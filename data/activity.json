@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-11-14T06:19:47Z",
+  "generated_at": "2026-11-14T17:59:22Z",
   "source": "github-api",
   "events": [
     {
@@ -161,8 +161,8 @@
     "commit_count": 0
   },
   "stats": {
-    "window_start": "2026-11-08",
-    "window_end": "2026-11-14",
+    "window_start": "2026-11-09",
+    "window_end": "2026-11-15",
     "commits": 0,
     "pushes": 0,
     "active_repos": 0,
@@ -170,12 +170,6 @@
     "most_active": null,
     "daily": [
       {
-        "date": "2026-11-08",
-        "day": "SUN",
-        "commits": 0,
-        "pushes": 0
-      },
-      {
         "date": "2026-11-09",
         "day": "MON",
         "commits": 0,
@@ -208,42 +202,18 @@
       {
         "date": "2026-11-14",
         "day": "SAT",
+        "commits": 0,
+        "pushes": 0
+      },
+      {
+        "date": "2026-11-15",
+        "day": "SUN",
         "commits": 0,
         "pushes": 0
       }
     ],
     "matrix": [
       {
-        "date": "2026-11-08",
-        "day": "SUN",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
         "date": "2026-11-09",
         "day": "MON",
         "hours": [
@@ -396,6 +366,36 @@
       {
         "date": "2026-11-14",
         "day": "SAT",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-11-15",
+        "day": "SUN",
         "hours": [
           0,
           0,
