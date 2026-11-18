@@ -1,9 +1,18 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-11-18T07:26:12Z",
+  "generated_at": "2026-11-18T20:29:29Z",
   "source": "github-api",
   "events": [
+    {
+      "id": "27559588271",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-11-18T08:01:54Z",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "commit_count": 0
+    },
     {
       "id": "19868471368",
       "type": "ReleaseEvent",
@@ -52,6 +61,27 @@
   ],
   "commits": [
     {
+      "sha": "579088c524ec85a1e63a4a1358c2a228956eeb1a",
+      "message": "v1.0",
+      "repo": "learning_pass",
+      "branch": "default",
+      "timestamp": "2026-11-18T11:38:06Z"
+    },
+    {
+      "sha": "02e5cfd69380cac8e729522b0879ca37f37630d4",
+      "message": "3.9更新了评论功能",
+      "repo": "afinit_blog_page",
+      "branch": "master",
+      "timestamp": "2026-11-18T08:01:53Z"
+    },
+    {
+      "sha": "75c44ea28e7107313d2a2cf151a048ba4cbe9cd4",
+      "message": "3.5重命名相关文件，删除项目构建器功能，新增评论功能",
+      "repo": "afinit_blog",
+      "branch": "default",
+      "timestamp": "2026-11-18T07:38:27Z"
+    },
+    {
       "sha": "d1b5b4a7f2a4190b8be0c9b7c140f46642facd6d",
       "message": "Update README.md",
       "repo": "loolc_curriculum",
@@ -68,20 +98,36 @@
   ],
   "repos": [
     {
-      "name": "loolc_curriculum",
-      "description": "专为湖北民族大学设计的课表APP",
-      "language": "Java",
+      "name": "learning_pass",
+      "description": "学习通小助手，帮助高效学习",
+      "language": "JavaScript",
       "topics": [],
-      "pushed_at": "2026-11-18T07:10:29Z",
-      "url": "https://github.com/afterinit/loolc_curriculum"
+      "pushed_at": "2026-11-18T11:41:26Z",
+      "url": "https://github.com/afterinit/learning_pass"
     },
     {
       "name": "afinit_blog_page",
       "description": null,
       "language": "Vue",
       "topics": [],
-      "pushed_at": "2026-10-30T09:37:32Z",
+      "pushed_at": "2026-11-18T08:01:53Z",
       "url": "https://github.com/afterinit/afinit_blog_page"
+    },
+    {
+      "name": "afinit_blog",
+      "description": "https://github.com/afterinit/afinit_blog.git",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-11-18T07:38:32Z",
+      "url": "https://github.com/afterinit/afinit_blog"
+    },
+    {
+      "name": "loolc_curriculum",
+      "description": "专为湖北民族大学设计的课表APP",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-11-18T07:10:29Z",
+      "url": "https://github.com/afterinit/loolc_curriculum"
     },
     {
       "name": "main_page",
@@ -98,14 +144,6 @@
       "topics": [],
       "pushed_at": "2026-10-10T07:16:07Z",
       "url": "https://github.com/afterinit/one-netdisc"
-    },
-    {
-      "name": "afinit_blog",
-      "description": "https://github.com/afterinit/afinit_blog.git",
-      "language": "Java",
-      "topics": [],
-      "pushed_at": "2026-10-08T11:06:35Z",
-      "url": "https://github.com/afterinit/afinit_blog"
     },
     {
       "name": "jwt-login",
@@ -133,27 +171,21 @@
     }
   ],
   "latest_push": {
-    "timestamp": "2026-10-30T09:37:32Z",
+    "timestamp": "2026-11-18T08:01:54Z",
     "repo": "afinit_blog_page",
     "branch": "master",
-    "message": "public push · commit detail unavailable",
-    "commit_count": 0
+    "message": "3.9更新了评论功能",
+    "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-11-12",
-    "window_end": "2026-11-18",
-    "commits": 2,
-    "pushes": 0,
-    "active_repos": 1,
-    "active_days": 0,
-    "most_active": "loolc_curriculum",
+    "window_start": "2026-11-13",
+    "window_end": "2026-11-19",
+    "commits": 5,
+    "pushes": 1,
+    "active_repos": 4,
+    "active_days": 1,
+    "most_active": "afinit_blog_page",
     "daily": [
-      {
-        "date": "2026-11-12",
-        "day": "THU",
-        "commits": 0,
-        "pushes": 0
-      },
       {
         "date": "2026-11-13",
         "day": "FRI",
@@ -187,42 +219,18 @@
       {
         "date": "2026-11-18",
         "day": "WED",
-        "commits": 2,
+        "commits": 5,
+        "pushes": 1
+      },
+      {
+        "date": "2026-11-19",
+        "day": "THU",
+        "commits": 0,
         "pushes": 0
       }
     ],
     "matrix": [
       {
-        "date": "2026-11-12",
-        "day": "THU",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
         "date": "2026-11-13",
         "day": "FRI",
         "hours": [
@@ -391,7 +399,37 @@
           0,
           0,
           0,
-          2,
+          3,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-11-19",
+        "day": "THU",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
