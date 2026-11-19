@@ -1,9 +1,18 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-11-19T07:22:24Z",
+  "generated_at": "2026-11-19T20:34:37Z",
   "source": "github-api",
   "events": [
+    {
+      "id": "27652798939",
+      "type": "CreateEvent",
+      "action": "CREATE",
+      "timestamp": "2026-11-18T11:41:26Z",
+      "repo": "learning_pass",
+      "branch": "main",
+      "commit_count": 0
+    },
     {
       "id": "27559588271",
       "type": "PushEvent",
@@ -11,6 +20,24 @@
       "timestamp": "2026-11-18T08:01:54Z",
       "repo": "afinit_blog_page",
       "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "27647479890",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-11-18T07:38:33Z",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "commit_count": 0
+    },
+    {
+      "id": "27619488601",
+      "type": "PushEvent",
+      "action": "PUSH",
+      "timestamp": "2026-11-18T07:10:30Z",
+      "repo": "loolc_curriculum",
+      "branch": "main",
       "commit_count": 0
     },
     {
@@ -61,6 +88,13 @@
   ],
   "commits": [
     {
+      "sha": "2ddc3d21adcdad81f59ee753af7a6ea72b170721",
+      "message": "3.6修改项目名称及数据库名，新增初始化数据库",
+      "repo": "afinit_blog",
+      "branch": "master",
+      "timestamp": "2026-11-19T12:51:24Z"
+    },
+    {
       "sha": "579088c524ec85a1e63a4a1358c2a228956eeb1a",
       "message": "v1.0",
       "repo": "learning_pass",
@@ -78,25 +112,33 @@
       "sha": "75c44ea28e7107313d2a2cf151a048ba4cbe9cd4",
       "message": "3.5重命名相关文件，删除项目构建器功能，新增评论功能",
       "repo": "afinit_blog",
-      "branch": "default",
+      "branch": "master",
       "timestamp": "2026-11-18T07:38:27Z"
     },
     {
       "sha": "d1b5b4a7f2a4190b8be0c9b7c140f46642facd6d",
       "message": "Update README.md",
       "repo": "loolc_curriculum",
-      "branch": "default",
+      "branch": "main",
       "timestamp": "2026-11-18T07:10:29Z"
     },
     {
       "sha": "a3100fc4228ea0b7dd9116caa0f39eedf05a10fb",
       "message": "Update README.md",
       "repo": "loolc_curriculum",
-      "branch": "default",
+      "branch": "main",
       "timestamp": "2026-11-18T07:09:41Z"
     }
   ],
   "repos": [
+    {
+      "name": "afinit_blog",
+      "description": "https://github.com/afterinit/afinit_blog.git",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-11-19T12:51:37Z",
+      "url": "https://github.com/afterinit/afinit_blog"
+    },
     {
       "name": "learning_pass",
       "description": "学习通小助手，帮助高效学习",
@@ -112,14 +154,6 @@
       "topics": [],
       "pushed_at": "2026-11-18T08:01:53Z",
       "url": "https://github.com/afterinit/afinit_blog_page"
-    },
-    {
-      "name": "afinit_blog",
-      "description": "https://github.com/afterinit/afinit_blog.git",
-      "language": "Java",
-      "topics": [],
-      "pushed_at": "2026-11-18T07:38:32Z",
-      "url": "https://github.com/afterinit/afinit_blog"
     },
     {
       "name": "loolc_curriculum",
@@ -178,20 +212,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-11-13",
-    "window_end": "2026-11-19",
-    "commits": 5,
-    "pushes": 1,
+    "window_start": "2026-11-14",
+    "window_end": "2026-11-20",
+    "commits": 6,
+    "pushes": 3,
     "active_repos": 4,
     "active_days": 1,
-    "most_active": "afinit_blog_page",
+    "most_active": "afinit_blog",
     "daily": [
-      {
-        "date": "2026-11-13",
-        "day": "FRI",
-        "commits": 0,
-        "pushes": 0
-      },
       {
         "date": "2026-11-14",
         "day": "SAT",
@@ -220,46 +248,22 @@
         "date": "2026-11-18",
         "day": "WED",
         "commits": 5,
-        "pushes": 1
+        "pushes": 3
       },
       {
         "date": "2026-11-19",
         "day": "THU",
+        "commits": 1,
+        "pushes": 0
+      },
+      {
+        "date": "2026-11-20",
+        "day": "FRI",
         "commits": 0,
         "pushes": 0
       }
     ],
     "matrix": [
-      {
-        "date": "2026-11-13",
-        "day": "FRI",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
       {
         "date": "2026-11-14",
         "day": "SAT",
@@ -413,6 +417,36 @@
       {
         "date": "2026-11-19",
         "day": "THU",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-11-20",
+        "day": "FRI",
         "hours": [
           0,
           0,
