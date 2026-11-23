@@ -1,9 +1,36 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-11-23T07:35:14Z",
+  "generated_at": "2026-11-23T23:51:39Z",
   "source": "github-api",
   "events": [
+    {
+      "id": "21022025877",
+      "type": "ForkEvent",
+      "action": "FORK",
+      "timestamp": "2026-11-23T15:18:09Z",
+      "repo": "kouyu",
+      "branch": null,
+      "commit_count": 0
+    },
+    {
+      "id": "20983309592",
+      "type": "ReleaseEvent",
+      "action": "RELEASE",
+      "timestamp": "2026-11-23T08:15:34Z",
+      "repo": "e_loolc_shower_app",
+      "branch": null,
+      "commit_count": 0
+    },
+    {
+      "id": "28021014846",
+      "type": "CreateEvent",
+      "action": "CREATE",
+      "timestamp": "2026-11-23T07:59:36Z",
+      "repo": "e_loolc_shower_app",
+      "branch": "main",
+      "commit_count": 0
+    },
     {
       "id": "20914392446",
       "type": "ForkEvent",
@@ -63,7 +90,7 @@
       "type": "PushEvent",
       "action": "PUSH",
       "timestamp": "2026-11-18T07:10:30Z",
-      "repo": "loolc_curriculum",
+      "repo": "e_loolc_curriculum_app",
       "branch": "main",
       "commit_count": 0
     },
@@ -72,7 +99,7 @@
       "type": "ReleaseEvent",
       "action": "RELEASE",
       "timestamp": "2026-11-12T07:11:52Z",
-      "repo": "loolc_curriculum",
+      "repo": "e_loolc_curriculum_app",
       "branch": null,
       "commit_count": 0
     },
@@ -81,7 +108,7 @@
       "type": "CreateEvent",
       "action": "CREATE",
       "timestamp": "2026-11-12T07:06:45Z",
-      "repo": "loolc_curriculum",
+      "repo": "e_loolc_curriculum_app",
       "branch": "main",
       "commit_count": 0
     },
@@ -115,6 +142,13 @@
   ],
   "commits": [
     {
+      "sha": "7f7710f584a3a5c39d524ccdd6ec96de9c315ce7",
+      "message": "Add loolc shower Android app",
+      "repo": "e_loolc_shower_app",
+      "branch": "default",
+      "timestamp": "2026-11-23T07:57:45Z"
+    },
+    {
       "sha": "2ddc3d21adcdad81f59ee753af7a6ea72b170721",
       "message": "3.6修改项目名称及数据库名，新增初始化数据库",
       "repo": "afinit_blog",
@@ -145,19 +179,27 @@
     {
       "sha": "d1b5b4a7f2a4190b8be0c9b7c140f46642facd6d",
       "message": "Update README.md",
-      "repo": "loolc_curriculum",
+      "repo": "e_loolc_curriculum_app",
       "branch": "main",
       "timestamp": "2026-11-18T07:10:29Z"
     },
     {
       "sha": "a3100fc4228ea0b7dd9116caa0f39eedf05a10fb",
       "message": "Update README.md",
-      "repo": "loolc_curriculum",
+      "repo": "e_loolc_curriculum_app",
       "branch": "main",
       "timestamp": "2026-11-18T07:09:41Z"
     }
   ],
   "repos": [
+    {
+      "name": "e_loolc_shower_app",
+      "description": "专为湖北民族大学高校学子打造的获取洗澡码APP",
+      "language": "Java",
+      "topics": [],
+      "pushed_at": "2026-11-23T08:15:34Z",
+      "url": "https://github.com/afterinit/e_loolc_shower_app"
+    },
     {
       "name": "afinit_blog",
       "description": "https://github.com/afterinit/afinit_blog.git",
@@ -183,12 +225,12 @@
       "url": "https://github.com/afterinit/afinit_blog_page"
     },
     {
-      "name": "loolc_curriculum",
+      "name": "e_loolc_curriculum_app",
       "description": "专为湖北民族大学设计的课表APP",
       "language": "Java",
       "topics": [],
       "pushed_at": "2026-11-18T07:10:29Z",
-      "url": "https://github.com/afterinit/loolc_curriculum"
+      "url": "https://github.com/afterinit/e_loolc_curriculum_app"
     },
     {
       "name": "main_page",
@@ -239,20 +281,14 @@
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-11-17",
-    "window_end": "2026-11-23",
-    "commits": 6,
+    "window_start": "2026-11-18",
+    "window_end": "2026-11-24",
+    "commits": 7,
     "pushes": 4,
-    "active_repos": 4,
+    "active_repos": 5,
     "active_days": 2,
     "most_active": "afinit_blog",
     "daily": [
-      {
-        "date": "2026-11-17",
-        "day": "TUE",
-        "commits": 0,
-        "pushes": 0
-      },
       {
         "date": "2026-11-18",
         "day": "WED",
@@ -286,41 +322,17 @@
       {
         "date": "2026-11-23",
         "day": "MON",
+        "commits": 1,
+        "pushes": 0
+      },
+      {
+        "date": "2026-11-24",
+        "day": "TUE",
         "commits": 0,
         "pushes": 0
       }
     ],
     "matrix": [
-      {
-        "date": "2026-11-17",
-        "day": "TUE",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
       {
         "date": "2026-11-18",
         "day": "WED",
@@ -474,6 +486,36 @@
       {
         "date": "2026-11-23",
         "day": "MON",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-11-24",
+        "day": "TUE",
         "hours": [
           0,
           0,
