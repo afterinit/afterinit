@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "username": "afterinit",
-  "generated_at": "2026-11-24T09:52:04Z",
+  "generated_at": "2026-11-24T22:24:44Z",
   "source": "github-api",
   "events": [
     {
@@ -50,39 +50,12 @@
       "commit_count": 0
     },
     {
-      "id": "27806143237",
-      "type": "PushEvent",
-      "action": "PUSH",
-      "timestamp": "2026-11-19T12:51:38Z",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "commit_count": 0
-    },
-    {
       "id": "27652798939",
       "type": "CreateEvent",
       "action": "CREATE",
       "timestamp": "2026-11-18T11:41:26Z",
       "repo": "learning_pass",
       "branch": "main",
-      "commit_count": 0
-    },
-    {
-      "id": "27559588271",
-      "type": "PushEvent",
-      "action": "PUSH",
-      "timestamp": "2026-11-18T08:01:54Z",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "commit_count": 0
-    },
-    {
-      "id": "27647479890",
-      "type": "PushEvent",
-      "action": "PUSH",
-      "timestamp": "2026-11-18T07:38:33Z",
-      "repo": "afinit_blog",
-      "branch": "master",
       "commit_count": 0
     },
     {
@@ -120,24 +93,6 @@
       "repo": "Filee",
       "branch": null,
       "commit_count": 0
-    },
-    {
-      "id": "25767944411",
-      "type": "PushEvent",
-      "action": "PUSH",
-      "timestamp": "2026-10-30T09:37:32Z",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "commit_count": 0
-    },
-    {
-      "id": "25873262588",
-      "type": "PushEvent",
-      "action": "PUSH",
-      "timestamp": "2026-10-30T09:37:17Z",
-      "repo": "main_page",
-      "branch": "master",
-      "commit_count": 0
     }
   ],
   "commits": [
@@ -149,32 +104,11 @@
       "timestamp": "2026-11-23T07:57:45Z"
     },
     {
-      "sha": "2ddc3d21adcdad81f59ee753af7a6ea72b170721",
-      "message": "3.6修改项目名称及数据库名，新增初始化数据库",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-11-19T12:51:24Z"
-    },
-    {
       "sha": "579088c524ec85a1e63a4a1358c2a228956eeb1a",
       "message": "v1.0",
       "repo": "learning_pass",
       "branch": "default",
       "timestamp": "2026-11-18T11:38:06Z"
-    },
-    {
-      "sha": "02e5cfd69380cac8e729522b0879ca37f37630d4",
-      "message": "3.9更新了评论功能",
-      "repo": "afinit_blog_page",
-      "branch": "master",
-      "timestamp": "2026-11-18T08:01:53Z"
-    },
-    {
-      "sha": "75c44ea28e7107313d2a2cf151a048ba4cbe9cd4",
-      "message": "3.5重命名相关文件，删除项目构建器功能，新增评论功能",
-      "repo": "afinit_blog",
-      "branch": "master",
-      "timestamp": "2026-11-18T07:38:27Z"
     },
     {
       "sha": "d1b5b4a7f2a4190b8be0c9b7c140f46642facd6d",
@@ -201,14 +135,6 @@
       "url": "https://github.com/afterinit/e_loolc_shower_app"
     },
     {
-      "name": "afinit_blog",
-      "description": "https://github.com/afterinit/afinit_blog.git",
-      "language": "Java",
-      "topics": [],
-      "pushed_at": "2026-11-19T12:51:37Z",
-      "url": "https://github.com/afterinit/afinit_blog"
-    },
-    {
       "name": "learning_pass",
       "description": "学习通小助手，帮助高效学习",
       "language": "JavaScript",
@@ -217,28 +143,12 @@
       "url": "https://github.com/afterinit/learning_pass"
     },
     {
-      "name": "afinit_blog_page",
-      "description": null,
-      "language": "Vue",
-      "topics": [],
-      "pushed_at": "2026-11-18T08:01:53Z",
-      "url": "https://github.com/afterinit/afinit_blog_page"
-    },
-    {
       "name": "e_loolc_curriculum_app",
       "description": "专为湖北民族大学设计的课表APP",
       "language": "Java",
       "topics": [],
       "pushed_at": "2026-11-18T07:10:29Z",
       "url": "https://github.com/afterinit/e_loolc_curriculum_app"
-    },
-    {
-      "name": "main_page",
-      "description": null,
-      "language": "Vue",
-      "topics": [],
-      "pushed_at": "2026-10-30T09:37:16Z",
-      "url": "https://github.com/afterinit/main_page"
     },
     {
       "name": "one-netdisc",
@@ -274,32 +184,26 @@
     }
   ],
   "latest_push": {
-    "timestamp": "2026-11-19T12:51:38Z",
-    "repo": "afinit_blog",
-    "branch": "master",
-    "message": "3.6修改项目名称及数据库名，新增初始化数据库",
+    "timestamp": "2026-11-18T07:10:30Z",
+    "repo": "e_loolc_curriculum_app",
+    "branch": "main",
+    "message": "Update README.md",
     "commit_count": 1
   },
   "stats": {
-    "window_start": "2026-11-18",
-    "window_end": "2026-11-24",
-    "commits": 7,
-    "pushes": 4,
-    "active_repos": 5,
-    "active_days": 2,
-    "most_active": "afinit_blog",
+    "window_start": "2026-11-19",
+    "window_end": "2026-11-25",
+    "commits": 1,
+    "pushes": 0,
+    "active_repos": 1,
+    "active_days": 0,
+    "most_active": "e_loolc_shower_app",
     "daily": [
-      {
-        "date": "2026-11-18",
-        "day": "WED",
-        "commits": 5,
-        "pushes": 3
-      },
       {
         "date": "2026-11-19",
         "day": "THU",
-        "commits": 1,
-        "pushes": 1
+        "commits": 0,
+        "pushes": 0
       },
       {
         "date": "2026-11-20",
@@ -328,42 +232,18 @@
       {
         "date": "2026-11-24",
         "day": "TUE",
+        "commits": 0,
+        "pushes": 0
+      },
+      {
+        "date": "2026-11-25",
+        "day": "WED",
         "commits": 0,
         "pushes": 0
       }
     ],
     "matrix": [
       {
-        "date": "2026-11-18",
-        "day": "WED",
-        "hours": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          3,
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0
-        ]
-      },
-      {
         "date": "2026-11-19",
         "day": "THU",
         "hours": [
@@ -387,7 +267,7 @@
           0,
           0,
           0,
-          1,
+          0,
           0,
           0,
           0
@@ -516,6 +396,36 @@
       {
         "date": "2026-11-24",
         "day": "TUE",
+        "hours": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "date": "2026-11-25",
+        "day": "WED",
         "hours": [
           0,
           0,
